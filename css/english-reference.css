@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #d7dee0;
+}
+
+header {
+    background: linear-gradient();
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}

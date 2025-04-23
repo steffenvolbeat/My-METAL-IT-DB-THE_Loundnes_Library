@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Metal Learning Platform</title>
+    <!-- Split.js über CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.6.0/split.min.js"></script>
+    <!-- CodeMirror CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css"
+    />
+    <!-- Ein Theme (z.B. dracula) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <!-- Modi für HTML, CSS und JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="metal-body">
+    <!-- Partikel-Canvas im Hintergrund -->
+    <canvas id="particle-canvas"></canvas>
+
+    <header class="metal-header parallax">
+      <h1 class="metal-title glitch">Ultimate Metal Learning</h1>
+      <nav class="metal-nav">
+        <ul class="menu">
+          <li><a href="#" data-page="home" class="active">Home</a></li>
+          <li><a href="#" data-page="java-home">Java Topics</a></li>
+          <li><a href="#" data-page="code-playground">Code Playground</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content" class="content">
+      <section id="home" class="page active">
+        <h2 class="gradient-text">
+          Erlebe die dunkle Macht von HTML, CSS & JavaScript
+        </h2>
+        <p>
+          Der ultimative Metal-Codeplayground: Alles, was das Metalherz berührt
+          – von Drums und Gitarrenriffs bis hin zu glühenden Neon-Linien im
+          Code. Wage dich in die Dunkelheit.
+        </p>
+        <button id="open-live-editor" class="metal-button">
+          🔥 Probiere es selbst
+        </button>
+      </section>
+      <!-- Weitere Inhalte können hier ergänzt werden -->
+    </main>
+
+    <!-- Modal für den Live-Code-Editor -->
+    <div id="live-editor-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <div class="editor-controls">
+          <button id="save-code" class="metal-button">💾 Save</button>
+          <button id="clear-code" class="metal-button">🧹 Clear</button>
+          <button id="reset-code" class="metal-button">🔁 Reset</button>
+          <button id="toggle-theme" class="metal-button">🌑 Theme</button>
+        </div>
+        <!-- Tabs für HTML, CSS, JS -->
+        <div class="tabs">
+          <button class="tablinks active" data-editor="html">HTML</button>
+          <button class="tablinks" data-editor="css">CSS</button>
+          <button class="tablinks" data-editor="js">JavaScript</button>
+        </div>
+        <div id="editor-container" class="split">
+          <div class="editor-pane">
+            <!-- Die Editorflächen für jede Sprache -->
+            <div class="editor-tab active" id="editor-html">
+              <h3>💻 HTML Editor</h3>
+              <!-- Ursprüngliche Textarea als Fallback; CodeMirror wird sie ersetzen -->
+              <textarea
+                id="code-html"
+                placeholder="<!-- Schreibe deinen HTML-Code hier... -->"
+              ></textarea>
+            </div>
+            <div class="editor-tab" id="editor-css">
+              <h3>💻 CSS Editor</h3>
+              <textarea
+                id="code-css"
+                placeholder="/* Schreibe deinen CSS-Code hier... */"
+              ></textarea>
+            </div>
+            <div class="editor-tab" id="editor-js">
+              <h3>💻 JS Editor</h3>
+              <textarea
+                id="code-js"
+                placeholder="// Schreibe deinen JS-Code hier..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="output-pane">
+            <h3>🖥️ Live Vorschau</h3>
+            <!-- Iframe mit erweiterter Sandbox -->
+            <iframe
+              id="code-output"
+              sandbox="allow-scripts allow-same-origin"
+            ></iframe>
+            <h3>⚡ Konsole</h3>
+            <div class="console-output" id="console-output"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio-Feedback (Metal-Riff beim Knopfdruck) -->
+    <audio id="metal-audio" src="audio/metal-riff.mp3"></audio>
+    <!-- Falls du eine lokale Split.js-Datei hast, entferne diese Zeile. Sonst CDN verwenden! -->
+    <!-- <script src="Split.js"></script> -->
+    <script src="js/live-editor.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

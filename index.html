@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Metal-IT-DB</title>
+  </head>
+  <body class="index-body">
+    <!-- Sidebar-Navigation -->
+    <header>
+      <nav id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="/HTML-Pages/netzwerktechnik.html">Netzwerktechnik</a></li>
+          <li><a href="/HTML-Pages/programmierung.html">Programmierung</a></li>
+          <li><a href="/HTML-Pages/english-reference.html">Englisch-Nachschlagewerk</a></li>
+          <li><a href="/HTML-Pages/entwickler-portfolio.html">Portfolio</a></li>
+          <li><a href="/HTML-Pages/web-development-projecte.html">Projects</a></li>
+          <li><a href="/HTML-Pages/metal-it-songs-video.html">Metal-IT Songs & Videos</a></li>
+          <li><a href="/E-LearnBook-HTM-CSS-JS-React/Dashbord.html">Learn Dashbord</a></li>
+        </ul>
+      </nav>
+      <button class="open-sidebar-btn" onclick="toggleSidebar()">☰</button>
+    </header>
+
+    <main>
+      <!-- Overlay-Bereich -->
+      <div class="overlay">
+        <h1>Metal-IT-DB</h1>
+        <p>Deine Quelle für IT & Webanwendungen im Metal-Style</p>
+        <a class="btn-enter" href="/HTML-Pages/metal-it-songs-video.html">Enter the Darkness</a>
+      </div>
+
+      <!-- Gemeinsamer Container für Player und Playlist am unteren Rand -->
+      <div id="bottom-container">
+        <!-- Player Container: Enthält den YouTube- und den lokalen Player sowie die Steuerungsbuttons -->
+        <div id="player-container" class="player-container">
+          <!-- Container für den YouTube-Player (wird per API erzeugt) -->
+          <div id="youtubePlayerContainer" style="display:none;"></div>
+          <!-- Lokales Videoelement mit integriertem <source> -->
+          <video id="videoPlayer" width="100" muted autoplay style="display:none;">
+            <source id="videoSource" src="" type="video/mp4" />
+            Dein Browser unterstützt das Video-Tag nicht.
+          </video>
+          <!-- Steuerungsbuttons -->
+          <div class="controls">
+            <button id="nextTrack" class="next-track">▶️ Next</button>
+            <button id="randomPlay" class="next-track">🔀 Random</button>
+            <button id="enableSound" class="enable-sound">Ton aktivieren</button>
+          </div>
+        </div>
+        <!-- Dynamisch generierte Playlist -->
+        <ul id="videoPlaylist" class="playlist"></ul>
+      </div>
+
+      <!-- Login Modal (sollte sofort sichtbar sein) -->
+      <div id="loginModal" class="login-modal show">
+        <div class="login-box">
+          <h2>Login</h2>
+          <input type="text" id="username" placeholder="Username" />
+          <input type="password" id="password" placeholder="Password" />
+          <button id="loginBtn">Login</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

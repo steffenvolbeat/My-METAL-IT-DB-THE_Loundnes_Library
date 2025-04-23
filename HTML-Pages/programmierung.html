@@ -1,0 +1,3337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/programmierung.css" />
+    <script src="/js/programmierung.js" defer></script>
+    <title>Programmierung – Metal-IT-DB</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <section class="btn-openSongsVideos">
+          <button class="openSongsVideos">Metal-IT Songs & Videos</button>
+        </section>
+        <ul>
+          <li><a href="/index.html">Start</a></li>
+          <li>
+            <a href="/HTML-Pages/netzwerktechnik.html">Netzwerktechnik</a>
+          </li>
+          <li>
+            <a href="/HTML-Pages/english-reference.html"
+              >Englisch-Nachschlagewerk</a
+            >
+          </li>
+          <li>
+            <a href="/HTML-Pages/entwickler-portfolio.html"
+              >Entwickler-Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="web-development-projecte.html">Web-Development-Projecte</a>
+          </li>
+          <li><a href="metal-it-songs-video.html">Metal-It-songs-Videos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Programmierung & Web-Softwareentwicklung</h1>
+    <main class="main-section">
+       <!-- EXAMPLE-1: -->
+      <section class="HTML">
+        <h2>HTML</h2>
+        <button id="btn-elearn-htm">E-LearnBook HTML</button>
+        <!-- Modal-Container für die erweiterte Tabelle -->
+        <div id="tableModal" class="table-modal">
+        <button id="closeModal" onclick="closeTableModal()">Close Table</button>
+          <div class="modal-content"></div>
+        </div>
+        <!-- Geändert: Funktionsname von bntTable zu btnTable und ID angepasst ('htmlTable') -->
+        <button class="btn-table" onclick="btnTable('htmlTable')">
+          Show Table
+        </button>
+        <div class="table-box">
+          <table class="html-table unique-table expanded" id="htmlTable">
+            <thead>
+              <tr>
+                <th colspan="4">HTML Tag Übersicht</th>
+              </tr>
+              <tr>
+                <th>Tag</th>
+                <th>Beschreibung</th>
+                <th>Beispiel</th>
+                <th>Notion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Kategorie 1: Grundelemente (20 Tags) -->
+              <tr>
+                <th colspan="4">Grundelemente</th>
+              </tr>
+              <tr>
+                <td>&lt;!DOCTYPE&gt;</td>
+                <td>Dokumenttyp-Deklaration</td>
+                <td>&lt;!DOCTYPE html&gt;</td>
+                <td>Startpunkt</td></tr>
+              <tr>
+                <td>&lt;html&gt;</td>
+                <td>Wurzelelement des Dokuments</td>
+                <td>&lt;html lang="de"&gt;</td>
+                <td>Struktur</td>
+              </tr>
+              <tr>
+                <td>&lt;head&gt;</td><td>Enthält Meta-Daten</td><td>&lt;head&gt;...&lt;/head&gt;</td><td>Metainformationen</td>
+              </tr>
+              <tr>
+                <td>&lt;body&gt;</td>
+                <td>Hauptinhalt des Dokuments</td>
+                <td>&lt;body&gt;...&lt;/body&gt;</td>
+                <td>Sichtbarer Inhalt</td>
+              </tr>
+              <tr>
+                <td>&lt;title&gt;</td>
+                <td>Seitentitel</td>
+                <td>&lt;title&gt;Meine Seite&lt;/title&gt;</td>
+                <td>Browser-Titel</td>
+              </tr>
+              <tr>
+                <td>&lt;base&gt;</td>
+                <td>Basis-URL für relative Links</td>
+                <td>&lt;base href="http://example.com"&gt;</td>
+                <td>Link-Grundlage</td>
+              </tr>
+              <tr><td>&lt;meta&gt;</td>
+                <td>Definiert Metadaten</td>
+                <td>&lt;meta charset="UTF-8"&gt;</td>
+                <td>Zeichensatz</td>
+              </tr>
+              <tr>
+                <td>&lt;link&gt;</td>
+                <td>Verknüpft externe Ressourcen</td>
+                <td>&lt;link rel="stylesheet" href="style.css"&gt;</td>
+                <td>Stylesheets</td>
+              </tr>
+              <tr>
+                <td>&lt;script&gt;</td>
+                <td>Bindet Skripte ein</td>
+                <td>&lt;script src="app.js"&gt;&lt;/script&gt;</td>
+                <td>JS-Code</td>
+              </tr>
+              <tr>
+                <td>&lt;style&gt;</td>
+                <td>Definiert eingebettetes CSS</td>
+                <td>&lt;style&gt;body { }&lt;/style&gt;</td>
+                <td>Inline Styles</td>
+              </tr>
+              <tr><td>&lt;noscript&gt;</td>
+                <td>Inhalt für deaktiviertes JS</td><td>&lt;noscript&gt;JS ist deaktiviert&lt;/noscript&gt;</td>
+                <td>Fallback</td>
+              </tr>
+              <tr>
+                <td>&lt;template&gt;</td>
+                <td>Unverarbeiteter Inhalt für Templates</td>
+                <td>&lt;template&gt;...&lt;/template&gt;</td>
+                <td>Vorlage</td>
+              </tr>
+              <tr>
+                <td>&lt;slot&gt;</td>
+                <td>Platzhalter in Web Components</td>
+                <td>&lt;slot&gt;&lt;/slot&gt;</td>
+                <td>Shadow DOM</td>
+              </tr>
+              <tr>
+                <td>&lt;object&gt;</td>
+                <td>Betten externe Medien ein</td>
+                <td>&lt;object data="file.pdf"&gt;&lt;/object&gt;</td>
+                <td>Multimedia</td>
+              </tr>
+              <tr>
+                <td>&lt;param&gt;</td>
+                <td>Parameter für &lt;object&gt;</td>
+                <td>&lt;param name="autoplay" value="true"&gt;</td>
+                <td>Einstellungen</td>
+              </tr>
+              <tr>
+                <td>&lt;embed&gt;</td>
+                <td>Betten von Multimedia-Inhalten</td>
+                <td>&lt;embed src="video.mp4"&gt;</td>
+                <td>Einbettung</td>
+              </tr>
+              <tr>
+                <td>&lt;picture&gt;</td>
+                <td>Flexible Bilddarstellung</td>
+                <td>&lt;picture&gt;&lt;source srcset="img.webp" type="image/webp"&gt;&lt;img src="img.jpg"&gt;&lt;/picture&gt;</td>
+                <td>Responsive Images</td>
+              </tr>
+              <tr>
+                <td>&lt;source&gt;</td>
+                <td>Definiert Quellen für Medien</td>
+                <td>&lt;source src="video.mp4" type="video/mp4"&gt;</td>
+                <td>Medienquelle</td></tr>
+              <tr>
+                <td>&lt;iframe&gt;</td>
+                <td>Betten externen Content ein</td>
+                <td>&lt;iframe src="page.html"&gt;&lt;/iframe&gt;</td>
+                <td>Inline Frame</td>
+              </tr>
+      
+              <!-- Kategorie 2: Textformatierung & Inline-Elemente (20 Tags) -->
+              <tr>
+                <th colspan="4">Textformatierung & Inline-Elemente</th>
+              </tr>
+              <tr>
+                <td>&lt;h1&gt; - &lt;h6&gt;</td>
+                <td>Überschriften in unterschiedlichen Größen</td>
+                <td>&lt;h1&gt;Überschrift&lt;/h1&gt;</td>
+                <td>Struktur</td>
+              </tr>
+              <tr>
+                <td>&lt;p&gt;</td>
+                <td>Absatz</td>
+                <td>&lt;p&gt;Text&lt;/p&gt;</td>
+                <td>Textblock</td>
+              </tr>
+              <tr>
+                <td>&lt;span&gt;</td>
+                <td>Inline-Container</td>
+                <td>&lt;span&gt;Text&lt;/span&gt;</td>
+                <td>Formatierung</td>
+              </tr>
+              <tr>
+                <td>&lt;strong&gt;</td>
+                <td>Starker Text (semantisch wichtig)</td>
+                <td>&lt;strong&gt;wichtig&lt;/strong&gt;</td>
+                <td>Hervorhebung</td>
+              </tr>
+              <tr>
+                <td>&lt;b&gt;</td>
+                <td>Fetter Text (ohne semantische Bedeutung)</td>
+                <td>&lt;b&gt;Fett&lt;/b&gt;</td>
+                <td>Optisch</td>
+              </tr>
+              <tr>
+                <td>&lt;i&gt;</td>
+                <td>Kursiver Text</td>
+                <td>&lt;i&gt;kursiv&lt;/i&gt;</td>
+                <td>Formatierung</td>
+              </tr>
+              <tr>
+                <td>&lt;em&gt;</td>
+                <td>Betonter Text</td>
+                <td>&lt;em&gt;wichtig&lt;/em&gt;</td>
+                <td>Semantisch betont</td>
+              </tr>
+              <tr>
+                <td>&lt;small&gt;</td>
+                <td>Kleiner Text</td>
+                <td>&lt;small&gt;klein&lt;/small&gt;</td>
+                <td>Größenanpassung</td>
+              </tr>
+              <tr>
+                <td>&lt;mark&gt;</td>
+                <td>Markiert Text</td>
+                <td>&lt;mark&gt;markiert&lt;/mark&gt;</td>
+                <td>Hervorhebung</td>
+              </tr>
+              <tr>
+                <td>&lt;del&gt;</td>
+                <td>Durchgestrichener Text</td>
+                <td>&lt;del&gt;alt&lt;/del&gt;</td>
+                <td>Änderung</td>
+              </tr>
+              <tr>
+                <td>&lt;ins&gt;</td>
+                <td>Unterstrichener Text (Einfügung)</td>
+                <td>&lt;ins&gt;neu&lt;/ins&gt;</td>
+                <td>Änderung</td>
+              </tr>
+              <tr>
+                <td>&lt;sub&gt;</td>
+                <td>Tiefgestellter Text</td>
+                <td>&lt;sub&gt;2&lt;/sub&gt;</td>
+                <td>Formeln</td>
+              </tr>
+              <tr>
+                <td>&lt;sup&gt;</td>
+                <td>Hochgestellter Text</td>
+                <td>&lt;sup&gt;2&lt;/sup&gt;</td>
+                <td>Exponenten</td>
+              </tr>
+              <tr>
+                <td>&lt;abbr&gt;</td>
+                <td>Abkürzung</td>
+                <td>&lt;abbr title=\"Hypertext Markup Language\"&gt;HTML&lt;/abbr&gt;</td>
+                <td>Erklärung</td>
+              </tr>
+              <tr>
+                <td>&lt;cite&gt;</td>
+                <td>Zitiert einen Titel</td>
+                <td>&lt;cite&gt;Quelle&lt;/cite&gt;</td>
+                <td>Referenz</td>
+              </tr>
+              <tr>
+                <td>&lt;dfn&gt;</td>
+                <td>Definiert einen Begriff</td>
+                <td>&lt;dfn&gt;Definition&lt;/dfn&gt;</td>
+                <td>Glossar</td>
+              </tr>
+              <tr>
+                <td>&lt;code&gt;</td>
+                <td>Inline-Code</td>
+                <td>&lt;code&gt;var a = 5;&lt;/code&gt;</td>
+                <td>Programmcode</td>
+              </tr>
+              <tr>
+                <td>&lt;kbd&gt;</td>
+                <td>Text, der Tastatureingaben repräsentiert</td>
+                <td>&lt;kbd&gt;Enter&lt;/kbd&gt;</td>
+                <td>Interaktion</td>
+              </tr>
+      
+              <!-- Kategorie 3: Listen & Tabellen (20 Tags) -->
+              <tr>
+                <th colspan="4">Listen & Tabellen</th>
+              </tr>
+              <tr>
+                <td>&lt;ul&gt;</td>
+                <td>Ungeordnete Liste</td>
+                <td>&lt;ul&gt;&lt;li&gt;Eintrag&lt;/li&gt;&lt;/ul&gt;</td>
+                <td>Aufzählung</td>
+              </tr>
+              <tr>
+                <td>&lt;ol&gt;</td>
+                <td>Geordnete Liste</td>
+                <td>&lt;ol&gt;&lt;li&gt;Erster Eintrag&lt;/li&gt;&lt;/ol&gt;</td>
+                <td>Reihenfolge</td>
+              </tr>
+              <tr>
+                <td>&lt;li&gt;</td>
+                <td>Listenelement</td>
+                
+                <td>&lt;li&gt;Eintrag&lt;/li&gt;</td>
+                <td>Listenitem</td>
+              </tr>
+              <tr>
+                <td>&lt;dl&gt;</td>
+                <td>Definitionsliste</td>
+                <td>&lt;dl&gt;&lt;dt&gt;Begriff&lt;/dt&gt;&lt;dd&gt;Definition&lt;/dd&gt;&lt;/dl&gt;</td>
+                <td>Definition</td></tr>
+              <tr>
+                <td>&lt;dt&gt;</td>
+                <td>Begriff in einer Definitionsliste</td>
+                <td>&lt;dt&gt;HTML&lt;/dt&gt;</td>
+                <td>Begriff</td>
+              </tr>
+              <tr>
+                <td>&lt;dd&gt;</td>
+                <td>Definition eines Begriffs</td>
+                <td>&lt;dd&gt;Hypertext Markup Language&lt;/dd&gt;</td>
+                <td>Erklärung</td>
+              </tr>
+              <tr>
+                <td>&lt;table&gt;</td>
+                <td>Erstellt eine Tabelle</td>
+                <td>&lt;table&gt;...&lt;/table&gt;</td>
+                <td>Datenanzeige</td>
+              </tr>
+              <tr>
+                <td>&lt;tr&gt;</td>
+                <td>Tabellenzeile</td>
+                <td>&lt;tr&gt;...&lt;/tr&gt;</td>
+                <td>Zeile</td>
+              </tr>
+              <tr>
+                <td>&lt;td&gt;</td>
+                <td>Tabellenzelle</td>
+                <td>&lt;td&gt;Inhalt&lt;/td&gt;</td>
+                <td>Zelle</td>
+              </tr>
+              <tr>
+                <td>&lt;th&gt;</td>
+                <td>Tabellenkopfzelle</td>
+                <td>&lt;th&gt;Header&lt;/th&gt;</td>
+                <td>Überschrift</td>
+              </tr>
+              <tr>
+                <td>&lt;thead&gt;</td>
+                <td>Tabellenkopf</td>
+                <td>&lt;thead&gt;...&lt;/thead&gt;</td>
+                <td>Header</td>
+              </tr>
+              <tr>
+                <td>&lt;tbody&gt;</td>
+                <td>Hauptteil der Tabelle</td>
+                <td>&lt;tbody&gt;...&lt;/tbody&gt;</td>
+                <td>Datenbereich</td>
+              </tr>
+              <tr>
+                <td>&lt;tfoot&gt;</td>
+                <td>Tabellenfuß</td>
+                <td>&lt;tfoot&gt;...&lt;/tfoot&gt;</td>
+                <td>Fußzeile</td>
+              </tr>
+              <tr>
+                <td>&lt;caption&gt;</td>
+                <td>Tabellenbeschriftung</td>
+                <td>&lt;caption&gt;Überschrift&lt;/caption&gt;</td>
+                <td>Beschreibung</td>
+              </tr>
+              <tr>
+                <td>&lt;col&gt;</td>
+                <td>Definiert eine Spalte</td>
+                <td>&lt;col style=\"width:50%\"&gt;</td>
+                <td>Spaltenformat</td>
+              </tr>
+              <tr>
+                <td>&lt;colgroup&gt;</td>
+                <td>Gruppiert Spalten</td>
+                <td>&lt;colgroup&gt;...&lt;/colgroup&gt;</td>
+                <td>Spaltengruppe</td>
+              </tr>
+              <tr>
+                <th colspan="4">Formulare & Input</th></tr>
+              <tr>
+                <td>&lt;form&gt;</td>
+                <td>Formularcontainer</td>
+                <td>&lt;form action=\"#\"&gt;...&lt;/form&gt;</td>
+                <td>Datenübertragung</td>
+              </tr>
+              <tr>
+                <td>&lt;input&gt;</td>
+                <td>Eingabefeld</td>
+                <td>&lt;input type=\"text\" placeholder=\"Name\"&gt;</td>
+                <td>Benutzereingabe</td>
+              </tr>
+              <tr>
+                <td>&lt;textarea&gt;</td>
+                <td>Mehrzeiliges Eingabefeld</td>
+                <td>&lt;textarea&gt;Text&lt;/textarea&gt;</td>
+                <td>Textblock</td>
+              </tr>
+              <tr>
+                <td>&lt;button&gt;</td>
+                <td>Klickbarer Button</td>
+                <td>&lt;button&gt;Absenden&lt;/button&gt;</td>
+                <td>Interaktion</td>
+              </tr>
+              <tr>
+                <td>&lt;select&gt;</td>
+                <td>Dropdown-Liste</td>
+                <td>&lt;select&gt;&lt;option&gt;Option 1&lt;/option&gt;&lt;/select&gt;</td>
+                <td>Auswahl</td>
+              </tr>
+              <tr>
+                <td>&lt;option&gt;</td>
+                <td>Ein Eintrag in einer Auswahl</td>
+                <td>&lt;option&gt;Option 1&lt;/option&gt;</td>
+                <td>Auswahlwert</td>
+              </tr>
+              <tr>
+                <td>&lt;label&gt;</td>
+                <td>Beschriftung für ein Eingabefeld</td>
+                <td>&lt;label for=\"name\"&gt;Name:&lt;/label&gt;</td>
+                <td>Zugehörigkeit</td>
+              </tr>
+              <tr>
+                <td>&lt;fieldset&gt;</td>
+                <td>Gruppiert Formularfelder</td>
+                <td>&lt;fieldset&gt;...&lt;/fieldset&gt;</td>
+                <td>Formulargruppe</td>
+              </tr>
+              <tr>
+                <td>&lt;legend&gt;</td>
+                <td>Überschrift für ein Fieldset</td>
+                <td>&lt;legend&gt;Persönliche Daten&lt;/legend&gt;</td>
+                <td>Gruppenbeschriftung</td>
+              </tr>
+              <tr>
+                <td>&lt;datalist&gt;</td>
+                <td>Definiert eine Liste von vordefinierten Optionen</td>
+                <td>&lt;datalist id=\"browsers\"&gt;&lt;option value=\"Chrome\"&gt;&lt;/datalist&gt;</td>
+                <td>Autocomplete</td>
+              </tr>
+              <tr>
+                <td>&lt;output&gt;</td>
+                <td>Zeigt das Ergebnis einer Berechnung</td>
+                <td>&lt;output&gt;Ergebnis&lt;/output&gt;</td>
+                <td>Rückgabe</td>
+              </tr>
+              <tr>
+                <td>&lt;meter&gt;</td>
+                <td>Zeigt einen Messwert (z.B. Fortschritt) an</td>
+                <td>&lt;meter value=\"0.6\" min=\"0\" max=\"1\"&gt;</td>
+                <td>Messanzeige</td>
+              </tr>
+              <tr>
+                <td>&lt;progress&gt;</td>
+                <td>Zeigt den Fortschritt einer Aufgabe an</td>
+                <td>&lt;progress value=\"70\" max=\"100\"&gt;</td>
+                <td>Fortschrittsbalken</td>
+              </tr>
+      
+              <!-- Kategorie 5: Multimedia (20 Tags) -->
+              <tr>
+                <th colspan="4">Multimedia</th>
+              </tr>
+              <tr>
+                <td>&lt;img&gt;</td>
+                <td>Bindet ein Bild ein</td>
+                <td>&lt;img src=\"bild.jpg\" alt=\"Beispiel\"&gt;</td>
+                <td>Bildanzeige</td>
+              </tr>
+              <tr>
+                <td>&lt;audio&gt;</td>
+                <td>Betten Audioinhalte ein</td>
+                <td>&lt;audio src=\"sound.mp3\" controls&gt;&lt;/audio&gt;</td>
+                <td>Audio-Player</td>
+              </tr>
+              <tr>
+                <td>&lt;video&gt;</td>
+                <td>Betten Videoinhalte ein</td>
+                <td>&lt;video src=\"video.mp4\" controls&gt;&lt;/video&gt;</td>
+                <td>Video-Player</td>
+              </tr>
+              <tr>
+                <td>&lt;source&gt;</td>
+                <td>Definiert eine Quelle für Medien</td>
+                <td>&lt;source src=\"video.mp4\" type=\"video/mp4\"&gt;</td>
+                <td>Medienquelle</td>
+              </tr>
+              <tr>
+                <td>&lt;track&gt;</td>
+                <td>Definiert Untertitel oder Beschreibungen</td>
+                <td>&lt;track src=\"subtitles.vtt\" kind=\"subtitles\"&gt;</td>
+                <td>Textinhalte</td>
+              </tr>
+              <tr>
+                <td>&lt;canvas&gt;</td>
+                <td>Zeichenfläche für dynamische Grafiken</td>
+                <td>&lt;canvas width=\"300\" height=\"150\"&gt;&lt;/canvas&gt;</td>
+                <td>Zeichnung</td></tr>
+              <tr>
+                <td>&lt;svg&gt;</td>
+                <td>Container für Vektorgrafiken</td>
+                <td>&lt;svg width=\"100\" height=\"100\"&gt;&lt;/svg&gt;</td>
+                <td>Skalierbar</td>
+              </tr>
+              <tr>
+                <td>&lt;embed&gt;</td>
+                <td>Betten externe Inhalte ein</td>
+                <td>&lt;embed src=\"file.pdf\" type=\"application/pdf\"&gt;</td>
+                <td>Dateien</td>
+              </tr>
+              <tr>
+                <td>&lt;object&gt;</td>
+                <td>Betten Multimedia und andere Inhalte ein</td>
+                <td>&lt;object data=\"movie.swf\" type=\"application/x-shockwave-flash\"&gt;&lt;/object&gt;</td>
+                <td>Flexibel</td>
+              </tr>
+              <tr>
+                <td>&lt;param&gt;</td>
+                <td>Parameter für das object-Element</td>
+                <td>&lt;param name=\"movie\" value=\"movie.swf\"&gt;</td>
+                <td>Einstellungen</td>
+              </tr>
+              <tr>
+                <td>&lt;iframe&gt;</td>
+                <td>Betten externe Dokumente ein</td>
+                <td>&lt;iframe src=\"page.html\"&gt;&lt;/iframe&gt;</td>
+                <td>Inline Frame</td>
+              </tr>
+              <tr>
+                <th colspan="4">Semantische Elemente</th>
+              </tr>
+              <tr>
+                <td>&lt;header&gt;</td>
+                <td>Definiert den Kopfbereich eines Dokuments</td>
+                <td>&lt;header&gt;...&lt;/header&gt;</td>
+                <td>Navigation, Titel</td>
+              </tr>
+              <tr>
+                <td>&lt;nav&gt;</td>
+                <td>Definiert einen Navigationsbereich</td>
+                <td>&lt;nav&gt;...&lt;/nav&gt;</td>
+                <td>Links</td>
+              </tr>
+              <tr>
+                <td>&lt;main&gt;</td>
+                <td>Hauptinhalt des Dokuments</td>
+                <td>&lt;main&gt;...&lt;/main&gt;</td>
+                <td>Zentraler Inhalt</td></tr>
+              <tr>
+                <td>&lt;article&gt;</td>
+                <td>Eigenständiger Artikel</td>
+                <td>&lt;article&gt;...&lt;/article&gt;</td>
+                <td>Beitrag</td>
+              </tr>
+              <tr>
+                <td>&lt;section&gt;</td>
+                <td>Thematisch gruppierter Inhalt</td>
+                <td>&lt;section&gt;...&lt;/section&gt;</td>
+                <td>Inhalt</td>
+              </tr>
+              <tr>
+                <td>&lt;aside&gt;</td>
+                <td>Nebeninhalt</td>
+                <td>&lt;aside&gt;...&lt;/aside&gt;</td>
+                <td>Nebeninformationen</td>
+              </tr>
+              <tr><td>&lt;footer&gt;</td>
+                <td>Fußbereich des Dokuments</td>
+                <td>&lt;footer&gt;...&lt;/footer&gt;</td>
+                <td>Abschluss</td>
+              </tr>
+              <tr>
+                <td>&lt;figure&gt;</td>
+                <td>Container für Medien und Beschriftungen</td>
+                <td>&lt;figure&gt;&lt;img src=\"bild.jpg\"&gt;&lt;figcaption&gt;Bildbeschreibung&lt;/figcaption&gt;&lt;/figure&gt;</td>
+                <td>Visueller Inhalt</td>
+              </tr>
+              <tr>
+                <td>&lt;figcaption&gt;</td>
+                <td>Beschriftung für ein figure-Element</td>
+                <td>&lt;figcaption&gt;Bildbeschreibung&lt;/figcaption&gt;</td>
+                <td>Erklärung</td>
+              </tr>
+              <tr>
+                <td>&lt;mark&gt;</td>
+                <td>Markiert wichtigen Text</td>
+                <td>&lt;mark&gt;wichtig&lt;/mark&gt;</td>
+                <td>Hervorhebung</td>
+              </tr>
+              <tr>
+                <td>&lt;address&gt;</td>
+                <td>Enthält Kontaktinformationen</td>
+                <td>&lt;address&gt;Kontakt: ...&lt;/address&gt;</td>
+                <td>Kontakt</td>
+              </tr>
+              <tr>
+                <td>&lt;details&gt;</td>
+                <td>Ermöglicht ausklappbaren Inhalt</td>
+                <td>&lt;details&gt;&lt;summary&gt;Mehr&lt;/summary&gt;...&lt;/details&gt;</td>
+                <td>Interaktiv</td>
+              </tr>
+              <tr>
+                <td>&lt;summary&gt;</td>
+                <td>Beschriftet ein details-Element</td>
+                <td>&lt;summary&gt;Details&lt;/summary&gt;</td>
+                <td>Übersicht</td>
+              </tr>
+              <tr>
+                <th colspan="4">Scripting & Metainformationen</th>
+              </tr>
+              <tr>
+                <td>&lt;script&gt;</td>
+                <td>Bindet externe Skripte ein</td>
+                <td>&lt;script src=\"app.js\"&gt;&lt;/script&gt;</td>
+                <td>JavaScript</td>
+              </tr>
+              <tr>
+                <td>&lt;noscript&gt;</td>
+                <td>Alternative Inhalte bei deaktiviertem JS</td>
+                <td>&lt;noscript&gt;JS deaktiviert&lt;/noscript&gt;</td>
+                <td>Fallback</td>
+              </tr>
+              <tr>
+                <td>&lt;template&gt;</td>
+                <td>Inhalt, der nicht direkt gerendert wird</td>
+                <td>&lt;template&gt;...&lt;/template&gt;</td>
+                <td>Vorlage</td>
+              </tr>
+              <tr>
+                <td>&lt;slot&gt;</td>
+                <td>Platzhalter in Web Components</td>
+                <td>&lt;slot&gt;&lt;/slot&gt;</td>
+                <td>Shadow DOM</td>
+              </tr>
+              <tr>
+                <td>&lt;!-- --&gt;</td>
+                <td>HTML-Kommentar</td>
+                <td>&lt;!-- Kommentar --&gt;</td>
+                <td>Notiz</td>
+              </tr>       
+              <tr>
+                <td>&lt;!ENTITY&gt;</td>
+                <td>Definiert benutzerdefinierte Entitäten</td>
+                <td>&lt;!ENTITY copy \"©\"&gt;</td>
+                <td>DTD-Definition</td>
+              </tr>
+              <tr>
+                <td>&lt;!ATTLIST&gt;</td>
+                <td>Definiert Attributlisten in DTD</td>
+                <td>&lt;!ATTLIST tag attr CDATA #IMPLIED&gt;</td>
+                <td>DTD-Spezifikation</td>
+              </tr>
+              <tr>
+                <td>&lt;!--#include --&gt;</td>
+                <td>Server Side Include (SSI)</td>
+                <td>&lt;!--#include virtual=\"header.html\" --&gt;</td>
+                <td>SSI</td>
+              </tr>
+              <tr>
+                <td>&lt;!ELEMENT&gt;</td>
+                <td>Definiert ein Element in DTD</td>
+                <td>&lt;!ELEMENT note (to,from,heading,body)&gt;</td>
+                <td>DTD-Definition</td>
+              </tr>
+              <tr>
+                <td>&lt;!ATTLIST&gt;</td>
+                <td>Attributliste für ein Element</td>
+                <td>&lt;!ATTLIST note date CDATA #IMPLIED&gt;</td>
+                <td>DTD-Attribut</td></tr><tr><td>&lt;![CDATA[ ... ]]&gt;</td>
+                <td>CDATA-Sektion zum Einfügen von unverarbeiteten Daten</td>
+                <td>&lt;![CDATA[ <data>Some data</data> ]]&gt;</td>
+                <td>Literaltext</td>
+              </tr>
+              <tr>
+                <th colspan=\"4\">Obsolete / Deprecated</th>
+              </tr>
+              <tr>
+                  <td>&lt;font&gt;</td>
+                  <td>Definiert Textfarbe und -größe (veraltet)</td>
+                  <td>&lt;font color=\"red\"&gt;Text&lt;/font&gt;</td>
+                  <td>Veraltet</td>
+              </tr>
+              <tr>
+                <td>&lt;center&gt;</td>
+                <td>Zentriert Inhalte (veraltet)</td>
+                <td>&lt;center&gt;Text&lt;/center&gt;</td>
+                <td>Veraltet</td>
+              </tr>
+              <tr>
+                <td>&lt;big&gt;</td>
+                <td>Erhöht die Textgröße (veraltet)</td>
+                <td>&lt;big&gt;Text&lt;/big&gt;</td>
+                <td>Veraltet</td>
+              </tr>
+              <tr>
+                <td>&lt;strike&gt;</td>
+                <td>Durchgestrichener Text (veraltet)</td>
+                <td>&lt;strike&gt;Text&lt;/strike&gt;</td>
+                <td>Veraltet</td>
+              </tr>
+              <tr>
+                <td>&lt;tt&gt;</td>
+                <td>Monospace-Schrift (veraltet)</td>
+                <td>&lt;tt&gt;Text&lt;/tt&gt;</td>
+                <td>Veraltet</td>
+              </tr>
+              <tr>
+                <td>&lt;u&gt;</td>
+                <td>Unterstrichener Text (wird noch unterstützt, aber selten empfohlen)</td>
+                <td>&lt;u&gt;Text&lt;/u&gt;</td>
+                <td>Alternative: CSS text-decoration</td>
+              </tr>
+              <tr>
+                <td>&lt;basefont&gt;</td>
+                <td>Legt Standard-Schriftattribute fest (veraltet)</td>
+                <td>&lt;basefont size=\"3\" color=\"black\"&gt;</td>
+                <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;center&gt;</td>
+                  <td>Zentriert Inhalte (veraltet, doppelt – daher nur einmal)</td>
+                  <td>&lt;center&gt;Text&lt;/center&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;applet&gt;</td>
+                  <td>Betten Java-Applets ein (veraltet)</td>
+                <td>&lt;applet code=\"MyApplet.class\"&gt;</td>
+                <td>Java im Browser</td>
+              </tr>
+              <tr>
+                <td>&lt;isindex&gt;</td>
+                <td>Erstellt eine einfache Sucheingabe (veraltet)</td>
+                <td>&lt;isindex prompt=\"Search:\"&gt;</td>
+                <td>Veraltet</td>
+              </tr>
+              <tr>
+                <th colspan="4">Sonstiges</th>
+                </tr>
+                <tr>
+                  <td>&lt;abbr&gt;</td>
+                  <td>Abkürzung</td>
+                  <td>&lt;abbr title=\"Hypertext Markup Language\"&gt;HTML&lt;/abbr&gt;</td>
+                  <td>Erklärung</td>
+                </tr>        
+                <tr>
+                  <td>&lt;cite&gt;</td>
+                  <td>Zitiert einen Titel</td>
+                  <td>&lt;cite&gt;Quelle&lt;/cite&gt;</td>
+                  <td>Referenz</td>
+                </tr>
+                <tr>
+                  <td>&lt;dfn&gt;</td>
+                  <td>Definiert einen Begriff</td>
+                  <td>&lt;dfn&gt;Definition&lt;/dfn&gt;</td>
+                  <td>Glossar</td>
+                </tr>
+                <tr>
+                  <td>&lt;var&gt;</td>
+                  <td>Zeigt Variablen an</td>
+                  <td>&lt;var&gt;x&lt;/var&gt;</td>
+                  <td>Mathematische Notation</td>
+                </tr>
+                <tr>
+                  <td>&lt;samp&gt;</td>
+                  <td>Beispielausgabe</td>
+                  <td>&lt;samp&gt;Output&lt;/samp&gt;</td>
+                  <td>Codeausgabe</td>
+                </tr>
+                <tr>
+                  <td>&lt;code&gt;</td>
+                  <td>Inline-Code</td>
+                  <td>&lt;code&gt;print()&lt;/code&gt;</td>
+                  <td>Programmiercode</td>
+                </tr>
+                <tr>
+                  <td>&lt;kbd&gt;</td>
+                  <td>Zeigt Tastatureingaben an</td>
+                  <td>&lt;kbd&gt;Enter&lt;/kbd&gt;</td>
+                  <td>Interaktion</td>
+                </tr>
+                <tr>
+                  <td>&lt;wbr&gt;</td>
+                  <td>Erlaubt Zeilenumbruch an einer geeigneten Stelle</td>
+                  <td>&lt;wbr&gt;</td>
+                  <td>Zeilenumbruch</td>
+                </tr>
+                <tr>
+                  <td>&lt;ins&gt;</td>
+                  <td>Markiert eingefügten Text</td>
+                  <td>&lt;ins&gt;neu&lt;/ins&gt;</td>
+                  <td>Änderungen</td>
+                </tr>
+                <tr>
+                  <td>&lt;del&gt;</td>
+                  <td>Markiert gelöschten Text</td>
+                  <td>&lt;del&gt;alt&lt;/del&gt;</td>
+                  <td>Änderungen</td>
+                </tr>
+                <tr>
+                  <th colspan=\"4\">Erweiterte Elemente</th>
+                </tr>
+                <tr>
+                  <td>&lt;picture&gt;</td>
+                  <td>Flexibles Bild-Element</td>
+                  <td>&lt;picture&gt;...&lt;/picture&gt;</td>
+                  <td>Responsive Images</td>
+                </tr>
+                <tr>
+                  <td>&lt;source&gt;</td>
+                  <td>Bildquelle für picture</td>
+                  <td>&lt;source srcset=\"img.webp\" type=\"image/webp\"&gt;</td>
+                  <td>Formatwahl</td>
+                </tr>
+                <tr>
+                  <td>&lt;mark&gt;</td>
+                  <td>Hervorhebung von Text</td>
+                  <td>&lt;mark&gt;Text&lt;/mark&gt;</td>
+                  <td>Text-Highlight</td>
+                </tr>
+                <tr>
+                  <td>&lt;ruby&gt;</td>
+                  <td>Enthält Aussprachehilfen</td>
+                  <td>&lt;ruby&gt;漢&lt;rt&gt;kan&lt;/rt&gt;&lt;/ruby&gt;</td>
+                  <td>Text Annotation</td>
+                </tr>
+                <tr>
+                  <td>&lt;rt&gt;</td>
+                  <td>Zeigt die Aussprache an</td>
+                  <td>&lt;rt&gt;kan&lt;/rt&gt;</td>
+                  <td>Ruby Text</td>
+                </tr>
+                <tr>
+                  <td>&lt;rp&gt;</td>
+                  <td>Fallback für Ruby</td>
+                  <td>&lt;rp&gt;(&lt;/rp&gt;</td>
+                  <td>Ergänzend</td>
+                </tr>
+                <tr>
+                  <td>&lt;time&gt;</td>
+                  <td>Enthält Zeit- oder Datumsinformationen</td>
+                  <td>&lt;time datetime=\"2021-12-31\"&gt;31.12.2021&lt;/time&gt;</td>
+                  <td>Maschinenlesbar</td>
+                </tr>
+                <tr>
+                  <td>&lt;data&gt;</td>
+                  <td>Bindet maschinenlesbare Daten an sichtbaren Text</td>
+                  <td>&lt;data value=\"42\"&gt;Antwort&lt;/data&gt;</td>
+                  <td>Datenbindung</td>
+                </tr>
+                <tr>
+                  <td>&lt;dialog&gt;</td>
+                  <td>Erstellt ein modales Dialogfenster</td>
+                  <td>&lt;dialog&gt;Inhalt&lt;/dialog&gt;</td>
+                  <td>Interaktiv</td>
+                </tr>
+                <tr>
+                  <td>&lt;menu&gt;</td>
+                  <td>Erstellt ein Kontextmenü</td>
+                  <td>&lt;menu&gt;&lt;li&gt;Option&lt;/li&gt;&lt;/menu&gt;</td>
+                  <td>Navigation</td>
+                </tr>
+                <tr>
+                  <td>&lt;menuitem&gt;</td>
+                  <td>Ein Eintrag in einem Menü</td>
+                  <td>&lt;menuitem label=\"Option\"&gt;</td>
+                  <td>Interaktion</td>
+                </tr>
+                <tr>
+                  <td>&lt;summary&gt;</td>
+                  <td>Beschriftet ein Details-Element</td>
+                  <td>&lt;summary&gt;Mehr Details&lt;/summary&gt;</td>
+                  <td>Aufklappen</td>
+                </tr>
+                <tr>
+                  <td>&lt;slot&gt;</td>
+                  <td>Platzhalter in Web Components</td>
+                  <td>&lt;slot&gt;&lt;/slot&gt;</td>
+                  <td>Shadow DOM</td>
+                </tr>
+                <tr>
+                  <td>&lt;picture&gt;</td>
+                  <td>Ermöglicht flexible Bildquellen</td>
+                  <td>&lt;picture&gt;...&lt;/picture&gt;</td>
+                  <td>Responsive</td>
+                </tr>
+                <tr>
+                  <td>&lt;canvas&gt;</td>
+                  <td>Zeichenfläche für dynamische Grafiken</td>
+                  <td>&lt;canvas&gt;&lt;/canvas&gt;</td>
+                  <td>Grafik</td>
+                </tr>
+                <tr>
+                  <td>&lt;slot&gt;</td>
+                  <td>Platzhalter für verteilten Inhalt</td>
+                  <td>&lt;slot name=\"header\"&gt;&lt;/slot&gt;</td>
+                  <td>Web Components</td>
+                </tr>
+                <tr class="category-header">
+                  <th colspan="4">Grundelemente</th>
+                </tr>
+                <tr>
+                  <td>&lt;!DOCTYPE&gt;</td>
+                  <td>Dokumenttyp-Deklaration</td>
+                  <td>&lt;!DOCTYPE html&gt;</td>
+                  <td>Startpunkt</td>
+                </tr>
+                <tr>
+                  <td>&lt;html&gt;</td>
+                  <td>Wurzelelement des Dokuments</td>
+                  <td>&lt;html lang="de"&gt;</td>
+                  <td>Struktur</td>
+                </tr>
+                <tr>
+                  <td>&lt;head&gt;</td>
+                  <td>Enthält Metainformationen</td>
+                  <td>&lt;head&gt;...&lt;/head&gt;</td>
+                  <td>Metadaten</td>
+                </tr>
+                <tr>
+                  <td>&lt;body&gt;</td>
+                  <td>Hauptinhalt des Dokuments</td>
+                  <td>&lt;body&gt;...&lt;/body&gt;</td>
+                  <td>Sichtbarer Inhalt</td>
+                </tr>
+                <tr>
+                  <td>&lt;title&gt;</td>
+                  <td>Seitentitel</td>
+                  <td>&lt;title&gt;Meine Seite&lt;/title&gt;</td>
+                  <td>Browser-Titel</td>
+                </tr>
+                <tr>
+                  <td>&lt;base&gt;</td>
+                  <td>Basis-URL für relative Links</td>
+                  <td>&lt;base href="http://example.com"&gt;</td>
+                  <td>Grundlage</td>
+                </tr>
+                <tr>
+                  <td>&lt;meta&gt;</td>
+                  <td>Definiert Metadaten</td>
+                  <td>&lt;meta charset="UTF-8"&gt;</td>
+                  <td>Zeichensatz</td>
+                </tr>
+                <tr>
+                  <td>&lt;link&gt;</td>
+                  <td>Verknüpft externe Ressourcen</td>
+                  <td>&lt;link rel="stylesheet" href="style.css"&gt;</td>
+                  <td>Stylesheets</td>
+                </tr>
+                <tr>
+                  <td>&lt;script&gt;</td>
+                  <td>Bindet Skripte ein</td>
+                  <td>&lt;script src="app.js"&gt;&lt;/script&gt;</td>
+                  <td>JavaScript</td>
+                </tr>
+                <tr>
+                  <td>&lt;style&gt;</td>
+                  <td>Definiert eingebettetes CSS</td>
+                  <td>&lt;style&gt;...&lt;/style&gt;</td>
+                  <td>Inline Styles</td></tr>
+                <tr>
+                  <td>&lt;noscript&gt;</td>
+                  <td>Alternative Inhalte bei deaktiviertem JS</td>
+                  <td>&lt;noscript&gt;JS deaktiviert&lt;/noscript&gt;</td>
+                  <td>Fallback</td>
+                </tr>
+                <tr>
+                  <td>&lt;template&gt;</td>
+                  <td>Unverarbeiteter Inhalt</td>
+                  <td>&lt;template&gt;...&lt;/template&gt;</td>
+                  <td>Vorlage</td></tr>
+                <tr>
+                  <td>&lt;slot&gt;</td>
+                  <td>Platzhalter in Web Components</td>
+                  <td>&lt;slot&gt;&lt;/slot&gt;</td>
+                  <td>Shadow DOM</td>
+                </tr>
+                <tr>
+                  <td>&lt;object&gt;</td>
+                  <td>Betten externe Ressourcen ein</td>
+                  <td>&lt;object data="file.pdf"&gt;&lt;/object&gt;</td>
+                  <td>Multimedia</td>
+                </tr>
+                <tr>
+                  <td>&lt;param&gt;</td>
+                  <td>Parameter für &lt;object&gt;</td>
+                  <td>&lt;param name="autoplay" value="true"&gt;</td>
+                  <td>Einstellungen</td>
+                </tr>
+                <tr>
+                  <td>&lt;embed&gt;</td>
+                  <td>Betten externe Inhalte ein</td>
+                  <td>&lt;embed src="video.mp4"&gt;</td>
+                  <td>Einbettung</td>
+                </tr>
+                <tr>
+                  <td>&lt;picture&gt;</td>
+                  <td>Flexibles Bild-Element</td>
+                  <td>&lt;picture&gt;&lt;source srcset="img.webp" type="image/webp"&gt;&lt;img src="img.jpg" alt="Beispiel"&gt;&lt;/picture&gt;</td>
+                  <td>Responsive</td>
+                </tr>
+                <tr>
+                  <td>&lt;source&gt;</td>
+                  <td>Definiert Medienquellen</td>
+                  <td>&lt;source src="video.mp4" type="video/mp4"&gt;</td>
+                  <td>Medienquelle</td>
+                </tr>
+                <tr>
+                  <td>&lt;iframe&gt;</td>
+                  <td>Betten externen Content ein</td>
+                  <td>&lt;iframe src="page.html"&gt;&lt;/iframe&gt;</td>
+                  <td>Inline Frame</td>
+                </tr>
+                <tr class="category-header">
+                  <th colspan="4">Textformatierung & Inline-Elemente</th>
+                </tr>
+                <tr>
+                  <td>&lt;h1&gt; - &lt;h6&gt;</td>
+                  <td>Überschriften</td>
+                  <td>&lt;h1&gt;Überschrift&lt;/h1&gt;</td>
+                  <td>Struktur</td></tr>
+                <tr>
+                  <td>&lt;p&gt;</td>
+                  <td>Absatz</td>
+                  <td>&lt;p&gt;Text&lt;/p&gt;</td>
+                  <td>Textblock</td>
+                </tr>
+                <tr>
+                  <td>&lt;span&gt;</td>
+                  <td>Inline-Container</td>
+                  <td>&lt;span&gt;Text&lt;/span&gt;</td>
+                  <td>Formatierung</td></tr>
+                <tr>
+                  <td>&lt;strong&gt;</td>
+                  <td>Wichtig (semantisch)</td>
+                  <td>&lt;strong&gt;wichtig&lt;/strong&gt;</td>
+                  <td>Hervorhebung</td>
+                </tr>
+                <tr>
+                  <td>&lt;b&gt;</td>
+                  <td>Fetter Text (ohne Semantik)</td>
+                  <td>&lt;b&gt;fett&lt;/b&gt;</td>
+                  <td>Optisch</td>
+                </tr>
+                <tr>
+                  <td>&lt;i&gt;</td>
+                  <td>Kursiv</td>
+                  <td>&lt;i&gt;kursiv&lt;/i&gt;</td><td>Formatierung</td>
+                </tr>
+                <tr>
+                  <td>&lt;em&gt;</td>
+                  <td>Betonter Text</td>
+                  <td>&lt;em&gt;betont&lt;/em&gt;</td>
+                  <td>Semantisch</td>
+                </tr>
+                <tr>
+                  <td>&lt;small&gt;</td>
+                  <td>Kleiner Text</td>
+                  <td>&lt;small&gt;klein&lt;/small&gt;</td>
+                  <td>Größe</td></tr>
+                <tr>
+                  <td>&lt;mark&gt;</td>
+                  <td>Markiert Text</td>
+                  <td>&lt;mark&gt;wichtig&lt;/mark&gt;</td>
+                  <td>Highlight</td>
+                </tr>
+                <tr>
+                  <td>&lt;abbr&gt;</td>
+                  <td>Abkürzung mit Beschreibung</td>
+                  <td>&lt;abbr title=\"Hypertext Markup Language\"&gt;HTML&lt;/abbr&gt;</td>
+                  <td>Erklärung</td>
+                </tr>
+                <tr>
+                  <td>&lt;cite&gt;</td>
+                  <td>Zitiert einen Titel</td>
+                  <td>&lt;cite&gt;Quelle&lt;/cite&gt;</td>
+                  <td>Referenz</td>
+                </tr>
+                <tr>
+                  <td>&lt;dfn&gt;</td>
+                  <td>Definiert einen Begriff</td>
+                  <td>&lt;dfn&gt;Begriff&lt;/dfn&gt;</td>
+                  <td>Glossar</td>
+                </tr>
+                <tr>
+                  <td>&lt;code&gt;</td>
+                  <td>Inline-Code</td>#
+                  <td>&lt;code&gt;print()&lt;/code&gt;</td>
+                  <td>Programmcode</td>
+                </tr>
+                <tr>
+                  <td>&lt;kbd&gt;</td>
+                  <td>Text für Tastatureingabe</td>
+                  <td>&lt;kbd&gt;Enter&lt;/kbd&gt;</td>
+                  <td>Tastatur</td>
+                </tr>
+                <tr>
+                  <td>&lt;var&gt;</td>
+                  <td>Variablenanzeige</td>
+                  <td>&lt;var&gt;x&lt;/var&gt;</td>
+                  <td>Mathematik</td>
+                </tr>
+                <tr>
+                  <td>&lt;samp&gt;</td>
+                  <td>Beispielausgabe</td>
+                  <td>&lt;samp&gt;Output&lt;/samp&gt;</td>
+                  <td>Ergebnis</td>
+                </tr>
+                <tr>
+                  <td>&lt;wbr&gt;</td>
+                  <td>Erlaubt Zeilenumbruch</td>
+                  <td>&lt;wbr&gt;</td>
+                  <td>Textumbruch</td>
+                </tr>
+                <tr class="category-header">
+                  <th colspan="4">Listen & Tabellen</th>
+                </tr>
+                <tr>
+                  <td>&lt;ul&gt;</td>
+                  <td>Ungeordnete Liste</td>
+                  <td>&lt;ul&gt;&lt;li&gt;Eintrag&lt;/li&gt;&lt;/ul&gt;</td>
+                  <td>Aufzählung</td>
+                </tr>
+                <tr>
+                  <td>&lt;ol&gt;</td>
+                  <td>Geordnete Liste</td>
+                  <td>&lt;ol&gt;&lt;li&gt;Eintrag&lt;/li&gt;&lt;/ol&gt;</td>
+                  <td>Nummerierung</td>
+                </tr>
+                <tr>
+                  <td>&lt;li&gt;</td>
+                  <td>Listenelement</td>
+                  <td>&lt;li&gt;Eintrag&lt;/li&gt;</td>
+                  <td>Item</td>
+                </tr>
+                <tr>
+                  <td>&lt;dl&gt;</td>
+                  <td>Definitionsliste</td>
+                  <td>&lt;dl&gt;&lt;dt&gt;Begriff&lt;/dt&gt;&lt;dd&gt;Definition&lt;/dd&gt;&lt;/dl&gt;</td>
+                  <td>Definition</td>
+                </tr>
+                <tr>
+                  <td>&lt;dt&gt;</td>
+                  <td>Begriff in DL</td>
+                  <td>&lt;dt&gt;HTML&lt;/dt&gt;</td>
+                  <td>Definition</td>
+                </tr>
+                <tr>
+                  <td>&lt;dd&gt;</td>
+                  <td>Definition in DL</td>
+                  <td>&lt;dd&gt;Hypertext Markup Language&lt;/dd&gt;</td>
+                  <td>Erklärung</td>
+                </tr>
+                <tr>
+                  <td>&lt;table&gt;</td>
+                  <td>Erstellt eine Tabelle</td>
+                  <td>&lt;table&gt;...&lt;/table&gt;</td>
+                  <td>Datenanzeige</td>
+                </tr>
+                <tr>
+                  <td>&lt;tr&gt;</td>
+                  <td>Tabellenzeile</td>
+                  <td>&lt;tr&gt;...&lt;/tr&gt;</td>
+                  <td>Zeile</td></tr>
+                <tr>
+                  <td>&lt;td&gt;</td>
+                  <td>Tabellenzelle</td>
+                  <td>&lt;td&gt;Inhalt&lt;/td&gt;</td>
+                  <td>Zelle</td>
+                </tr>
+                <tr>
+                  <td>&lt;th&gt;</td>
+                  <td>Tabellenkopfzelle</td>
+                  <td>&lt;th&gt;Überschrift&lt;/th&gt;</td>
+                  <td>Header</td>
+                </tr>
+                <tr>
+                  <td>&lt;thead&gt;</td>
+                  <td>Tabellenkopfbereich</td>
+                  <td>&lt;thead&gt;...&lt;/thead&gt;</td>
+                  <td>Header</td>
+                </tr>
+                <tr>
+                  <td>&lt;tbody&gt;</td>
+                  <td>Tabellenkörper</td>
+                  <td>&lt;tbody&gt;...&lt;/tbody&gt;</td>
+                  <td>Daten</td>
+                </tr>
+                <tr>
+                  <td>&lt;tfoot&gt;</td>
+                  <td>Tabellenfuß</td>
+                  <td>&lt;tfoot&gt;...&lt;/tfoot&gt;</td>
+                  <td>Fußzeile</td>
+                </tr>
+                <tr>
+                  <td>&lt;caption&gt;</td>
+                  <td>Tabellenbeschriftung</td>
+                  <td>&lt;caption&gt;Überschrift&lt;/caption&gt;</td>
+                  <td>Beschreibung</td>
+                </tr>
+                
+                <!-- Kategorie 4: Formulare & Input (20 Tags) -->
+                <tr class="category-header">
+                  <th colspan="4">Formulare & Input</th>
+                </tr>
+                <tr>
+                  <td>&lt;form&gt;</td>
+                  <td>Formularcontainer</td>
+                  <td>&lt;form action=\"#\"&gt;...&lt;/form&gt;</td>
+                  <td>Datenübermittlung</td>
+                </tr>
+                <tr>
+                  <td>&lt;input&gt;</td>
+                  <td>Eingabefeld</td>
+                  <td>&lt;input type=\"text\" placeholder=\"Name\"&gt;</td>
+                  <td>Benutzereingabe</td>
+                </tr>
+                <tr>
+                  <td>&lt;textarea&gt;</td>
+                  <td>Mehrzeiliges Eingabefeld</td>
+                  <td>&lt;textarea&gt;Text&lt;/textarea&gt;</td>
+                  <td>Textfeld</td>
+                </tr>
+                <tr>
+                  <td>&lt;button&gt;</td>
+                  <td>Klickbarer Button</td>
+                  <td>&lt;button&gt;Absenden&lt;/button&gt;</td>
+                  <td>Interaktion</td>
+                </tr>
+                <tr>
+                  <td>&lt;select&gt;</td>
+                  <td>Dropdown-Liste</td>
+                  <td>&lt;select&gt;&lt;option&gt;Option 1&lt;/option&gt;&lt;/select&gt;</td>
+                  <td>Auswahl</td>
+                </tr>
+                <tr>
+                  <td>&lt;option&gt;</td>
+                  <td>Ein Eintrag in einer Auswahl</td>
+                  <td>&lt;option&gt;Option 1&lt;/option&gt;</td>
+                  <td>Wert</td>
+                  </tr>
+                <tr>
+                  <td>&lt;label&gt;</td>
+                  <td>Beschriftung für Eingabefelder</td>
+                  <td>&lt;label for=\"email\"&gt;E-Mail:&lt;/label&gt;</td>
+                  <td>Zuordnung</td>
+                </tr>
+                <tr>
+                  <td>&lt;fieldset&gt;</td>
+                  <td>Gruppiert Formularfelder</td>
+                  <td>&lt;fieldset&gt;...&lt;/fieldset&gt;</td>
+                  <td>Gruppe</td>
+                </tr>
+                <tr>
+                  <td>&lt;legend&gt;</td>
+                  <td>Überschrift für ein Fieldset</td>
+                  <td>&lt;legend&gt;Persönliche Daten&lt;/legend&gt;</td>
+                  <td>Beschriftung</td>
+                <tr>
+                  <td>&lt;datalist&gt;</td>
+                  <td>Liste von vordefinierten Optionen</td>#
+                  <td>&lt;datalist id=\"browsers\"&gt;&lt;option value=\"Chrome\"&gt;&lt;/datalist&gt;</td>
+                  <td>Autocomplete</td>
+                </tr>
+                <tr>
+                  <td>&lt;output&gt;</td>
+                  <td>Zeigt das Ergebnis einer Berechnung</td>
+                  <td>&lt;output&gt;Ergebnis&lt;/output&gt;</td>
+                  <td>Berechnung</td>
+                </tr>
+                <tr>
+                  <td>&lt;meter&gt;</td>
+                  <td>Messwertanzeige</td>
+                  <td>&lt;meter value=\"0.6\" min=\"0\" max=\"1\"&gt;</td>
+                  <td>Fortschritt</td>
+                </tr>
+                <tr>
+                  <td>&lt;progress&gt;</td>
+                  <td>Fortschrittsbalken</td>
+                  <td>&lt;progress value=\"70\" max=\"100\"&gt;</td>
+                  <td>Fortschritt</td>
+                </tr>
+                
+                <!-- Kategorie 5: Multimedia (20 Tags) -->
+                <tr class="category-header">
+                  <th colspan="4">Multimedia</th>
+                </tr>
+                <tr>
+                  <td>&lt;img&gt;</td>
+                  <td>Bindet ein Bild ein</td>
+                  <td>&lt;img src=\"bild.jpg\" alt=\"Beispiel\"&gt;</td>
+                  <td>Bild</td></tr>
+                <tr>
+                  <td>&lt;audio&gt;</td>
+                  <td>Betten Audioinhalte ein</td>
+                  <td>&lt;audio src=\"sound.mp3\" controls&gt;&lt;/audio&gt;</td>
+                  <td>Audio</td>
+                </tr>
+                <tr>
+                  <td>&lt;video&gt;</td>
+                  <td>Betten Videoinhalte ein</td>
+                  <td>&lt;video src=\"video.mp4\" controls&gt;&lt;/video&gt;</td>
+                  <td>Video</td>
+                </tr>
+                <tr>
+                  <td>&lt;source&gt;</td>
+                  <td>Quelle für Medien</td>
+                  <td>&lt;source src=\"video.mp4\" type=\"video/mp4\"&gt;</td>
+                  <td>Medienquelle</td>
+                </tr>
+                <tr>
+                  <td>&lt;track&gt;</td>
+                  <td>Untertitel und Beschreibungen</td>
+                  <td>&lt;track src=\"subtitles.vtt\" kind=\"subtitles\"&gt;</td>
+                  <td>Text</td>
+                </tr>
+                <tr>
+                  <td>&lt;canvas&gt;</td>
+                  <td>Zeichenfläche für dynamische Grafiken</td>
+                  <td>&lt;canvas width=\"300\" height=\"150\"&gt;&lt;/canvas&gt;</td>
+                  <td>Grafik</td>
+                </tr>
+                <tr>
+                  <td>&lt;svg&gt;</td>
+                  <td>Container für Vektorgrafiken</td>
+                  <td>&lt;svg width=\"100\" height=\"100\"&gt;&lt;/svg&gt;</td>
+                  <td>Vektorgrafik</td></tr>
+                <tr>
+                  <td>&lt;embed&gt;</td>
+                  <td>Betten externe Inhalte ein</td>
+                  <td>&lt;embed src=\"file.pdf\" type=\"application/pdf\"&gt;</td>
+                  <td>Datei</td>
+                </tr>
+                <tr>
+                  <td>&lt;object&gt;</td>
+                  <td>Betten Multimedia ein</td>
+                  <td>&lt;object data=\"movie.swf\" type=\"application/x-shockwave-flash\"&gt;&lt;/object&gt;</td>
+                  <td>Flash</td>
+                </tr>
+                <tr>
+                  <td>&lt;param&gt;</td>
+                  <td>Parameter für object</td>
+                  <td>&lt;param name=\"movie\" value=\"movie.swf\"&gt;</td>
+                  <td>Option</td>
+                </tr>
+                <tr>
+                  <td>&lt;iframe&gt;</td>
+                  <td>Betten externen Content ein</td>
+                  <td>&lt;iframe src=\"page.html\"&gt;&lt;/iframe&gt;</td>
+                  <td>Inline Frame</td>
+                </tr>
+                
+                <!-- Kategorie 6: Semantische Elemente (20 Tags) -->
+                <tr class="category-header">
+                  <th colspan="4">Semantische Elemente</th>
+                </tr>
+                <tr>
+                  <td>&lt;header&gt;</td>
+                  <td>Kopfbereich eines Dokuments</td>
+                  <td>&lt;header&gt;...&lt;/header&gt;</td>
+                  <td>Navigation, Titel</td>
+                </tr>
+                <tr>
+                  <td>&lt;nav&gt;</td>
+                  <td>Navigationsbereich</td>
+                  <td>&lt;nav&gt;...&lt;/nav&gt;</td>
+                  <td>Menü</td>
+                </tr>
+                <tr>
+                  <td>&lt;main&gt;</td>
+                  <td>Hauptinhalt</td>
+                  <td>&lt;main&gt;...&lt;/main&gt;</td>
+                  <td>Zentral</td>
+                </tr>
+                <tr>
+                  <td>&lt;article&gt;</td>
+                  <td>Eigenständiger Artikel</td>
+                  <td>&lt;article&gt;...&lt;/article&gt;</td>
+                  <td>Beitrag</td>
+                </tr>
+                <tr>
+                  <td>&lt;section&gt;</td>
+                  <td>Semantischer Abschnitt</td>
+                  <td>&lt;section&gt;...&lt;/section&gt;</td>
+                  <td>Inhalt</td>
+                </tr>
+                <tr>
+                  <td>&lt;aside&gt;</td>
+                  <td>Nebeninhalt</td>
+                  <td>&lt;aside&gt;...&lt;/aside&gt;</td>
+                  <td>Nebeninformation</td>
+                </tr>
+                <tr>
+                  <td>&lt;footer&gt;</td>
+                  <td>Fußbereich des Dokuments</td>
+                  <td>&lt;footer&gt;...&lt;/footer&gt;</td>
+                  <td>Abschluss</td>
+                </tr>
+                <tr>
+                  <td>&lt;figure&gt;</td>
+                  <td>Container für Medien und Beschriftung</td>
+                  <td>&lt;figure&gt;&lt;img src=\"bild.jpg\" alt=\"Beispiel\"&gt;&lt;figcaption&gt;Beschreibung&lt;/figcaption&gt;&lt;/figure&gt;</td>
+                  <td>Bild</td>
+                </tr>
+                <tr>
+                  <td>&lt;figcaption&gt;</td>
+                  <td>Beschriftung für ein figure</td>
+                  <td>&lt;figcaption&gt;Bildbeschreibung&lt;/figcaption&gt;</td>
+                  <td>Erklärung</td>
+                </tr>
+                <tr>
+                  <td>&lt;address&gt;</td>
+                  <td>Kontaktinformationen</td>
+                  <td>&lt;address&gt;Kontakt: ...&lt;/address&gt;</td>
+                  <td>Kontakt</td>
+                </tr>
+                <tr>
+                  <td>&lt;time&gt;</td>
+                  <td>Maschinenlesbare Zeit-/Datumsangabe</td>
+                  <td>&lt;time datetime=\"2021-12-31\"&gt;31.12.2021&lt;/time&gt;</td>
+                  <td>Zeitanzeige</td>
+                </tr>
+                
+                <!-- Kategorie 7: Scripting & Metainformationen (20 Tags) -->
+                <tr class="category-header">
+                  <th colspan="4">Scripting & Metainformationen</th>
+                </tr>
+                <tr>
+                  <td>&lt;script&gt;</td>
+                  <td>Bindet Skripte ein</td>
+                  <td>&lt;script src=\"app.js\"&gt;&lt;/script&gt;</td>
+                  <td>JavaScript</td>
+                </tr>
+                <tr>
+                  <td>&lt;noscript&gt;</td>
+                  <td>Alternative Inhalte bei deaktiviertem JS</td>
+                  <td>&lt;noscript&gt;JS nicht aktiviert&lt;/noscript&gt;</td>
+                  <td>Fallback</td>
+                </tr>
+                <tr>
+                  <td>&lt;template&gt;</td>
+                  <td>Unverarbeiteter Inhalt</td>
+                  <td>&lt;template&gt;...&lt;/template&gt;</td>
+                  <td>Vorlage</td>
+                </tr>
+                <tr>
+                  <td>&lt;!-- --&gt;</td>
+                  <td>HTML-Kommentar</td>
+                  <td>&lt;!-- Kommentar --&gt;</td>
+                  <td>Notiz</td>
+                </tr>
+                <tr>
+                  <td>&lt;!ENTITY&gt;</td>
+                  <td>Definiert benutzerdefinierte Entitäten</td>
+                  <td>&lt;!ENTITY copy \"©\"&gt;</td>
+                  <td>DTD</td>
+                </tr>
+                <tr>
+                  <td>&lt;!ATTLIST&gt;</td>
+                  <td>Definiert Attributlisten in DTD</td>
+                  <td>&lt;!ATTLIST tag attr CDATA #IMPLIED&gt;</td>
+                  <td>DTD</td></tr>
+                <tr>
+                  <td>&lt;!--#include --&gt;</td>
+                  <td>Server Side Include</td>
+                  <td>&lt;!--#include virtual=\"header.html\" --&gt;</td>
+                  <td>SSI</td></tr>
+                <tr>
+                  <td>&lt;!ELEMENT&gt;</td>
+                  <td>Definiert ein Element in DTD</td>
+                  <td>&lt;!ELEMENT note (to,from,heading,body)&gt;</td>
+                  <td>DTD</td></tr>
+                <tr>
+                  <td>&lt;![CDATA[...]]&gt;</td>
+                  <td>Unverarbeiteter Textblock</td>
+                  <td>&lt;![CDATA[<data>Text</data>]]&gt;</td>
+                  <td>Literal</td>
+                </tr>
+                <tr>
+                  <td>&lt;script type=\"module\"&gt;</td>
+                  <td>Modulare JavaScript-Einbindung</td>
+                  <td>&lt;script type=\"module\" src=\"mod.js\"&gt;&lt;/script&gt;</td>
+                  <td>ES6 Module</td>
+                </tr>
+                <tr>
+                  <td>&lt;link rel=\"import\"&gt;</td>
+                  <td>HTML-Import (veraltet)</td>
+                  <td>&lt;link rel=\"import\" href=\"component.html\"&gt;</td>
+                  <td>Web Components</td>
+                </tr>
+                <tr class="category-header">
+                  <th colspan="4">Obsolete / Deprecated</th>
+                </tr>
+                <tr>
+                  <td>&lt;font&gt;</td>
+                  <td>Definiert Schriftattribute (veraltet)</td>
+                  <td>&lt;font color=\"red\"&gt;Text&lt;/font&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;center&gt;</td>
+                  <td>Zentriert Inhalte (veraltet)</td>
+                  <td>&lt;center&gt;Text&lt;/center&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;big&gt;</td>
+                  <td>Erhöht Textgröße (veraltet)</td>
+                  <td>&lt;big&gt;Text&lt;/big&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;blink&gt;</td>
+                  <td>Lässt Text blinken (veraltet)</td>
+                  <td>&lt;blink&gt;Text&lt;/blink&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;marquee&gt;</td>
+                  <td>Lässt Text scrollen (veraltet)</td>
+                  <td>&lt;marquee&gt;Text&lt;/marquee&gt;</td>
+                  <td>Beweglich</td>
+                </tr>
+                <tr>
+                  <td>&lt;basefont&gt;</td>
+                  <td>Definiert Standard-Schriftattribute (veraltet)</td>
+                  <td>&lt;basefont size=\"3\" color=\"black\"&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;isindex&gt;</td>
+                  <td>Einzelnes Suchfeld (veraltet)</td>
+                  <td>&lt;isindex prompt=\"Search:\"&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;applet&gt;</td>
+                  <td>Bindet Java-Applets ein (veraltet)</td>
+                  <td>&lt;applet code=\"MyApplet.class\"&gt;&lt;/applet&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;dir&gt;</td>
+                  <td>Erstellt eine Directory-Liste (veraltet)</td>
+                  <td>&lt;dir&gt;...&lt;/dir&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr>
+                  <td>&lt;menu&gt;</td><td>Altes Menü-Element (veraltet)</td>
+                  <td>&lt;menu&gt;...&lt;/menu&gt;</td>
+                  <td>Veraltet</td>
+                </tr>
+                <tr class="category-header">
+                  <th colspan="4">Sonstiges</th>
+                </tr>
+                <tr>
+                  <td>&lt;abbr&gt;</td>
+                  <td>Abkürzung mit Erklärung</td>
+                  <td>&lt;abbr title=\"Hypertext Markup Language\"&gt;HTML&lt;/abbr&gt;</td>
+                  <td>Info</td>
+                </tr>
+                <tr>
+                  <td>&lt;cite&gt;</td>
+                  <td>Zitiert einen Titel</td>
+                  <td>&lt;cite&gt;Quelle&lt;/cite&gt;</td>
+                  <td>Referenz</td>
+                </tr>
+                <tr>
+                  <td>&lt;dfn&gt;</td>
+                  <td>Definiert einen Begriff</td>
+                  <td>&lt;dfn&gt;Definition&lt;/dfn&gt;</td>
+                  <td>Glossar</td>
+                </tr>
+                <tr>
+                  <td>&lt;var&gt;</td>
+                  <td>Zeigt Variablen an</td>
+                  <td>&lt;var&gt;x&lt;/var&gt;</td>
+                  <td>Mathematik</td>
+                </tr>
+                <tr>
+                  <td>&lt;samp&gt;</td>
+                  <td>Beispielausgabe</td>
+                  <td>&lt;samp&gt;Ausgabe&lt;/samp&gt;</td>
+                  <td>Output</td>
+                </tr>
+                <tr>
+                  <td>&lt;ins&gt;</td>
+                  <td>Markiert eingefügten Text</td>
+                  <td>&lt;ins&gt;neu&lt;/ins&gt;</td>
+                  <td>Änderung</td>
+                </tr>
+                <tr>
+                  <td>&lt;del&gt;</td>
+                  <td>Markiert entfernten Text</td>
+                  <td>&lt;del&gt;alt&lt;/del&gt;</td>
+                  <td>Entfernt</td>
+                </tr>
+                <tr>
+                  <td>&lt;wbr&gt;</td>
+                  <td>Ermöglicht Zeilenumbruch</td>
+                  <td>&lt;wbr&gt;</td>
+                  <td>Trennzeichen</td></tr>    
+                <tr class="category-header">
+                  <th colspan="4">Erweiterte / Moderne Elemente</th>
+                </tr>
+                <tr>
+                  <td>&lt;article&gt;</td>
+                  <td>Eigenständiger Artikel</td>
+                  <td>&lt;article&gt;Inhalt&lt;/article&gt;</td>
+                  <td>Strukturiert</td>
+                </tr>
+                <tr>
+                  <td>&lt;section&gt;</td>
+                  <td>Thematisch gruppierter Abschnitt</td>
+                  <td>&lt;section&gt;Abschnitt&lt;/section&gt;</td>
+                  <td>Gliederung</td>
+                </tr>
+                <tr>
+                  <td>&lt;aside&gt;</td>
+                  <td>Nebeninhalt</td>
+                  <td>&lt;aside&gt;Nebeninfo&lt;/aside&gt;</td>
+                  <td>Zusatzinfo</td>
+                </tr>
+                <tr>
+                  <td>&lt;header&gt;</td>
+                  <td>Kopfbereich</td>
+                  <td>&lt;header&gt;Kopf&lt;/header&gt;</td>
+                  <td>Überschrift</td>
+                </tr>
+                <tr>
+                  <td>&lt;footer&gt;</td>
+                  <td>Fußbereich</td>
+                  <td>&lt;footer&gt;Footer&lt;/footer&gt;</td>
+                  <td>Ende</td>
+                </tr>
+                <tr>
+                  <td>&lt;main&gt;</td>
+                  <td>Zentraler Inhaltsbereich</td>
+                  <td>&lt;main&gt;Hauptinhalt&lt;/main&gt;</td>
+                  <td>Fokus</td>
+                </tr>
+                <tr>
+                  <td>&lt;figure&gt;</td>
+                  <td>Container für Medien und Beschriftungen</td>
+                  <td>&lt;figure&gt;&lt;img src=\"bild.jpg\" alt=\"Beispiel\"&gt;&lt;figcaption&gt;Beschreibung&lt;/figcaption&gt;&lt;/figure&gt;</td>
+                  <td>Visuell</td>
+                </tr>
+                <tr>
+                  <td>&lt;figcaption&gt;</td>
+                  <td>Beschriftung für ein figure</td>
+                  <td>&lt;figcaption&gt;Bildbeschreibung&lt;/figcaption&gt;</td>
+                  <td>Erklärung</td>
+                </tr>
+                <tr>
+                  <td>&lt;details&gt;</td>
+                  <td>Ausklappbarer Bereich</td>
+                  <td>&lt;details&gt;&lt;summary&gt;Mehr&lt;/summary&gt;Inhalt&lt;/details&gt;</td>
+                  <td>Interaktiv</td>
+                </tr>
+                <tr>
+                  <td>&lt;summary&gt;</td>
+                  <td>Überschrift für details</td>
+                  <td>&lt;summary&gt;Details&lt;/summary&gt;</td>
+                  <td>Zusammenfassung</td>
+                </tr>
+                <tr>
+                  <td>&lt;dialog&gt;</td>
+                  <td>Modaler Dialog</td>
+                  <td>&lt;dialog&gt;Inhalt&lt;/dialog&gt;</td>
+                  <td>Interaktiv</td>
+                </tr>
+                <tr>
+                  <td>&lt;menu&gt;</td>
+                  <td>Kontextmenü</td>
+                  <td>&lt;menu&gt;&lt;li&gt;Eintrag&lt;/li&gt;&lt;/menu&gt;</td>
+                  <td>Navigation</td>
+                </tr>
+                <tr>
+                  <td>&lt;menuitem&gt;</td>
+                  <td>Eintrag in einem Menü</td>
+                  <td>&lt;menuitem label=\"Option\"&gt;</td>
+                  <td>Option</td>
+                </tr>
+                
+                <!-- Kategorie 11: Sonstiges (20 Tags) -->      
+                <tr class="category-header">
+                  <th colspan="4">Sonstiges</th>
+                </tr>
+                <tr>
+                  <td>&lt;ins&gt;</td>
+                  <td>Markiert eingefügten Text</td>
+                  <td>&lt;ins&gt;neu&lt;/ins&gt;</td>
+                  <td>Änderung</td>
+                </tr>
+                <tr>
+                  <td>&lt;del&gt;</td>
+                  <td>Markiert gelöschten Text</td>
+                  <td>&lt;del&gt;alt&lt;/del&gt;</td>
+                  <td>Entfernt</td>
+                </tr>
+                <tr>
+                  <td>&lt;abbr&gt;</td>
+                  <td>Abkürzung mit Erklärung</td>
+                  <td>&lt;abbr title=\"Hypertext Markup Language\"&gt;HTML&lt;/abbr&gt;</td>
+                  <td>Erklärung</td>
+                </tr>
+                <tr>
+                  <td>&lt;cite&gt;</td>
+                  <td>Zitiert einen Titel</td>
+                  <td>&lt;cite&gt;Quelle&lt;/cite&gt;</td>
+                  <td>Referenz</td>
+                </tr>
+                <tr>
+                  <td>&lt;dfn&gt;</td>
+                  <td>Definiert einen Begriff</td>
+                  <td>&lt;dfn&gt;Definition&lt;/dfn&gt;</td>
+                  <td>Glossar</td>
+                </tr>
+                <tr>
+                  <td>&lt;var&gt;</td>
+                  <td>Zeigt Variablen an</td>
+                  <td>&lt;var&gt;x&lt;/var&gt;</td>
+                  <td>Mathematik</td>
+                </tr>
+                <tr>
+                  <td>&lt;samp&gt;</td>
+                  <td>Beispielausgabe</td>
+                  <td>&lt;samp&gt;Output&lt;/samp&gt;</td>
+                  <td>Ergebnis</td>
+                </tr>
+                <tr>
+                  <td>&lt;kbd&gt;</td>
+                  <td>Repräsentiert Tastatureingaben</td>
+                  td>&lt;kbd&gt;Enter&lt;/kbd&gt;</td>
+                  <td>Interaktion</td>
+                </tr>
+                <tr>
+                  <td>&lt;small&gt;</td>
+                  <td>Verkleinert den Text</td>
+                  <td>&lt;small&gt;klein&lt;/small&gt;</td>
+                  <td>Formatierung</td>
+                </tr>
+                <tr>
+                  <td>&lt;big&gt;</td>
+                  <td>Erhöht den Text</td>
+                  <td>&lt;big&gt;groß&lt;/big&gt;</td>
+                  <td>Formatierung</td>
+                </tr>
+                <tr>
+                  <td>&lt;u&gt;</td>
+                  <td>Unterstreicht den Text</td>
+                  <td>&lt;u&gt;Text&lt;/u&gt;</td>
+                  <td>Optisch</td>
+                </tr>
+                <tr>
+                  <td>&lt;bdi&gt;</td>
+                  <td>Isoliert bidirektionalen Text</td>
+                  <td>&lt;bdi&gt;Text&lt;/bdi&gt;</td>
+                  <td>Textfluss</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+        <p>Beschreibung ...</p>
+      </section>
+      <section class="CSS">
+        <h2>CSS</h2>
+        <button id="btn-elearn-css">E-BookLearn CSS</button>
+        <!-- Geändert: Funktionsname und ID angepasst ('css-table') -->
+        <button class="btn-table" onclick="btnTable('css-table')">
+          Show Table
+        </button>
+        <div class="table-box">
+          <table class="javascript-table unique-table expanded" id="css-table">
+          <thead>
+            <tr>
+              <th colspan="4">CSS Eigenschaften Übersicht</th>
+            </tr>
+            <tr>
+              <th>Eigenschaft</th>
+              <th>Beschreibung</th>
+              <th>Beispiel</th>
+              <th>Notion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="category-header">
+              <th colspan="4">Grundlagen</th>
+            </tr>
+            <tr>
+              <td>color</td>#
+              <td>Legt die Textfarbe fest</td>
+              <td>color: red;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>background-color</td>
+              <td>Legt die Hintergrundfarbe fest</td>
+              <td>background-color: blue;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>background</td>
+              <td>Shorthand für Hintergrund</td>
+              <td>background: #fff url('img.jpg') no-repeat;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>border</td>
+              <td>Definiert einen Rahmen</td>
+              <td>border: 1px solid black;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>margin</td>
+              <td>Außenabstand</td>
+              <td>margin: 10px;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>padding</td>
+              <td>Innenabstand</td>
+              <td>padding: 15px;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>Elementbreite</td>
+              <td>width: 100px;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>Elementhöhe</td>
+              <td>height: 200px;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>display</td>
+              <td>Anzeigeformat</td>
+              <td>display: block;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>position</td>
+              <td>Positionierung</td>
+              <td>position: relative;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>top</td>
+              <td>Obere Position</td>
+              <td>top: 10px;</td>
+              <td>Grundlagen</td></tr>
+            <tr>
+              <td>right</td>
+              <td>Rechte Position</td>
+              <td>right: 10px;</td>
+              <td>Grundlagen</td></tr>
+            <tr>
+              <td>bottom</td>
+              <td>Untere Position</td>
+              <td>bottom: 10px;</td>
+              <td>Grundlagen</td></tr>
+            <tr>
+              <td>left</td>
+              <td>Linke Position</td>
+              <td>left: 10px;</td>
+              <td>Grundlagen</td></tr>
+            <tr>
+              <td>overflow</td>
+              <td>Überlaufverhalten</td>
+              <td>overflow: hidden;</td>
+              <td>Grundlagen</td></tr>
+            <tr>
+              <td>visibility</td>
+              <td>Sichtbarkeit</td>
+              <td>visibility: visible;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>opacity</td>
+              <td>Transparenz</td>
+              <td>opacity: 0.8;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr>
+              <td>background-repeat</td>
+              <td>Wiederholungsverhalten</td>
+              <td>background-repeat: no-repeat;</td>
+              <td>Grundlagen</td></tr>
+            <tr>
+              <td>background-size</td>
+              <td>Anpassung des Hintergrunds</td>
+              <td>background-size: cover;</td>
+              <td>Grundlagen</td></tr>
+            <tr>
+              <td>background-position</td>
+              <td>Positionierung des Hintergrunds</td>
+              <td>background-position: center;</td>
+              <td>Grundlagen</td>
+            </tr>
+            <tr class="category-header">
+              <th colspan="4">Box-Modell & Layout</th>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>Breite eines Elements</td>
+              <td>width: 100px;</td>
+              <td>Größe</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>Höhe eines Elements</td>
+              <td>height: 200px;</td>
+              <td>Größe</td>
+            </tr>
+            <tr>
+              <td>max-width</td>
+              <td>Maximale Breite</td>
+              <td>max-width: 500px;</td>
+              <td>Begrenzung</td>
+            </tr>
+            <tr>
+              <td>max-height</td>
+              <td>Maximale Höhe</td>
+              <td>max-height: 300px;</td>
+              <td>Begrenzung</td>
+            </tr>
+            <tr>
+              <td>min-width</td>
+              <td>Minimale Breite</td>
+              <td>min-width: 200px;</td>
+              <td>Begrenzung</td>
+            </tr>
+            <tr>
+              <td>min-height</td>
+              <td>Minimale Höhe</td>
+              <td>min-height: 100px;</td>
+              <td>Begrenzung</td>
+            </tr>
+            <tr>
+              <td>margin</td>
+              <td>Außenabstand</td>
+              <td>margin: 10px;</td>
+              <td>Abstand</td>
+            </tr>
+            <tr>
+              <td>padding</td>
+              <td>Innenabstand</td>
+              <td>padding: 20px;</td>
+              <td>Abstand</td>
+            </tr>
+            <tr>
+              <td>border</td>
+              <td>Rahmen</td>
+              <td>border: 1px solid black;</td>
+              <td>Rahmen</td>
+            </tr>
+            <tr>
+              <td>border-radius</td>
+              <td>Eckenabrundung</td>
+              <td>border-radius: 10px;</td>
+              <td>Abrundung</td>
+            </tr>
+            <tr>
+              <td>box-shadow</td>
+              <td>Schattierung</td>
+              <td>box-shadow: 2px 2px 5px gray;</td>
+              <td>Schatten</td></tr>
+            <tr>
+              <td>display</td>
+              <td>Anzeigetyp</td>
+              <td>display: flex;</td>
+              <td>Layout</td></tr>
+            <tr>
+              <td>position</td>
+              <td>Positionierung</td>
+              <td>position: absolute;</td>
+              <td>Ausrichtung</td>
+            </tr>
+            <tr>
+              <td>top</td>
+              <td>Obere Position</td>
+              <td>top: 10px;</td>
+              <td>Platzierung</td>
+            </tr>
+            <tr>
+              <td>left</td>
+              <td>Linke Position</td>
+              <td>left: 20px;</td>
+              <td>Platzierung</td>
+            </tr>
+            <tr>
+              <td>z-index</td>
+              <td>Stapelreihenfolge</td>
+              <td>z-index: 999;</td>
+              <td>Schichtung</td>
+            </tr>
+            <tr>
+              <td>overflow</td>
+              <td>Überlauf-Verhalten</td>
+              <td>overflow: hidden;</td>
+              <td>Verstecken</td>
+            </tr>
+            <tr>
+              <td>clip-path</td>
+              <td>Ausschneidebereich</td>
+              <td>clip-path: circle(50%);</td>
+              <td>Maskierung</td>
+            </tr>
+            <tr>
+              <td>object-fit</td>
+              <td>Skalierung von Bildern</td>
+              <td>object-fit: cover;</td>
+              <td>Bildanpassung</td>
+            </tr>
+            <tr class="category-header"><th colspan="4">Text & Schrift</th>
+            </tr>
+            <tr>
+              <td>font-size</td>
+              <td>Schriftgröße</td>
+              <td>font-size: 16px;</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td>font-family</td>
+              <td>Schriftart</td>
+              <td>font-family: Arial, sans-serif;</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td>font-weight</td>
+              <td>Schriftstärke</td>
+              <td>font-weight: bold;</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td>font-style</td>
+              <td>Schriftstil (z.B. italic)</td>
+              <td>font-style: italic;</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td>text-align</td>
+              <td>Textausrichtung</td>
+              <td>text-align: center;</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td>text-decoration</td>
+              <td>Textdekoration (z.B. underline)</td>
+              <td>text-decoration: underline;</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td>text-transform</td>
+              <td>Textumwandlung (uppercase, lowercase)</td>
+              <td>text-transform: uppercase;</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td>line-height</td>
+              <td>Zeilenhöhe</td>
+              <td>line-height: 1.5;</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+            <td>letter-spacing</td>
+            <td>Buchstabenabstand</td>
+            <td>letter-spacing: 2px;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>word-spacing</td>
+            <td>Wortabstand</td>
+            <td>word-spacing: 5px;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>white-space</td>
+            <td>Umbruchverhalten</td>
+            <td>white-space: nowrap;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>text-shadow</td>
+            <td>Textschatten</td>
+            <td>text-shadow: 1px 1px 2px gray;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>text-overflow</td>
+            <td>Überlauf des Textes</td>
+            <td>text-overflow: ellipsis;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>text-indent</td>
+            <td>Einzug der ersten Zeile</td>
+            <td>text-indent: 20px;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>vertical-align</td>
+            <td>Vertikale Ausrichtung von Inline-Elementen</td>
+            <td>vertical-align: middle;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>direction</td>
+            <td>Schriftfluss (ltr, rtl)</td>
+            <td>direction: ltr;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>unicode-bidi</td>
+            <td>Kontrolliert den bidirektionalen Textfluss</td>
+            <td>unicode-bidi: isolate;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>font-variant</td>
+            <td>Schriftvarianten (z.B. small-caps)</td>
+            <td>font-variant: small-caps;</td>
+            <td>Text</td>
+            </tr>
+            <tr>
+            <td>font-stretch</td>
+            <td>Verändert die Breite der Schrift</td>
+            <td>font-stretch: condensed;</td>
+            <td>Text</td>
+            </tr><tr>
+            <td>text-rendering</td>
+            <td>Optimiert die Textdarstellung</td>
+            <td>text-rendering: optimizeLegibility;</td>
+            <td>Text</td>
+            </tr>          
+            <tr class=\"category-header\">
+            <th colspan=\"4\">Box-Modell & Layout</th>
+            </tr>
+            <tr>
+            <td>box-sizing</td>
+            <td>Inklusive Padding & Border in der Breitenberechnung</td>
+            <td>box-sizing: border-box;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>border-collapse</td>
+            <td>Zusammenfassen von Tabellenrahmen</td>
+            <td>border-collapse: collapse;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>border-spacing</td>
+            <td>Abstand zwischen Zellen</td>
+            <td>border-spacing: 5px;</td>
+            <td>Layout</td>
+            </tr>          
+            <tr>
+            <td>outline</td>
+            <td>Rahmen, der den Layoutfluss nicht beeinflusst</td>
+            <td>outline: 2px solid blue;</td>
+            <td>Layout</td></tr>
+            <tr>
+            <td>outline-offset</td>
+            <td>Abstand des Outlines</td>
+            <td>outline-offset: 4px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>clip-path</td>
+            <td>Definiert einen Ausschnittbereich</td>
+            <td>clip-path: circle(50%);</td>
+            <td>Layout</td>
+            </tr>         
+            <tr>
+            <td>overflow-x</td>
+            <td>Horizontales Überlaufen</td>
+            <td>overflow-x: auto;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>overflow-y</td>
+            <td>Vertikales Überlaufen</td>
+            <td>overflow-y: auto;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>margin-top</td>
+            <td>Oberer Außenabstand</td>
+            <td>margin-top: 10px;</td>
+            <td>Layout</td>
+            </tr>         
+            <tr>
+            <td>margin-right</td>
+            <td>Rechter Außenabstand</td>
+            <td>margin-right: 10px;</td>
+            <td>Layout</td></tr>          
+            <tr>
+            <td>margin-bottom</td>
+            <td>Unterer Außenabstand</td>
+            <td>margin-bottom: 10px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>margin-left</td>
+            <td>Linker Außenabstand</td>
+            <td>margin-left: 10px;</td>
+            <td>Layout</td>
+            </tr>          
+            <tr>
+            <td>padding-top</td>
+            <td>Oberer Innenabstand</td>
+            <td>padding-top: 5px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>padding-right</td>
+            <td>Rechter Innenabstand</td>
+            <td>padding-right: 5px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>padding-bottom</td>
+            <td>Unterer Innenabstand</td>
+            <td>padding-bottom: 5px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>padding-left</td>
+            <td>Linker Innenabstand</td>
+            <td>padding-left: 5px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>min-width</td>
+            <td>Minimale Breite</td>
+            <td>min-width: 200px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>max-width</td>
+            <td>Maximale Breite</td>
+            <td>max-width: 1200px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr>
+            <td>min-height</td>
+            <td>Minimale Höhe</td>
+            <td>min-height: 100px;</td>
+            <td>Layout</td>
+            </tr>
+            <tr class=\"category-header\">
+            <th colspan=\"4\">Flexbox</th>
+            </tr>
+            <tr>
+            <td>display</td>
+            <td>Aktiviert Flexbox</td>
+            <td>display: flex;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>flex-direction</td>
+            <td>Richtung der Flex-Items</td>
+            <td>flex-direction: row;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>flex-wrap</td>
+            <td>Erlaubt Umbruch in Flexbox</td>
+            <td>flex-wrap: wrap;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>justify-content</td>
+            <td>Ausrichtung entlang der Hauptachse</td>
+            <td>justify-content: center;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>align-items</td>
+            <td>Ausrichtung entlang der Querachse</td>
+            <td>align-items: center;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>align-content</td>
+            <td>Ausrichtung mehrerer Zeilen</td>
+            <td>align-content: space-between;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>flex-grow</td>
+            <td>Wachstumsfaktor der Items</td>
+            <td>flex-grow: 1;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>flex-shrink</td>
+            <td>Schrumpffaktor der Items</td>
+            <td>flex-shrink: 1;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>flex-basis</td>
+            <td>Grundgröße der Items</td>
+            <td>flex-basis: 100px;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>order</td>
+            <td>Sortierreihenfolge</td>
+            <td>order: 2;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>align-self</td>
+            <td>Individuelle Ausrichtung eines Items</td>
+            <td>align-self: flex-start;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>gap</td>
+            <td>Abstand zwischen Items</td>
+            <td>gap: 10px;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>row-gap</td>
+            <td>Zeilenabstand</td>
+            <td>row-gap: 5px;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr>
+            <td>column-gap</td>
+            <td>Spaltenabstand</td>
+            <td>column-gap: 5px;</td>
+            <td>Flexbox</td>
+            </tr>
+            <tr class=\"category-header\">
+            <th colspan=\"4\">Grid</th>
+            </tr>
+            <tr>
+            <td>display</td>
+            <td>Aktiviert Grid Layout</td>
+            <td>display: grid;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>grid-template-columns</td>
+            <td>Definiert Spalten</td>
+            <td>grid-template-columns: 1fr 1fr;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>grid-template-rows</td>
+            <td>Definiert Zeilen</td>
+            <td>grid-template-rows: auto;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>grid-gap</td>
+            <td>Abstand zwischen Zellen</td>
+            <td>grid-gap: 10px;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>grid-row</td>
+            <td>Positionierung in Zeilen</td>
+            <td>grid-row: 1 / 3;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>grid-column</td>
+            <td>Positionierung in Spalten</td>
+            <td>grid-column: 2 / span 2;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>grid-auto-rows</td>
+            <td>Automatische Zeilenhöhe</td>
+            <td>grid-auto-rows: minmax(100px, auto);</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>grid-auto-columns</td>
+            <td>Automatische Spaltenbreite</td>
+            <td>grid-auto-columns: minmax(50px, auto);</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>justify-items</td>
+            <td>Horizontale Ausrichtung der Items</td>
+            <td>justify-items: center;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>align-items</td>
+            <td>Vertikale Ausrichtung der Items</td>
+            <td>align-items: center;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>justify-content</td>
+            <td>Horizontale Ausrichtung des Rasters</td>
+            <td>justify-content: space-around;</td>
+            <td>Grid</td>
+            </tr>
+            <tr>
+            <td>align-content</td>
+            <td>Vertikale Ausrichtung des Rasters</td>
+            <td>align-content: space-between;</td>
+            <td>Grid</td>
+            </tr>
+            <tr class=\"category-header\">
+            <th colspan=\"4\">Animation & Übergänge</th>
+            </tr>
+            <tr>
+            <td>animation-name</td>
+            <td>Name der Animation</td>
+            <td>animation-name: slide;</td>
+            <td>Animation</td>
+            </tr>
+            <tr>
+            <td>animation-duration</td>
+            <td>Dauer der Animation</td>
+            <td>animation-duration: 2s;</td>
+            <td>Animation</td>
+            </tr>
+            <tr>
+            <td>animation-timing-function</td>
+            <td>Geschwindigkeitskurve</td>
+            <td>animation-timing-function: ease;</td>
+            <td>Animation</td>
+            </tr>
+            <tr>
+            <td>animation-delay</td>
+            <td>Verzögerung des Starts</td>
+            <td>animation-delay: 1s;</td>
+            <td>Animation</td>
+            </tr>
+            <tr>
+            <td>animation-iteration-count</td>
+            <td>Wiederholungen</td>
+            <td>animation-iteration-count: infinite;</td>
+            <td>Animation</td>
+            </tr>
+            <tr>
+            <td>animation-fill-mode</td>
+            <td>Endzustand der Animation</td>
+            <td>animation-fill-mode: forwards;</td>
+            <td>Animation</td>
+            </tr>
+            <tr>
+            <td>transition-property</td>
+            <td>Welche Eigenschaft wird animiert</td>
+            <td>transition-property: all;</td>
+            <td>Übergang</td>
+            </tr>
+            <tr>
+            <td>transition-duration</td>
+            <td>Dauer des Übergangs</td>
+            <td>transition-duration: 0.5s;</td>
+            <td>Übergang</td>
+            </tr>
+            <tr>
+            <td>transition-timing-function</td>
+            <td>Kurve des Übergangs</td>
+            <td>transition-timing-function: linear;</td>
+            <td>Übergang</td>
+            </tr>
+            <tr>
+            <td>transition-delay</td>
+            <td>Verzögerung des Übergangs</td>
+            <td>transition-delay: 0.2s;</td>
+            <td>Übergang</td>
+            </tr>
+            <tr>
+            <td>transform</td>
+            <td>Transformation eines Elements</td>
+            <td>transform: rotate(45deg);</td>
+            <td>Übergang</td>
+            </tr>
+            <tr>
+            <td>transform-origin</td>
+            <td>Ursprung der Transformation</td>
+            <td>transform-origin: center;</td>
+            <td>Übergang</td>
+            </tr>
+            <tr class=\"category-header\">
+            <th colspan=\"4\">Pseudo-Klassen & -Elemente</th>
+            </tr>
+            <tr>
+            <td>:hover</td>
+            <td>Stil bei Maus-Hover</td>
+            <td>a:hover { color: blue; }</td>
+            <td>Pseudo</td>
+            </tr>
+            <tr>
+            <td>:active</td>
+            <td>Stil während Aktivierung</td>
+            <td>button:active { background: gray; }</td>
+            <td>Pseudo</td>
+            </tr>
+            <tr>
+            <td>:focus</td>
+            <td>Stil beim Fokussieren</td>
+            <td>input:focus { border-color: green; }</td>
+            <td>Pseudo</td>
+            </tr>
+            <tr>
+            <td>:visited</td>
+            <td>Stil für besuchte Links</td>
+            <td>a:visited { color: purple; }</td>
+            <td>Pseudo</td>
+            </tr>
+            <tr>
+            <td>:first-child</td>
+            <td>Erstes Kind</td>
+            <td>li:first-child { font-weight: bold; }</td>
+            <td>Pseudo</td>
+            </tr>\          
+            <tr>
+            <td>:last-child</td>
+            <td>Letztes Kind</td>
+            <td>li:last-child { color: red; }</td>
+            <td>Pseudo</td>
+            </tr>
+            <tr>
+            <td>:nth-child(n)</td>
+            <td>Bestimmte Kinder</td>
+            <td>tr:nth-child(odd) { background: #eee; }</td>
+            <td>Pseudo</td>
+            </tr>          
+            <tr>
+            <td>:nth-of-type(n)</td>
+            <td>Bestimmte Elemente desselben Typs</td>
+            <td>p:nth-of-type(2) { font-style: italic; }</td>
+            <td>Pseudo</td>
+            </tr>          
+            <tr>
+            <td>:not()</td>
+            <td>Schließt Elemente aus</td>
+            <td>div:not(.active) { opacity: 0.5; }</td>
+            <td>Pseudo</td>
+            </tr>          
+            <tr>
+            <td>::before</td>
+            <td>Inhalt vor einem Element</td>
+            <td>p::before { content: \"➤ \"; }</td>
+            <td>Pseudo-Element</td>
+            </tr>        
+            <tr>
+            <td>::after</td>
+            <td>Inhalt nach einem Element</td>
+            <td>p::after { content: \" ←\"; }</td>
+            <td>Pseudo-Element</td>
+            </tr>
+            <tr class=\"category-header\">
+            <th colspan=\"4\">Responsive & Media Queries</th>
+            </tr>        
+            <tr>
+            <td>@media</td>
+            <td>Regeln für bestimmte Geräte</td>
+            <td>@media screen and (max-width:600px) { ... }</td>
+            <td>Responsive</td>
+            </tr>
+            <tr>
+            <td>min-width</td>
+            <td>Minimale Breite</td>
+            <td>min-width: 320px;</td>
+            <td>Responsive</td></tr>
+            <tr>
+            <td>max-width</td>
+            <td>Maximale Breite</td>
+            <td>max-width: 1200px;</td>
+            <td>Responsive</td>
+            </tr>        
+            <tr>
+            <td>vw</td>
+            <td>Viewport-Breite</td>
+            <td>width: 50vw;</td>
+            <td>Responsive</td>
+            </tr>          
+            <tr>
+            <td>vh</td>
+            <td>Viewport-Höhe</td>
+            <td>height: 100vh;</td>
+            <td>Responsive</td>
+            </tr>          
+            <tr>
+            <td>vmin</td>
+            <td>Minimale Viewport-Einheit</td>
+            <td>width: 10vmin;</td>
+            <td>Responsive</td>
+            </tr>
+            <tr>
+            <td>vmax</td>
+            <td>Maximale Viewport-Einheit</td>
+            <td>width: 10vmax;</td>
+            <td>Responsive</td>
+            </tr>         
+            <tr>
+            <td>@import</td>
+            <td>Importiert Stylesheets</td>
+            <td>@import url('style.css') screen;</td>
+            <td>Responsive</td>
+            </tr>
+            <tr>
+            <td>@supports</td>
+            <td>Feature Query</td>
+            <td>@supports (display: grid) { ... }</td>
+            <td>Responsive</td>
+            </tr>          
+            <tr>
+            <td>calc()</td>
+            <td>Berechnet Werte dynamisch</td>
+            <td>width: calc(100% - 20px);</td>
+            <td>Responsive</td>
+            </tr>   
+            <tr class=\"category-header\">
+            <th colspan=\"4\">Effekte & Filter</th>
+            </tr>
+            <tr>
+            <td>box-shadow</td>
+            <td>Erzeugt einen Schatten</td>
+            <td>box-shadow: 2px 2px 5px gray;</td>
+            <td>Effekte</td>
+            </tr>         
+            <tr>
+            <td>text-shadow</td>
+            <td>Erzeugt einen Schatten für Text</td>
+            <td>text-shadow: 1px 1px 2px black;</td>
+            <td>Effekte</td>
+            </tr>
+            <tr>
+            <td>filter</td>
+            <td>Wendet visuelle Effekte an</td>
+            <td>filter: blur(5px);</td>
+            <td>Effekte</td>
+            </tr>          
+            <tr>
+            <td>backdrop-filter</td>
+            <td>Wendet Effekte auf den Hintergrund an</td>
+            <td>backdrop-filter: brightness(0.8);</td>
+            <td>Effekte</td>
+            </tr>          
+            <tr>
+            <td>transition</td>
+            <td>Definiert Übergangseffekte</td>
+            <td>transition: all 0.3s ease;</td>
+            <td>Effekte</td>
+            </tr>
+            <tr><td>transform</td>
+            <td>Wendet Transformationen an</td>
+            <td>transform: rotate(45deg);</td>
+            <td>Effekte</td>
+            </tr>
+            <tr>
+            <td>transform-origin</td>
+            <td>Ursprung der Transformation</td>
+            <td>transform-origin: center;</td>
+            <td>Effekte</td>
+            </tr>
+            <tr>
+            <td>animation</td>
+            <td>Shorthand für Animationen</td>
+            <td>animation: fade 2s infinite;</td>
+            <td>Effekte</td>
+            </tr>          
+            <tr>
+            <td>animation-delay</td>
+            <td>Verzögert den Start</td>
+            <td>animation-delay: 1s;</td>
+            <td>Effekte</td>
+            </tr>          
+            <tr>
+            <td>animation-duration</td>
+            <td>Dauer der Animation</td>
+            <td>animation-duration: 2s;</td>
+            <td>Effekte</td>
+            </tr>
+            <tr>
+            <td>animation-fill-mode</td>
+            <td>Definiert den Endzustand</td>
+            <td>animation-fill-mode: forwards;</td>
+            <td>Effekte</td>
+            </tr>   
+            <tr class=\"category-header\">
+            <th colspan=\"4\">Sonstiges</th>
+            </tr>         
+            <tr>
+            <td>cursor</td>
+            <td>Legt den Mauszeiger fest</td>
+            <td>cursor: pointer;</td>
+            <td>Sonstiges</td>
+            </tr>          
+            <tr>
+            <td>
+            </td>
+            <td>Rahmen, der den Layoutfluss nicht beeinflusst</td>
+            <td>outline: 2px solid blue;</td>
+            <td>Sonstiges</td>
+            </tr>          
+            <tr>
+            <td>outline-offset</td>
+            <td>Abstand des Outlines</td>
+            <td>outline-offset: 4px;</td>
+            <td>Sonstiges</td>
+            </tr>          
+            <tr>
+            <td>transition</td>
+            <td>Übergangseffekte</td>
+            <td>transition: all 0.5s;</td>
+            <td>Sonstiges</td>
+            </tr>          
+            <tr>
+            <td>will-change</td>
+            <td>Optimiert Performance für sich ändernde Eigenschaften</td>
+            <td>will-change: opacity;</td>
+            <td>Sonstiges</td>
+            </tr>          
+            <tr>
+            <td>clip</td>
+            <td>Schneidet einen Bereich ab (veraltet)</td>
+            <td>clip: rect(0,0,0,0);</td>
+            <td>Sonstiges</td>
+            </tr>          
+            <tr>
+            <td>counter-reset</td>
+            <td>Setzt einen Zähler zurück</td>
+            <td>counter-reset: section;</td>
+            <td>Sonstiges</td>
+            </tr>          
+            <tr>
+            <td>counter-increment</td>
+            <td>Erhöht einen Zähler</td>
+            <td>counter-increment: section;</td>
+            <td>Sonstiges</td>
+            </tr>         
+            <tr>
+            <td>content</td>
+            <td>Definiert Inhalt in Pseudo-Elementen</td>
+            <td>content: \"Hello\";</td>
+            <td>Sonstiges</td>
+            </tr>          
+            <tr>
+            <td>font-smoothing</td>
+            <td>Verbessert die Schriftglättung</td>
+            <td>-webkit-font-smoothing: antialiased;</td>
+            <td>Sonstiges</td>
+            </tr>
+            <tr>
+            <td>appearance</td>
+            <td>Standardisiert das Aussehen eines Elements</td>
+            <td>appearance: none;</td>
+            <td>Sonstiges</td>
+            </tr>
+      
+          </tbody>
+          </table>
+        </div>
+        <p>Beschreibung ...</p>
+      </section>
+      <section class="JavaScript">
+        <h2>JavaScript</h2>
+        <Button id="btn-learn-js">E-LearBook JS</Button>
+        <!-- Geändert: Funktionsname und ID angepasst ('js-table') -->
+        <button class="btn-table" onclick="btnTable('js-table')">
+          Show Table
+        </button>
+        <div class="table-box">
+          <table class="javascript-table unique-table expanded" id="js-table">
+            <thead>
+              <tr>
+                <th colspan="6">Kategorien von JavaScript-Tags</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="6">Grundlegende JavaScript-Tags</th>
+              </tr>
+              <tr>
+                <td>
+                  &lt;script&gt; - Definiert ein Skript-Element zum Einfügen von
+                  JavaScript-Code.
+                </td>
+                <td>
+                  &lt;noscript&gt; - Gibt an, dass der Inhalt nur angezeigt
+                  wird, wenn JavaScript deaktiviert ist.
+                </td>
+                <td>
+                  &lt;link&gt; - Stellt eine Verbindung zu externen Ressourcen,
+                  wie z. B. Stylesheets oder Skripten, her.
+                </td>
+                <td>
+                  &lt;style&gt; - Definiert eingebettete CSS-Styles im
+                  HTML-Dokument.
+                </td>
+                <td>
+                  &lt;meta&gt; - Definiert Metadaten wie Charset und
+                  Viewport-Informationen.
+                </td>
+                <td>
+                  &lt;head&gt; - Enthält Meta-Informationen, Links und Skripte,
+                  jedoch keinen sichtbaren Inhalt.
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="6">Ereignisse und Interaktivität</th>
+              </tr>
+              <tr>
+                <td>
+                  addEventListener() - Fügt ein Event-Listener zu einem Element
+                  hinzu.
+                </td>
+                <td>
+                  alert() - Zeigt ein modales Dialogfeld mit einer Nachricht an.
+                </td>
+                <td>
+                  confirm() - Zeigt ein modales Dialogfeld mit einer
+                  Bestätigungsmeldung an.
+                </td>
+                <td>
+                  prompt() - Zeigt ein Dialogfeld an, in dem der Benutzer
+                  Eingaben machen kann.
+                </td>
+                <td>
+                  setTimeout() - Führt eine Funktion nach einer Verzögerung aus.
+                </td>
+                <td>
+                  setInterval() - Führt eine Funktion in regelmäßigen Abständen
+                  aus.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  clearTimeout() - Stoppt die Ausführung einer durch
+                  setTimeout() gesetzten Funktion.
+                </td>
+                <td>
+                  clearInterval() - Stoppt die wiederholte Ausführung einer
+                  durch setInterval() gesetzten Funktion.
+                </td>
+                <td>
+                  document.getElementById() - Gibt das Element mit der
+                  angegebenen ID zurück.
+                </td>
+                <td>
+                  document.querySelector() - Gibt das erste Element zurück, das
+                  dem angegebenen CSS-Selektor entspricht.
+                </td>
+                <td>
+                  document.querySelectorAll() - Gibt alle Elemente zurück, die
+                  dem angegebenen CSS-Selektor entsprechen.
+                </td>
+                <td>
+                  getAttribute() - Gibt den Wert eines Attributs eines
+                  HTML-Elements zurück.
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="6">Objekte und Arrays</th>
+              </tr>
+              <tr>
+                <td>Array() - Erzeugt ein neues Array.</td>
+                <td>Object() - Erzeugt ein neues Objekt.</td>
+                <td>
+                  JSON.parse() - Wandelt einen JSON-String in ein
+                  JavaScript-Objekt um.
+                </td>
+                <td>
+                  JSON.stringify() - Wandelt ein JavaScript-Objekt in einen
+                  JSON-String um.
+                </td>
+                <td>
+                  Math.random() - Gibt eine Zufallszahl im Bereich von 0 bis 1
+                  zurück.
+                </td>
+                <td>Math.floor() - Rundet eine Zahl ab.</td>
+              </tr>
+              <tr>
+                <td>Math.ceil() - Rundet eine Zahl auf.</td>
+                <td>
+                  Math.max() - Gibt den größten Wert unter den angegebenen
+                  Werten zurück.
+                </td>
+                <td>
+                  Math.min() - Gibt den kleinsten Wert unter den angegebenen
+                  Werten zurück.
+                </td>
+                <td>Math.sqrt() - Gibt die Quadratwurzel einer Zahl zurück.</td>
+                <td>
+                  Array.push() - Fügt ein oder mehrere Elemente ans Ende eines
+                  Arrays an.
+                </td>
+                <td>
+                  Array.pop() - Entfernt das letzte Element aus einem Array.
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="6">DOM-Manipulation</th>
+              </tr>
+              <tr>
+                <td>
+                  document.createElement() - Erstellt ein neues HTML-Element.
+                </td>
+                <td>
+                  document.createTextNode() - Erstellt einen neuen Textknoten.
+                </td>
+                <td>
+                  document.appendChild() - Fügt ein Element als Kind eines
+                  anderen Elements hinzu.
+                </td>
+                <td>
+                  document.removeChild() - Entfernt ein Kind-Element von einem
+                  übergeordneten Element.
+                </td>
+                <td>
+                  element.classList.add() - Fügt einer Liste von Klassen eine
+                  neue Klasse hinzu.
+                </td>
+                <td>
+                  element.classList.remove() - Entfernt eine Klasse aus der
+                  Liste der Klassen eines Elements.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  element.style.property - Ändert den Stil eines Elements
+                  direkt.
+                </td>
+                <td>
+                  element.setAttribute() - Setzt den Wert eines Attributs eines
+                  HTML-Elements.
+                </td>
+                <td>
+                  element.getAttribute() - Gibt den Wert eines Attributs eines
+                  HTML-Elements zurück.
+                </td>
+                <td>
+                  element.innerHTML - Holt oder setzt den HTML-Inhalt eines
+                  Elements.
+                </td>
+                <td>
+                  element.textContent - Holt oder setzt den Textinhalt eines
+                  Elements.
+                </td>
+                <td>
+                  element.style - Ermöglicht das direkte Setzen von CSS-Stilen
+                  für ein Element.
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="6">Fehlerbehandlung</th>
+              </tr>
+              <tr>
+                <td>try...catch - Behandelt Fehler in einem Codeblock.</td>
+                <td>throw - Wirft eine benutzerdefinierte Ausnahme.</td>
+                <td>
+                  finally - Wird nach dem Ausführen eines try...catch-Blocks
+                  ausgeführt, unabhängig davon, ob ein Fehler aufgetreten ist.
+                </td>
+                <td>console.log() - Gibt Informationen in der Konsole aus.</td>
+                <td>
+                  console.error() - Gibt Fehlernachrichten in der Konsole aus.
+                </td>
+                <td>console.warn() - Gibt Warnmeldungen in der Konsole aus.</td>
+              </tr>
+
+              <tr>
+                <th colspan="6">Asynchrone Programmierung</th>
+              </tr>
+              <tr>
+                <td>
+                  Promise() - Erzeugt ein Promise-Objekt, das einen zukünftigen
+                  Wert darstellt.
+                </td>
+                <td>async - Kennzeichnet eine Funktion als asynchron.</td>
+                <td>
+                  await - Wartet auf die Auflösung eines Promises in einer
+                  asynchronen Funktion.
+                </td>
+                <td>
+                  fetch() - Macht eine HTTP-Anfrage und gibt ein Promise zurück.
+                </td>
+                <td>
+                  setTimeout() - Verzögert die Ausführung einer Funktion um eine
+                  angegebene Zeit.
+                </td>
+                <td>
+                  setInterval() - Führt eine Funktion wiederholt in festgelegten
+                  Intervallen aus.
+                </td>
+              </tr>
+              <tr>
+                <th colspan="6">Array-Methoden</th>
+              </tr>
+              <tr>
+                <td>
+                  Array.slice() - Gibt einen Teil des Arrays zurück, ohne das
+                  Original zu verändern.
+                </td>
+                <td>
+                  Array.splice() - Ändert den Inhalt eines Arrays durch
+                  Hinzufügen, Entfernen oder Ersetzen von Elementen.
+                </td>
+                <td>
+                  Array.forEach() - Führt eine Funktion für jedes Element im
+                  Array aus.
+                </td>
+                <td>
+                  Array.map() - Erstellt ein neues Array, das durch Anwenden
+                  einer Funktion auf jedes Element des Originalarrays entsteht.
+                </td>
+                <td>
+                  Array.filter() - Erstellt ein neues Array mit allen Elementen,
+                  die eine Bedingung erfüllen.
+                </td>
+                <td>
+                  Array.reduce() - Reduziert das Array auf einen einzigen Wert,
+                  indem eine Funktion auf jedes Element angewendet wird.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Array.reduceRight() - Reduziert das Array von rechts nach
+                  links auf einen einzigen Wert.
+                </td>
+                <td>
+                  Array.find() - Gibt das erste Element im Array zurück, das
+                  eine Bedingung erfüllt.
+                </td>
+                <td>
+                  Array.findIndex() - Gibt den Index des ersten Elements im
+                  Array zurück, das eine Bedingung erfüllt.
+                </td>
+                <td>
+                  Array.indexOf() - Gibt den Index des ersten Vorkommens eines
+                  bestimmten Werts im Array zurück.
+                </td>
+                <td>
+                  Array.includes() - Überprüft, ob ein Array ein bestimmtes
+                  Element enthält.
+                </td>
+                <td>
+                  Array.concat() - Kombiniert mehrere Arrays oder Werte in ein
+                  neues Array.
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="6">String-Methoden</th>
+              </tr>
+              <tr>
+                <td>
+                  String.charAt() - Gibt das Zeichen an einem bestimmten Index
+                  im String zurück.
+                </td>
+                <td>
+                  String.indexOf() - Gibt den Index des ersten Vorkommens eines
+                  bestimmten Werts im String zurück.
+                </td>
+                <td>
+                  String.includes() - Überprüft, ob ein String ein bestimmtes
+                  Teilzeichen enthält.
+                </td>
+                <td>
+                  String.split() - Teilt einen String anhand eines Trennzeichens
+                  und gibt ein Array zurück.
+                </td>
+                <td>
+                  String.slice() - Gibt einen Teil des Strings zurück, ohne das
+                  Original zu verändern.
+                </td>
+                <td>
+                  String.replace() - Ersetzt ein Vorkommen eines Musters durch
+                  einen neuen Wert.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  String.toLowerCase() - Wandelt den String in Kleinbuchstaben
+                  um.
+                </td>
+                <td>
+                  String.toUpperCase() - Wandelt den String in Großbuchstaben
+                  um.
+                </td>
+                <td>
+                  String.trim() - Entfernt Leerzeichen am Anfang und Ende eines
+                  Strings.
+                </td>
+                <td>
+                  String.charCodeAt() - Gibt den Unicode-Wert des Zeichens an
+                  einem bestimmten Index zurück.
+                </td>
+                <td>
+                  String.substr() - Gibt einen bestimmten Teil eines Strings
+                  zurück, beginnend an einem bestimmten Index.
+                </td>
+                <td>
+                  String.repeat() - Wiederholt den String eine angegebene Anzahl
+                  von Malen.
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="6">Mathematische Funktionen</th>
+              </tr>
+              <tr>
+                <td>Math.abs() - Gibt den absoluten Wert einer Zahl zurück.</td>
+                <td>
+                  Math.round() - Rundet eine Zahl auf die nächstgelegene ganze
+                  Zahl.
+                </td>
+                <td>Math.pow() - Gibt die Potenz einer Zahl zurück.</td>
+                <td>
+                  Math.random() - Gibt eine zufällige Zahl im Bereich von 0 bis
+                  1 zurück.
+                </td>
+                <td>
+                  Math.min() - Gibt den kleinsten Wert unter den angegebenen
+                  Werten zurück.
+                </td>
+                <td>
+                  Math.max() - Gibt den größten Wert unter den angegebenen
+                  Werten zurück.
+                </td>
+              </tr>
+              <tr>
+                <td>Math.sqrt() - Gibt die Quadratwurzel einer Zahl zurück.</td>
+                <td>
+                  Math.ceil() - Rundet eine Zahl auf die nächstgrößere ganze
+                  Zahl auf.
+                </td>
+                <td>
+                  Math.floor() - Rundet eine Zahl auf die nächstkleinere ganze
+                  Zahl ab.
+                </td>
+                <td>
+                  Math.sin() - Gibt den Sinus eines Winkels (in Bogenmaß)
+                  zurück.
+                </td>
+                <td>
+                  Math.cos() - Gibt den Kosinus eines Winkels (in Bogenmaß)
+                  zurück.
+                </td>
+                <td>
+                  Math.tan() - Gibt den Tangens eines Winkels (in Bogenmaß)
+                  zurück.
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="6">Date und Zeit</th>
+              </tr>
+              <tr>
+                <td>
+                  Date() - Erstellt ein neues Date-Objekt mit dem aktuellen
+                  Datum und der aktuellen Uhrzeit.
+                </td>
+                <td>
+                  Date.now() - Gibt die Anzahl der Millisekunden seit dem 1.
+                  Januar 1970 zurück.
+                </td>
+                <td>
+                  Date.getFullYear() - Gibt das Jahr eines Date-Objekts zurück.
+                </td>
+                <td>
+                  Date.getMonth() - Gibt den Monat (0-11) eines Date-Objekts
+                  zurück.
+                </td>
+                <td>
+                  Date.getDate() - Gibt den Tag des Monats (1-31) eines
+                  Date-Objekts zurück.
+                </td>
+                <td>
+                  Date.getHours() - Gibt die Stunde (0-23) eines Date-Objekts
+                  zurück.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Date.getMinutes() - Gibt die Minuten (0-59) eines Date-Objekts
+                  zurück.
+                </td>
+                <td>
+                  Date.getSeconds() - Gibt die Sekunden (0-59) eines
+                  Date-Objekts zurück.
+                </td>
+                <td>
+                  Date.getMilliseconds() - Gibt die Millisekunden (0-999) eines
+                  Date-Objekts zurück.
+                </td>
+                <td>Date.setFullYear() - Setzt das Jahr eines Date-Objekts.</td>
+                <td>Date.setMonth() - Setzt den Monat eines Date-Objekts.</td>
+                <td>
+                  Date.setDate() - Setzt den Tag des Monats eines Date-Objekts.
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="6">Fehlerbehandlung und Debugging</th>
+              </tr>
+              <tr>
+                <td>try...catch - Behandelt Fehler in einem Codeblock.</td>
+                <td>throw - Wirft eine benutzerdefinierte Ausnahme.</td>
+                <td>
+                  finally - Wird nach dem Ausführen eines try...catch-Blocks
+                  ausgeführt, unabhängig davon, ob ein Fehler aufgetreten ist.
+                </td>
+                <td>console.log() - Gibt Informationen in der Konsole aus.</td>
+                <td>
+                  console.error() - Gibt Fehlernachrichten in der Konsole aus.
+                </td>
+                <td>console.warn() - Gibt Warnmeldungen in der Konsole aus.</td>
+              </tr>
+
+              <tr>
+                <th colspan="6">Asynchrone Programmierung und Promises</th>
+              </tr>
+              <tr>
+                <td>
+                  Promise() - Erzeugt ein Promise-Objekt, das einen zukünftigen
+                  Wert darstellt.
+                </td>
+                <td>async - Kennzeichnet eine Funktion als asynchron.</td>
+                <td>
+                  await - Wartet auf die Auflösung eines Promises in einer
+                  asynchronen Funktion.
+                </td>
+                <td>
+                  fetch() - Macht eine HTTP-Anfrage und gibt ein Promise zurück.
+                </td>
+                <td>
+                  then() - Wird aufgerufen, wenn ein Promise erfolgreich
+                  aufgelöst wird.
+                </td>
+                <td>
+                  catch() - Wird aufgerufen, wenn ein Promise abgelehnt wird.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Beschreibung ...</p>
+      </section>
+      <section class="Java">
+        <h2>Java</h2>
+        <button>E-LearnBook Java</button>
+        <!-- Geändert: Funktionsname und ID angepasst ('java-table') -->
+        <button class="btn-table" onclick="btnTable('java-table')">
+          Show Table
+        </button>
+        <div class="table-box">
+          <table class="java-table unique-table expanded" id="java-table">
+            <tr>
+              <th>TAG</th>
+              <th>Beschreibung</th>
+              <th>Beispliele</th>
+              <th>Notion</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <p>Beschreibung ...</p>
+      </section>
+      <section class="Python">
+        <h2>Python</h2>
+        <button>Python</button>
+        <!-- Geändert: Funktionsname und ID angepasst ('python-table') -->
+        <button class="btn-table" onclick="btnTable('python-table')">
+          Show Table
+        </button>
+        <div class="table-box">
+          <table class="python-table unique-table expanded" id="python-table">
+            <tr>
+              <th>TAG</th>
+              <th>Beschreibung</th>
+              <th>Beispliele</th>
+              <th>Notion</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <p>Beschreibung ...</p>
+      </section>
+      <section class="btn-openSongsVideos">
+        <button class="openSongsVideos">Metal-IT Songs & Videos</button>
+      </section>
+      <!-- Datenbank mit Programmiersprachen -->
+      <section class="Show-Bank">
+        <h2>Programmiersprachen-Nachschlagewerk</h2>
+        <button class="Database" onclick="showLanguages()">
+          Datenbank anzeigen
+        </button>
+        <div id="languages-list"></div>
+      </section>
+    </main>
+  </body>
+</html>

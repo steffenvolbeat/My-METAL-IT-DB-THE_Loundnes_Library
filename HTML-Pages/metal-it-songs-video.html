@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Metal-IT Songs & Videos – Metal-IT-DB</title>
+    <link rel="stylesheet" href="/css/metal-it-songs-video.css" />
+    <script defer src="/js/metal-it-videos.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Metal-IT Songs & Videos</h1>
+      <nav>
+        <a href="/index.html">Start</a>
+        <a href="/HTML-Pages/english-reference.html">English Ref</a>
+        <a href="/HTML-Pages/entwickler-portfolio.html">Portfolio</a>
+        <a href="/HTML-Pages/netzwerktechnik.html">Netzwerk</a>
+        <a href="/HTML-Pages/programmierung.html">Programmierung</a>
+        <a href="/HTML-Pages/web-development-projecte.html">Projekte</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Metal-IT Videos</h2>
+        <!-- Videoelement für lokale Videos -->
+        <video id="videoPlayer" controls width="100%">
+          <source id="videoSource" src="/assets/videos/video1.mp4" type="video/mp4">
+          Dein Browser unterstützt kein Video-Tag.
+        </video>
+        <!-- Platzhalter für YouTube-IFrame (muss leer bleiben!) -->
+        <div id="youtubeContainer" style="display: none;"></div>
+        <progress id="videoProgress" value="0" max="100"></progress>
+        <div class="video-controls">
+          <button onclick="prevVideo()">⏮ Vorheriges</button>
+          <button onclick="nextVideo()">⏭ Nächstes</button>
+        </div>
+        <h3>Playlist</h3>
+        <ul id="videoPlaylist"></ul>
+      </section>
+
+      <section class="media-db">
+        <h2>Sound- & Videodatenbank</h2>
+        <button onclick="loadMediaDB()">Datenbank anzeigen</button>
+        <div class="media-list" id="mediaList"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Metal-IT-DB</p>
+    </footer>
+  </body>
+</html>

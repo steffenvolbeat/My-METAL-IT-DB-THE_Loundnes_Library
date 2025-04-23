@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-color: white;
+  --font-weigth: bold;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: conic-gradient(
+    from 45deg at 70% -10%,
+    #fff700,
+    #f4f71a,
+    #a4f663,
+    #00ccd1,
+    #724aa8,
+    #6c1035,
+    #5c0107,
+    #590000
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: "";
+  background: linear-gradient(
+    0deg,
+    #ff00c3,
+    #d123ba,
+    #a42dab,
+    #7b2f97,
+    #552b80,
+    #342465,
+    #181a48,
+    #050b2b
+  );
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+header {
+  display: "";
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+
+.header ul li a {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: var(--font-weigth);
+  margin: 0 1.5em;
+}
+
+/* Regel für den Button im Header */
+header nav .btn-openSongsVideos .openSongsVideos {
+  border: 2px solid white;
+  border-radius: 0.5em;
+  font-size: 1.5rem; /* gleiche Schriftgröße wie die Links */
+  padding: 0.5em 1.5em; /* Abstand ähnlich den Links */
+  margin: 0 1.5em; /* gleichen Außenabstand wie die Links */
+  margin-top: 1.5em;
+  background: none; /* kein Hintergrund, kann nach Bedarf angepasst werden */ /* kein Rahmen */
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+header nav .btn-openSongsVideos {
+  padding-bottom: 1.7em;
+}
+
+.main-section {
+  position: absolute;
+  display: flex;
+  margin-top: 20em;
+}
+
+.main-section {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 15em;
+  width: 90%;
+}
+
+main section button {
+  display: block;
+  width: 90%;
+  margin: auto;
+  background-color: #552b80;
+  color: var(--font-color);
+  border: 1px solid whitesmoke;
+  border-radius: 0.5em;
+  padding: 0.8em;
+}
+
+
+
+.HTML,
+.CSS,
+.JavaScript,
+.Java,
+.Python,
+.React {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 2em;
+  width: calc(33% - 2em);
+}
+
+/*.HTML, .CSS, .JavaScript, .Java, .Python, .React{
+  width: 100% !important;
+}*/
+
+/* Das derzeitige max-height der Tabelle außer Kraft setzen, sodass der komplette Inhalt angezeigt wird */
+/*.HTML .table-box, .CSS .table-box, .JavaScript .table-box, .Java .table-box,
+.Python .table-box, .React .table-box{
+    max-height: none !important;
+}*/
+
+
+/* Searchfunction  */
+.section-search {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+}
+.Show-Bank {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*.table-box {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 3px solid wheat;
+  margin-top: 1em;
+  border-radius: 0.5em ;
+  background-color: rgba(0, 0, 0, 0.3);
+}*/
+
+/* Standardzustand: verkleinerte Tabelle mit fester Höhe und stets sichtbarer Scrollbar */
+/* Standardzustand: verkleinerte Tabelle mit fester Höhe und immer sichtbaren Scrollbars */
+.table-box {
+  max-height: 200px;             /* feste Höhe im Normalzustand */
+  overflow-y: scroll;            /* vertikale Scrollbar immer sichtbar */
+  overflow-x: auto;              /* horizontale Scrollbar, wenn nötig */
+  border: 3px solid wheat;
+  margin-top: 1em;
+  border-radius: 0.5em;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: max-height 0.5s ease, width 0.5s ease;
+  width: 100%;                   /* Nimmt 100% der verfügbaren Breite ein */
+}
+
+/* Erweiterter Zustand: volle Tabelle – hier wird die Höhenbeschränkung aufgehoben */
+.table-box.expanded {
+  max-height: 50vh;              /* keine Höhenbegrenzung */
+  width: 100vw;                   /* bleibt 100% breit, sodass der Container den vollen Inhalt anzeigt */
+}
+
+/* Falls Du in bestimmten Sections (HTML, CSS, JavaScript, Java, Python) dennoch volle Breite haben willst, 
+   kannst Du diesen Block entfernen oder gezielt einsetzen. Wichtig: Für den Toggle-Effekt bleibt die max-height in .table-box */
+
+/* Modal-Overlay */
+.table-modal {
+  display: none;              /* standardmäßig ausgeblendet */
+  position: fixed;            /* Overlay über dem gesamten Viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* dunkler Hintergrund */
+  z-index: 1000;
+  overflow: auto;             /* Scrollbars, falls der Inhalt größer ist */
+  padding: 2em;
+}
+
+/* Modal-Inhalt */
+.table-modal .modal-content {
+  background: white;
+  padding: 1em;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;             /* Scrollbars innerhalb des Modal-Inhalts */
+  border-radius: 0.5em;
+}
+
+/* Optional: Style für den Schließ-Button */
+#closeModal {
+  display: block;
+  margin: 0 auto 1em;
+  padding: 0.5em 1em;
+  background-color: #552b80;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.table-box::-webkit-scrollbar {
+  width: 1em;
+}
+
+.table-box::-webkit-scrollbar-track {
+  background: #2d0258;
+  border-radius: 6px;
+}
+
+.table-box::-webkit-scrollbar-thumb {
+  background: #552b80;
+  border-radius: 6px;
+  border: 3px solid #222;
+}
+
+.table-box::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+.unique-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.unique-table th {
+  background: linear-gradient(45deg, #552b80, #342465);
+  color: var(--font-color);
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.unique-table tr:nth-child(odd) {
+  background-color: rgba(30, 140, 255, 1.3);
+}
+
+.unique-table tr:nth-child(even) {
+  background-color: rgba(240, 248, 255, 2.3);
+}

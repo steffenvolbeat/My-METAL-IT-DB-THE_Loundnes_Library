@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>METAL INFERNO - Metal-IT-DB</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Eigene CSS -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <!-- Loader/Intro -->
+    <div id="loader">
+      <img id="loader-logo" src="./assets/images/Metal-IT-DB.png" alt="Logo" />
+      <div class="progress-metal"></div>
+    </div>
+
+    <!-- Intro Video Portal -->
+    <div id="metal-intro">
+      <video
+        id="intro-video"
+        src="./assets/videos/intro-metal.mp4"
+        autoplay
+        muted
+      ></video>
+    </div>
+
+    <!-- Portal Effekt (wird automatisch entfernt) -->
+    <div id="portal-effect"></div>
+
+    <!-- Canvas Container für Partikel & Rauch -->
+    <div id="canvas-container">
+      <canvas id="particleCanvas"></canvas>
+      <canvas id="smokeCanvas"></canvas>
+    </div>
+
+    <!-- Scroll-Indikator -->
+    <div id="scroll-indicator">
+      <p>Scroll down</p>
+      <div class="arrow"></div>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <header>
+      <h1>Learn Höllentore</h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="/E-LearnBook-HTM-CSS-JS-React/metal-js-full-learning-platform/JS-Learn/"
+              >Home</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="HTML-Board">
+        <h2>Willkommen im höllischen HTML</h2>
+        <p>Wähle eines der höllischen Unterthemen aus:</p>
+        <ul>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </section>
+      <section class="CSS3-Board">
+        <h2>Willkommen im höllischen CSS3</h2>
+        <p>Wähle eines der höllischen Unterthemen aus:</p>
+        <ul>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </section>
+      <section class="JavaScipt-Board">
+        <h2>Willkommen im höllischen JavaScript</h2>
+        <p>Wähle eines der höllischen Unterthemen aus:</p>
+        <ul>
+          <li>
+            <a href="#">01-Basic</a>
+          </li>
+          <li><a href="">02-Intermediate</a></li>
+          <li><a href="">03-Advanced</a></li>
+          <li><a href="">04-Expert-Level</a></li>
+          <li><a href="">05-Full_Projects</a></li>
+          <li><a href="">06-Visualization</a></li>
+          <li><a href="">07-CheatSheets</a></li>
+          <li><a href="">08-Tools</a></li>
+          <li><a href="">09-Bonus</a></li>
+          <li><a href="">09-Bonus</a></li>
+          <li><a href="">11-Learn-Cards</a></li>
+          <li><a href="">Ultimative- JS-Console</a></li>
+          <li><a href="">Mini Project: Calculator</a></li>
+        </ul>
+      </section>
+      <section class="Python-Board">
+        <h2>Willkommen im höllischen Python</h2>
+        <p>Wähle eines der höllischen Unterthemen aus:</p>
+        <ul>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </section>
+      <section class="React-Bord">
+        <h2>Willkommen im höllischen React</h2>
+        <p>Wähle eines der höllischen Unterthemen aus:</p>
+        <ul>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Hintergrundmusik mit Lautstärkeregler -->
+    <audio id="bg-music" src="./assets/sounds/bg-loop.mp3" loop></audio>
+    <div
+      style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        color: #fff;
+        font-family: monospace;
+      "
+    >
+      🔊
+      <input
+        type="range"
+        id="volume-control"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.5"
+      />
+    </div>
+
+    <!-- Zusätzliche Effekt-Elemente -->
+    <!-- Hover-Cursor-Orb -->
+    <div id="metal-orb"></div>
+    <!-- Höllentor-Gate, per Button gesteuert -->
+    <!-- Gate‑Portal & Button -->
+    <div id="gate-portal"></div>
+    <button type="button" id="gate-button" class="gate-button">
+      Tor zur JS-Hölle öffnen
+    </button>
+
+    <!-- Floating Runes -->
+    <div class="rune" style="top: 10%; left: 15%">ᚠ</div>
+    <div class="rune" style="top: 40%; left: 70%">ᚢ</div>
+    <div class="rune" style="top: 75%; left: 30%">ᚦ</div>
+
+    <!-- Skripte -->
+
+    <!-- Partikel-Script -->
+    <script src="./js/particles.js"></script>
+    <!-- Rauch-Script -->
+    <script src="./js/smoke.js"></script>
+    <!-- main.js -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
