@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.console-module {
+  background: rgba(10, 10, 10, 0.85);
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 1rem;
+  color: #eee;
+}
+
+#console-input {
+  width: 100%;
+  height: 100px;
+  background: #111;
+  color: #0f0;
+  font-family: monospace;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+
+#run-code,
+#clear-console {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#run-code:hover,
+#clear-console:hover {
+  background: #333;
+}
+
+.console-output {
+  background: #000;
+  color: #0f0;
+  font-family: monospace;
+  padding: 0.5rem;
+  height: 150px;
+  overflow-y: auto;
+  border-radius: 4px;
+  margin-top: 1rem;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fortschritt Hölle des JS</title>
+  </head>
+  <body>
+    <main>
+      <article id="intermediate-quiz" class="module quiz-module">
+        <h1>Fortgeschrittenen-Quiz</h1>
+        <div id="quiz-container"></div>
+      </article>
+    </main>
+    <script type="module">
+      import { Quiz } from '../modules/quiz.js';
+      new Quiz('../../data/quiz/intermediate.json', '#quiz-container');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Höllischer Einsteiger in JS Learn</title>
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/theme-metal.css" />
+    <link rel="stylesheet" href="../../css/modules/quiz.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../../index.html">Zurück zur Übersicht</a>
+      </nav>
+    </header>
+
+    <main>
+      <article id="beginner-quiz" class="module quiz-module">
+        <h1>The Apocalyptic JS - Beginner - Quiz of Madness</h1>
+        <div id="quiz-container"></div>
+      </article>
+    </main>
+    <script type="module">
+      import { Quiz } from "../modules/quiz.js";
+      // Quiz initilisieren mit JSON-DATEN und CONTAINER
+      new Quiz("../../data/quiz/beginner.json", "#quiz-container");
+    </script>
+  </body>
+</html>
