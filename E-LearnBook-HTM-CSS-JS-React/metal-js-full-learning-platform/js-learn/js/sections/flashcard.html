@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/base.css" />
+    <link rel="stylesheet" href="../../css/layout.css" />
+    <link rel="stylesheet" href="../../css/theme-metal.css" />
+    <link rel="stylesheet" href="../../css/modules/flashcard.css" />
+  </head>
+  <body id="app" class="content">
+    <div id="flashcard-container"></div>
+  </body>
+  <script type="module">
+    import { Flashcard } from "../modules/flashcard.js";
+    new Flashcard(
+      "../../data/flashcards/beginner.json",
+      "#flashcard-container"
+    );
+  </script>
+</html>

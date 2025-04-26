@@ -8,23 +8,27 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/theme-metal.css" />
   </head>
-  <body id="app" class="content">
-    <header class="site-header">
-      <h1>JS Learn Platform</h1>
-      <nav>
-        <ul>
-          <li><a href="#/beginner">Einsteiger</a></li>
-          <li><a href="#/intermediate">Fortgeschritten</a></li>
-          <li><a href="#/expert">Experten</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main id="app" class="content">
-      <!-- Hier lädt router.js die Section-HTMLs -->
-    </main>
-    <footer class="site-footer">
-      <p>&copy; 2025 JS Learn Platform</p>
-    </footer>
+  <body>
+    <canvas id="metal-canvas"></canvas>
+    <div id="wrapper">
+      <header id="header-content" class="site-header">
+        <h1>JS Learn Platform</h1>
+        <nav>
+          <ul>
+            <li><a href="#/beginner">Einsteiger</a></li>
+            <li><a href="#/intermediate">Fortgeschritten</a></li>
+            <li><a href="#/expert">Experten</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="app">
+        <!-- Dynamisch per router.js befüllt -->
+      </main>
+      <footer class="site-footer">
+        <p>&copy; 2025 JS Learn Platform</p>
+      </footer>
+    </div>
+    <script src="js/metal-canvas.js" type="module"></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

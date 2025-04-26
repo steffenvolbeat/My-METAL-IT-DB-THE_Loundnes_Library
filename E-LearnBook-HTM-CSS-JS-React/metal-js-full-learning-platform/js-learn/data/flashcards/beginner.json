@@ -1,0 +1,313 @@
+{
+  "cards": [
+    { "front": "let vs, const", "back": "..." },
+    {
+      "front": "Was ist eine Variable in JavaScript?",
+      "back": "Ein Container zum Speichern von Werten, deklariert mit var, let oder const."
+    },
+    {
+      "front": "Unterschied zwischen let und const?",
+      "back": "let: veränderbare Variable; const: unveränderliche Konstante (muss bei Deklaration initialisiert werden)."
+    },
+    {
+      "front": "Was ist der Unterschied zwischen == und ===?",
+      "back": "== vergleicht nach Typumwandlung, === vergleicht streng ohne Typumwandlung."
+    },
+    {
+      "front": "Wie definiert man eine Funktion in JavaScript?",
+      "back": "Mit function-Keyword z.B. function meineFunktion() { /* ... */ } oder als Arrow Function."
+    },
+    {
+      "front": "Was ist das DOM?",
+      "back": "Document Object Model – eine baumartige Darstellung der HTML-/XML-Struktur."
+    },
+    {
+      "front": "Was ist ein Arrow Function?",
+      "back": "Kürzere Syntax für Funktionen: const f = (a, b) => a + b;"
+    },
+    {
+      "front": "Wie erstellt man ein Array?",
+      "back": "Mit eckigen Klammern: const arr = [1, 2, 3];"
+    },
+    {
+      "front": "Was macht console.log()?",
+      "back": "Gibt Werte in der Browser-Konsole aus."
+    },
+    {
+      "front": "Was ist ein Objekt in JavaScript?",
+      "back": "Eine Sammlung von Schlüssel-Wert-Paaren, z.B. const obj = {name: 'Max', age: 30};"
+    },
+    {
+      "front": "Wie greift man auf ein Objekt-Property zu?",
+      "back": "Mit Punkt-Notation: obj.name oder eckiger Klammer: obj['name']"
+    },
+    {
+      "front": "Was ist eine Variable?",
+      "back": "Ein Name für einen Speicherplatz, um Werte zu speichern."
+    },
+    {
+      "front": "Wie deklariert man eine Variable mit let?",
+      "back": "let name = \"Max\";"
+    },
+    {
+      "front": "Was ist der Unterschied zwischen var und const?",
+      "back": "var: alt, funktionen-scope; const: Block-scope und nicht neu zuweisen."
+    },
+    {
+      "front": "Nenne drei primitive Datentypen in JS.",
+      "back": "string, number, boolean"
+    },
+    {
+      "front": "Wie prüft man den Typ einer Variable?",
+      "back": "Mit typeof, z. B. typeof 5 ergibt \"number\"."
+    },
+    {
+      "front": "Was macht console.log()?",
+      "back": "Gibt Werte in der Browser-Konsole aus."
+    },
+    {
+      "front": "Wie schreibt man einen einzeiligen Kommentar?",
+      "back": "// Das ist ein Kommentar"
+    },
+    {
+      "front": "Was ist ein Operator?",
+      "back": "Ein Symbol für Rechen- oder Vergleichsoperationen, z. B. + oder ===."
+    },
+    {
+      "front": "Wie schreibt man eine if-Anweisung?",
+      "back": "if (bedingung) { // Code } else { // anderer Code }"
+    },
+    {
+      "front": "Wie funktioniert eine for-Schleife?",
+      "back": "for (let i = 0; i < 5; i++) { /* wiederhole */ }"
+    },
+    {
+      "front": "Was ist eine Funktion?",
+      "back": "Ein benannter Block mit wiederverwendbarem Code."
+    },
+    {
+      "front": "Wie definiert man eine Funktion?",
+      "back": "function meineFunktion() { /* Code */ }"
+    },
+    {
+      "front": "Wie ruft man eine Funktion auf?",
+      "back": "meineFunktion();"
+    },
+    {
+      "front": "Was ist eine Arrow Function?",
+      "back": "Kurze Syntax: const f = () => { /* Code */ };"
+    },
+    {
+      "front": "Wie erstellt man ein Array?",
+      "back": "const arr = [\"Apfel\", \"Banane\", \"Kirsche\"];"
+    },
+    {
+      "front": "Wie greift man auf ein Array-Element zu?",
+      "back": "arr[0] liefert das erste Element."
+    },
+    {
+      "front": "Was ist ein Objekt?",
+      "back": "Sammlung von Schlüssel-Wert-Paaren, z. B. const o = {name: \"Anna\"};"
+    },
+    {
+      "front": "Wie liest man ein Objekt-Property aus?",
+      "back": "o.name oder o[\"name\"]"
+    },
+    {
+      "front": "Wie wählt man ein DOM-Element aus?",
+      "back": "document.getElementById(\"meineId\");"
+    },
+    {
+      "front": "Wie fügt man einem Button einen Klick-Handler hinzu?",
+      "back": "button.addEventListener(\"click\", () => { /* Code */ });"
+    },
+    {
+      "front": "Was ist eine Methode?",
+      "back": "Eine Funktion, die als Property in einem Objekt gespeichert ist."
+    },
+    {
+      "front": "Erkläre Hoisting.",
+      "back": "Variablen- und Funktionsdeklarationen werden vor der Ausführung an den Anfang ihres Scopes verschoben."
+    },
+    {
+      "front": "Was ist der globale Scope?",
+      "back": "Variablen, die außerhalb von Funktionen definiert sind, sind im gesamten Skript sichtbar."
+    },
+    {
+      "front": "Was ist der Block-Scope?",
+      "back": "Variablen mit let oder const sind nur innerhalb des umgebenden Blocks sichtbar."
+    },
+    {
+      "front": "Was bedeutet lexical scope?",
+      "back": "Der Scope einer Variablen wird durch die physische Position des Codes bestimmt."
+    },
+    {
+      "front": "Was ist eine Closure?",
+      "back": "Eine Funktion, die Zugriff auf Variablen ihres äußeren Scopes behält, auch nach dessen Ausführung."
+    },
+    {
+      "front": "Wie schreibt man eine for-Schleife?",
+      "back": "for (let i = 0; i < 5; i++) { /* ... */ }"
+    },
+    {
+      "front": "Was ist eine while-Schleife?",
+      "back": "Eine Schleife, die so lange wiederholt, wie die Bedingung true ist."
+    },
+    {
+      "front": "Was ist ein Callback?",
+      "back": "Eine Funktion, die als Argument an eine andere Funktion übergeben wird."
+    },
+    {
+      "front": "Was macht Array.prototype.map()?",
+      "back": "Erzeugt ein neues Array durch Anwenden einer Funktion auf jedes Element."
+    },
+    {
+      "front": "Was macht Array.prototype.filter()?",
+      "back": "Erzeugt ein neues Array mit allen Elementen, die einen Test bestehen."
+    },
+    {
+      "front": "Was macht Array.prototype.reduce()?",
+      "back": "Reduziert ein Array auf einen einzigen Wert durch Anwenden einer Funktion."
+    },
+    {
+      "front": "Was ist ein Promise?",
+      "back": "Ein Objekt für asynchrone Operationen, das eventual einen Wert liefert oder fehlschlägt."
+    },
+    {
+      "front": "Welche drei Zustände kann ein Promise haben?",
+      "back": "pending, fulfilled (resolved), rejected."
+    },
+    {
+      "front": "Wie erstellt man ein Promise?",
+      "back": "Mit new Promise((resolve, reject) => { /* ... */ });"
+    },
+    {
+      "front": "Wie hängt man einen .then()-Handler an?",
+      "back": "promise.then(result => { /* ... */ });"
+    },
+    {
+      "front": "Was macht .catch() bei Promises?",
+      "back": "Fängt Fehler ab, wenn das Promise rejected wurde."
+    },
+    {
+      "front": "Was ist async/await?",
+      "back": "Syntax für asynchrone Funktionen, die Promises handhaben wie synchronen Code."
+    },
+    {
+      "front": "Wie deklariert man eine async-Funktion?",
+      "back": "async function myFunc() { /* ... */ }"
+    },
+    {
+      "front": "Wie wartet man auf ein Promise mit await?",
+      "back": "const result = await promise; (nur in async-Funktionen)"
+    },
+    {
+      "front": "Was ist event bubbling?",
+      "back": "Ein Ereignis auf einem Element wird nach oben zum DOM-Root weitergereicht."
+    },
+    {
+      "front": "Wie verhindert man event bubbling?",
+      "back": "Mit event.stopPropagation() im Event-Handler."
+    },
+    {
+      "front": "Was ist event delegation?",
+      "back": "Ein einzelner Event-Handler am übergeordneten Element fängt Events seiner Kinder ab."
+    },
+    {
+      "front": "Wie registriert man einen Click-Handler?",
+      "back": "element.addEventListener('click', () => { /* ... */ });"
+    },
+    {
+      "front": "Was ist JSON?",
+      "back": "JavaScript Object Notation – Textformat zum Datenaustausch."
+    },
+    {
+      "front": "Wie wandelt man ein JS-Objekt in JSON um?",
+      "back": "JSON.stringify(obj);"
+    },
+    {
+      "front": "Wie parst man JSON in ein JS-Objekt?",
+      "back": "JSON.parse(jsonString);"
+    },
+    {
+      "front": "Was ist Fetch API?",
+      "back": "Moderne Schnittstelle für HTTP-Anfragen im Browser."
+    },
+    {
+      "front": "Wie macht man eine GET-Anfrage mit fetch?",
+      "back": "fetch(url).then(res => res.json()).then(data => { /* ... */ });"
+    },
+    {
+      "front": "Was ist localStorage?",
+      "back": "Browser-API zum Speichern von Daten als Schlüssel-Wert-Paare dauerhaft."
+    },
+    {
+      "front": "Wie speichert man etwas in localStorage?",
+      "back": "localStorage.setItem('key', 'value');"
+    },
+    {
+      "front": "Wie liest man etwas aus localStorage?",
+      "back": "const value = localStorage.getItem('key');"
+    },
+    {
+      "front": "Was ist sessionStorage?",
+      "back": "Ähnlich wie localStorage, aber die Daten werden beim Schließen des Tabs gelöscht."
+    },
+    {
+      "front": "Was ist der Unterschied var vs. let vs. const?",
+      "back": "var: function-scoped; let/const: block-scoped; const: unveränderlich."
+    },
+    {
+      "front": "Was ist Type Coercion?",
+      "back": "Automatische Umwandlung von Datentypen bei Operationen."
+    },
+    {
+      "front": "Wie konvertiert man einen String in eine Zahl?",
+      "back": "Mit Number('123') oder parseInt('123', 10)."
+    },
+    {
+      "front": "Was ist NaN?",
+      "back": "Not-a-Number – Ergebnis ungültiger oder undefinierter Zahl-Operationen."
+    },
+    {
+      "front": "Wie prüft man auf NaN?",
+      "back": "Number.isNaN(value);"
+    },
+    {
+      "front": "Was ist der Ternary Operator?",
+      "back": "Kurzform für if: condition ? expr1 : expr2."
+    },
+    {
+      "front": "Wie definiert man eine Klasse in JS?",
+      "back": "class MyClass { constructor() { } method() { } }"
+    },
+    {
+      "front": "Was ist der Konstruktor einer Klasse?",
+      "back": "Die special Methode constructor(), die beim new-Aufruf ausgeführt wird."
+    },
+    {
+      "front": "Wie erbt man von einer Klasse?",
+      "back": "class Child extends Parent { super(); }"
+    },
+    {
+      "front": "Was ist das Schlüsselwort this?",
+      "back": "Bezieht sich auf das aktuelle Objekt-Kontext in dem Code."
+    },
+    {
+      "front": "Wie bindet man this manuell?",
+      "back": "Mit function.bind(context) z.B. fn.bind(obj)."
+    },
+    {
+      "front": "Was ist ein Modul in JS?",
+      "back": "Ein File, das export/import verwendet, um Code zu kapseln."
+    },
+    {
+      "front": "Wie exportiert man mehrere Sachen?",
+      "back": "export { a, b, c }; oder export function foo() { }"
+    },
+    {
+      "front": "Wie importiert man alle Exporte als Objekt?",
+      "back": "import * as Utils from './utils.js';"
+    }
+  ]
+}

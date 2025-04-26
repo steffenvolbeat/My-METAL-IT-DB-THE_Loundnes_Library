@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Console of JS horror</title>
-    <link rel="stylesheet" href="../../css/base.css" />
-    <link rel="stylesheet" href="../../css/layout.css" />
-    <link rel="stylesheet" href="../../css/theme-metal.css" />
-    <link rel="stylesheet" href="../../css/modules/console.css" />
+    <title>Console - JS Learn Platform</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/theme-metal.css" />
+    <link rel="stylesheet" href="../css/modules/console.css" />
   </head>
   <body>
     <header>
-      <a href="../../index.html">Zurück zur Übersicht</a>
+      <nav>
+        <a href="../../index.html">Zurück zur Übersicht</a>
+      </nav>
     </header>
 
     <main>
       <div id="console-container"></div>
     </main>
+
     <script type="module">
       import { CodeConsole } from "../modules/console.js";
       new CodeConsole("#console-container");
