@@ -35,17 +35,41 @@ document.addEventListener("DOMContentLoaded", function () {
   // Es können sowohl YouTube-Videos als auch lokale Videos enthalten sein.
   // ========================
   const videoFiles = [
-    { src: "https://www.youtube.com/watch?v=9YICpjeGsbE", title: "Disturbed - I Will Not Break" },
-    { src: "https://www.youtube.com/watch?v=jMlSvuFTC3k", title: "Ramstein Giftig" },
-    { src: "assets/videos/AC⧸DC - Thunderstruck (Official Video).mp4", title: "Thunderstruck" },
+    {
+      src: "https://www.youtube.com/watch?v=9YICpjeGsbE",
+      title: "Disturbed - I Will Not Break",
+    },
+    {
+      src: "https://www.youtube.com/watch?v=jMlSvuFTC3k",
+      title: "Ramstein Giftig",
+    },
+    {
+      src: "assets/videos/AC⧸DC - Thunderstruck (Official Video).mp4",
+      title: "Thunderstruck",
+    },
     { src: "assets/videos/video2.mp4", title: "Video 2" },
     { src: "assets/videos/video3.mp4", title: "Video 3" },
     { src: "https://www.youtube.com/watch?v=EbHGS_bVkXY", title: "Ramstein" },
-    { src: "https://www.youtube.com/watch?v=Tf4M3adcYpY&t=1862s", title: "Volbeat (Let's Boogie! Live)" },
-    { src: "https://www.youtube.com/watch?v=cgLUopx9q68", title: "Weimar • Hexenjagd" },
-    { src: "https://www.youtube.com/watch?v=3Sor0oQ44EI&list=RDMM&index=12", title: "Weimar • Manifest" },
-    { src: "https://www.youtube.com/watch?v=Gns8PVcF-8Y", title: "Volbeat - In the Barn..." },
-    { src: "https://www.youtube.com/watch?v=UTUPgEse6_A&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGA&index=1", title: "Volbeat - By a Monster’s Hand" },
+    {
+      src: "https://www.youtube.com/watch?v=Tf4M3adcYpY&t=1862s",
+      title: "Volbeat (Let's Boogie! Live)",
+    },
+    {
+      src: "https://www.youtube.com/watch?v=cgLUopx9q68",
+      title: "Weimar • Hexenjagd",
+    },
+    {
+      src: "https://www.youtube.com/watch?v=3Sor0oQ44EI&list=RDMM&index=12",
+      title: "Weimar • Manifest",
+    },
+    {
+      src: "https://www.youtube.com/watch?v=Gns8PVcF-8Y",
+      title: "Volbeat - In the Barn...",
+    },
+    {
+      src: "https://www.youtube.com/watch?v=UTUPgEse6_A&list=RDGMEMJQXQAmqrnmK1SEjY_rKBGA&index=1",
+      title: "Volbeat - By a Monster’s Hand",
+    },
     // Weitere Einträge können hier ergänzt werden…
   ];
 
@@ -54,10 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Nutzt einen regulären Ausdruck, der verschiedene YouTube-URL-Formate abdeckt.
   // ========================
   function extractYouTubeID(url) {
-    const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^&?\/\s]+)/;
+    const regExp =
+      /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^&?\/\s]+)/;
     const match = url.match(regExp);
     // Gibt die gefundene Video-ID zurück oder null, falls keine ID gefunden wurde.
-    return (match && match[1]) ? match[1] : null;
+    return match && match[1] ? match[1] : null;
   }
 
   // ========================
@@ -67,7 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hole die URL des aktuellen Videos aus dem Array.
     const currentVideo = videoFiles[currentVideoIndex].src;
     // Überprüfung, ob es sich um einen YouTube-Link handelt.
-    if (currentVideo.includes("youtube.com") || currentVideo.includes("youtu.be")) {
+    if (
+      currentVideo.includes("youtube.com") ||
+      currentVideo.includes("youtu.be")
+    ) {
       // Wenn es ein YouTube-Video ist:
       // 1. Blende das lokale Videoelement aus.
       videoPlayer.style.display = "none";
@@ -75,23 +103,30 @@ document.addEventListener("DOMContentLoaded", function () {
       youtubeContainer.style.display = "block";
       // 3. Extrahiere die Video-ID aus der URL.
       const videoId = extractYouTubeID(currentVideo);
-      if (!videoId) return console.error("Kein gültiger YouTube-Link:", currentVideo);
+      if (!videoId)
+        return console.error("Kein gültiger YouTube-Link:", currentVideo);
       // 4. Wenn der YouTube-Player bereits existiert, lägt das neue Video.
       if (ytPlayer) {
         ytPlayer.loadVideoById(videoId);
       } else {
         // Andernfalls erstelle einen neuen YouTube-Player.
         ytPlayer = new YT.Player("youtubePlayerContainer", {
-          height: "400",   // Höhe des YouTube-Players
-          width: "100%",   // Breite des YouTube-Players
+          height: "400", // Höhe des YouTube-Players
+          width: "100%", // Breite des YouTube-Players
           videoId: videoId, // Die extrahierte Video-ID
           // Spieler-Parameter (playerVars) definieren, wie das Video abgespielt werden soll.
-          playerVars: { autoplay: 1, mute: 1, controls: 1, modestbranding: 1, rel: 0 },
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            controls: 1,
+            modestbranding: 1,
+            rel: 0,
+          },
           // Event-Handler für den YouTube-Player:
           events: {
-            onReady: onPlayerReady,           // Wird aufgerufen, wenn der Player bereit ist.
-            onStateChange: onPlayerStateChange  // Wird aufgerufen, wenn sich der Zustand des Players ändert (z.B. Video endet).
-          }
+            onReady: onPlayerReady, // Wird aufgerufen, wenn der Player bereit ist.
+            onStateChange: onPlayerStateChange, // Wird aufgerufen, wenn sich der Zustand des Players ändert (z.B. Video endet).
+          },
         });
       }
     } else {
@@ -193,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     // Überprüfe die Zugangsdaten (hier fest "admin"/"1234")
-    if (username === "admin" && password === "1234") {
+    if (username === "steffen" && password === "12345") {
       alert("Login erfolgreich!");
       // Speichert den Loginstatus in sessionStorage
       sessionStorage.setItem("loggedIn", "true");
@@ -221,12 +256,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialisiert die Videoquelle (startet das erste Video)
   updateVideoSource();
 
-  // Fügt optional eine Animation zum Player-Container hinzu 
+  // Fügt optional eine Animation zum Player-Container hinzu
   const playerContainer = document.getElementById("player-container");
   setTimeout(() => playerContainer.classList.add("animate"), 500);
-  
+
   // ========================
-  // Loginmodal sofort sichtbar machen 
+  // Loginmodal sofort sichtbar machen
   // Entfernt das "hidden" und füge "show" hinzu, sodass das Modal beim Laden sichtbar ist.
   // ========================
   loginModal.classList.remove("hidden");
@@ -245,3 +280,6 @@ function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("open");
 }
+
+
+

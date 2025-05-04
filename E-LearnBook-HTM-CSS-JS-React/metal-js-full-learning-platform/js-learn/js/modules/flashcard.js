@@ -1,61 +1,76 @@
 // js/modules/flashcard.js
 export class Flashcard {
-  constructor(jsonUrl, containerSelector) {
+  constructor(dataUrl, containerSelector) {
+    this.dataUrl = dataUrl;
     this.container = document.querySelector(containerSelector);
-    this.current = 0;
-    fetch(jsonUrl)
-      .then((r) => r.json())
-      .then((data) => {
-        this.cards = data.cards;
-        this.render();
-      });
+    this.cards = [];
+    this.currentIndex = 0;
+    this.loadData();
+  }
+
+  async loadData() {
+    try {
+      const res = await fetch(this.dataUrl);
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      const data = await res.json();
+      // Hier holen wir das eigentliche Array
+      this.cards = data.cards;
+      this.render();
+    } catch (err) {
+      console.error("Fehler beim Laden der Flashcards:", err);
+      this.container.innerHTML = `<p style="color: #f44336;">Fehler beim Laden der Daten.</p>`;
+    }
   }
 
   render() {
-    const { front, back } = this.cards[this.current];
+    if (!Array.isArray(this.cards) || this.cards.length === 0) {
+      this.container.innerHTML = `<p>Keine Flashcards gefunden.</p>`;
+      return;
+    }
+
+    const { question, answer } = this.cards[this.currentIndex];
     this.container.innerHTML = `
-      <section class="flashcard-module">
-        <div class="card-container">
-          <div class="card-face front">
-            <p>${front}</p>
-          </div>
-          <div class="card-face back">
-            <p>${back}</p>
+      <div class="flashcard-box">
+        <div class="flashcard">
+          <div class="card-inner">
+            <div class="card-front">${question}</div>
+            <div class="card-back">${answer}</div>
           </div>
         </div>
-        <div class="controls">
-          <button id="prev-card">← Prev</button>
-          <button id="flip-card">Flip</button>
-          <button id="next-card">Next →</button>
+        <div class="flashcard-controls">
+          <button id="prev-card">⏮️ Zurück</button>
+          <button id="flip-card">🔀 Flip</button>
+          <button id="next-card">⏭️ Weiter</button>
         </div>
-      </section>
+      </div>
     `;
-    this.attachHandlers();
+
+    this.attachControls();
   }
 
-  attachHandlers() {
-    // Flip-Button toggles 'flipped' class on card-container
-    this.container.querySelector("#flip-card").addEventListener("click", () => {
-      const container = this.container.querySelector(".card-container");
-      container.classList.toggle("flipped");
-    });
+  attachControls() {
+    const box = this.container.querySelector(".flashcard-box");
+    const inner = box.querySelector(".card-inner");
+    const btnPrev = box.querySelector("#prev-card");
+    const btnFlip = box.querySelector("#flip-card");
+    const btnNext = box.querySelector("#next-card");
 
-    // Next-Button
-    this.container.querySelector("#next-card").addEventListener("click", () => {
-      this.current = (this.current + 1) % this.cards.length;
-      // Reset flip state
-      this.container
-        .querySelector(".card-container")
-        .classList.remove("flipped");
+    // Flip via Klick auf Karte oder Flip-Button
+    inner.addEventListener("click", () => inner.classList.toggle("flipped"));
+    btnFlip.addEventListener("click", () => inner.classList.toggle("flipped"));
+
+    // Zurück
+    btnPrev.addEventListener("click", () => {
+      this.currentIndex =
+        (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+      inner.classList.remove("flipped");
       this.render();
     });
 
-    // Prev-Button
-    this.container.querySelector("#prev-card").addEventListener("click", () => {
-      this.current = (this.current - 1 + this.cards.length) % this.cards.length;
-      this.container
-        .querySelector(".card-container")
-        .classList.remove("flipped");
+    // Weiter
+    btnNext.addEventListener("click", () => {
+      this.currentIndex = (this.currentIndex + 1) % this.cards.length;
+      inner.classList.remove("flipped");
       this.render();
     });
   }

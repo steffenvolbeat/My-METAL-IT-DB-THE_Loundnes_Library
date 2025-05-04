@@ -1,7 +1,7 @@
 // js/sections/beginner.js
 export function sectionInit() {
-    const container = document.getElementById('content');
-    container.innerHTML = `
+  const container = document.getElementById("content");
+  container.innerHTML = `
       <section>
       <h1>🧠 JavaScript Grundlagen</h1>
       <article>
@@ -328,4 +328,4 @@ const s1 = Settings.getInstance();</code></pre>
       </article>
     </section
     `;
-  }
+}

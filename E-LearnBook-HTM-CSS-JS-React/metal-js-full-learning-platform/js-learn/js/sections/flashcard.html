@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../../css/base.css" />
-    <link rel="stylesheet" href="../../css/layout.css" />
-    <link rel="stylesheet" href="../../css/theme-metal.css" />
-    <link rel="stylesheet" href="../../css/modules/flashcard.css" />
-  </head>
-  <body id="app" class="content">
-    <div id="flashcard-container"></div>
-  </body>
-  <script type="module">
-    import { Flashcard } from "../modules/flashcard.js";
-    new Flashcard(
-      "../../data/flashcards/beginner.json",
-      "#flashcard-container"
-    );
-  </script>
-</html>
+<section class="module flashcard-section">
+  <header><h2>JS Flashcards</h2></header>
+  <div id="flashcard-container" aria-live="polite"></div>
+</section>
+
+<script type="module">
+  import { Flashcard } from "./js/modules/flashcard.js";
+
+  const map = {
+    "#/beginner": "data/flashcards/beginner.json",
+    "#/intermediate": "data/flashcards/intermediate.json",
+    "#/expert": "data/flashcards/expert.json",
+  };
+  const url = map[window.location.hash] || map["#/beginner"];
+  new Flashcard(url, "#flashcard-container");
+</script>

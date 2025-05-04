@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "question": "Welche Methode löst Garbage Collection aus?",
+      "options": [
+        "delete operator",
+        "heap.free()",
+        "Keine – GC läuft automatisch",
+        "global.gc()"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Was ist der Unterschied zwischen `==` und `===`?",
+      "options": [
+        "`==` prüft nur Wert, `===` prüft Wert und Typ",
+        "`==` ist strenger als `===`",
+        "Beide sind identisch",
+        "`===` wandelt Typen um"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "In welchem Phasenzyklus des Event Loop werden Microtasks ausgeführt?",
+      "options": [
+        "Nach jedem Task-Turn",
+        "Vor jedem Task-Turn",
+        "Nachdem Render erfolgt ist",
+        "Während HTTP-Requests"
+      ],
+      "answer": 0
+    }
+  ]
+}

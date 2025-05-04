@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Einsteiger - JS Learn Platform</title>
-    <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/layout.css" />
-    <link rel="stylesheet" href="../css/theme-metal.css" />
-    <link rel="stylesheet" href="../css/modules/quiz.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="../../index.html">Zurück zur Übersicht</a>
-      </nav>
-    </header>
-
-    <main>
-      <article id="beginner-quiz" class="module quiz-module">
-        <h1>Einsteiger-Quiz</h1>
-        <div id="quiz-container"></div>
-      </article>
-    </main>
-
-    <script type="module">
-      import { Quiz } from "../modules/quiz.js";
-      // Quiz initialisieren mit JSON-Daten und Container
-      new Quiz("../../data/quiz/beginner.json", "#quiz-container");
-    </script>
-  </body>
-</html>
+<section aria-labelledby="beg-title" class="module beginner-section">
+  <header><h2 id="beg-title">JS Einsteiger</h2></header>
+  <article>
+    <h3>Was ist JavaScript?</h3>
+    <p>JS bringt Dynamik ins Web…</p>
+  </article>
+  <!-- mehr Inhalte hier… -->
+</section>

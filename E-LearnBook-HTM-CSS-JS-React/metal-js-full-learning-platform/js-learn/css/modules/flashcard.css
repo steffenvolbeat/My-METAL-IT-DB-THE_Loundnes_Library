@@ -1,78 +1,74 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* css/modules/flashcard.css */
+
+.flashcard-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgba(10, 0, 20, 0.85);
+  border-radius: 8px;
+  color: #eee;
+  text-align: center;
 }
 
-html {
-  font-size: 62.5%;
+.flashcard {
+  perspective: 1000px;
+  margin-bottom: 1rem;
 }
 
-/* CSS für 3D-Flip-Karte */
-.card-container {
+.card-inner {
   position: relative;
-  width: 300px;
+  width: 100%;
+  max-width: 400px;
   height: 200px;
+  margin: 0 auto;
   transform-style: preserve-3d;
-  transition: transform 0.6s;
+  transition: transform 0.8s ease;
+  cursor: pointer;
 }
 
-.card-container.flipped {
+.card-inner.flipped {
   transform: rotateY(180deg);
 }
 
-.card-face {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: #111;
-  color: #eee;
-  border: 2px solid #444;
-  border-radius: 6px;
-  font-size: 1.4rem;
+  justify-content: center;
+  background: linear-gradient(145deg, #1a1a1a, #2c2c2c);
+  border: 2px solid #6a0dad;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 15px #9b59b6;
+  font-size: 1.1rem;
 }
 
-.card-face.back {
+.card-back {
   transform: rotateY(180deg);
 }
 
-.flashcard-module .controls button {
-  margin: 0 0.5rem;
+.flashcard-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.flashcard-controls button {
   padding: 0.5rem 1rem;
-  background: #222;
+  background-color: #6a0dad;
+  border: none;
   color: #fff;
-  border: 1px solid #555;
-  border-radius: 4px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
 }
 
-.flashcard-module .controls button:hover {
-  background: #333;
-}
-
-/** Obsidian-Button-Effekt */
-button {
-  background: linear-gradient(145deg, #222, #111);
-  box-shadow: 5px 5px 10px #0a0a0a, -5px -5px 10px #333333;
-  transition: all 0.2s ease;
-}
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 2px 2px 5px #0a0a0a, -2px -2px 5px #333333;
-}
-
-/* css/modules/*.css */
-button {
-  background: linear-gradient(145deg, #222, #111);
-  box-shadow: 5px 5px 10px #0a0a0a, -5px -5px 10px #333333;
-  transition: all 0.2s ease;
-}
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 2px 2px 5px #0a0a0a, -2px -2px 5px #333333;
+.flashcard-controls button:hover {
+  background-color: #9b59b6;
 }

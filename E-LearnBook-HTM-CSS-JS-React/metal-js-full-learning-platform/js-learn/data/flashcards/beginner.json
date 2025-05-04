@@ -1,313 +1,537 @@
 {
+  "level": "Einsteiger",
   "cards": [
-    { "front": "let vs, const", "back": "..." },
     {
-      "front": "Was ist eine Variable in JavaScript?",
-      "back": "Ein Container zum Speichern von Werten, deklariert mit var, let oder const."
+      "question": "Was ist JavaScript?",
+      "answer": "Eine Skriptsprache, die Webseiten dynamisch macht und interaktive Funktionen ermöglicht."
     },
     {
-      "front": "Unterschied zwischen let und const?",
-      "back": "let: veränderbare Variable; const: unveränderliche Konstante (muss bei Deklaration initialisiert werden)."
+      "question": "Wie deklarierst du eine Variable, die neu zugewiesen werden kann?",
+      "answer": "Mit dem Keyword `let`, z. B. `let x = 5;`"
     },
     {
-      "front": "Was ist der Unterschied zwischen == und ===?",
-      "back": "== vergleicht nach Typumwandlung, === vergleicht streng ohne Typumwandlung."
+      "question": "Wie deklarierst du eine Konstante?",
+      "answer": "Mit dem Keyword `const`, z. B. `const PI = 3.14;`"
     },
     {
-      "front": "Wie definiert man eine Funktion in JavaScript?",
-      "back": "Mit function-Keyword z.B. function meineFunktion() { /* ... */ } oder als Arrow Function."
+      "question": "Nenne die sechs primitiven Datentypen in JS.",
+      "answer": "`string`, `number`, `boolean`, `null`, `undefined`, `symbol`"
     },
     {
-      "front": "Was ist das DOM?",
-      "back": "Document Object Model – eine baumartige Darstellung der HTML-/XML-Struktur."
+      "question": "Wie erzeugst du ein Array mit drei Zahlen?",
+      "answer": "Per Literalsyntax: `const arr = [1, 2, 3];`"
     },
     {
-      "front": "Was ist ein Arrow Function?",
-      "back": "Kürzere Syntax für Funktionen: const f = (a, b) => a + b;"
+      "question": "Wie greifst du auf das zweite Element eines Arrays `arr` zu?",
+      "answer": "Mit dem Index: `arr[1]`"
     },
     {
-      "front": "Wie erstellt man ein Array?",
-      "back": "Mit eckigen Klammern: const arr = [1, 2, 3];"
+      "question": "Wie definierst du eine Funktion, die zwei Werte addiert?",
+      "answer": "Zum Beispiel:```js function add(a, b) {  return a + b;}```"
     },
     {
-      "front": "Was macht console.log()?",
-      "back": "Gibt Werte in der Browser-Konsole aus."
+      "question": "Wie schreibst du dieselbe Funktion als Arrow Function?",
+      "answer": "`const add = (a, b) => a + b;`"
     },
     {
-      "front": "Was ist ein Objekt in JavaScript?",
-      "back": "Eine Sammlung von Schlüssel-Wert-Paaren, z.B. const obj = {name: 'Max', age: 30};"
+      "question": "Was ist der Unterschied zwischen `==` und `===`?",
+      "answer": "`==` prüft nur Wert (loose equality), `===` prüft Wert und Typ (strict equality)."
     },
     {
-      "front": "Wie greift man auf ein Objekt-Property zu?",
-      "back": "Mit Punkt-Notation: obj.name oder eckiger Klammer: obj['name']"
+      "question": "Wie baust du eine `for`‑Schleife, die 5‑mal läuft?",
+      "answer": "```js\nfor (let i = 0; i < 5; i++) {\n  // ...\n}\n```"
     },
     {
-      "front": "Was ist eine Variable?",
-      "back": "Ein Name für einen Speicherplatz, um Werte zu speichern."
+      "question": "Wie stoppst du eine `while`‑Schleife?",
+      "answer": "Indem du die Bedingung auf `false` setzt oder innerhalb einen `break` ausführst."
     },
     {
-      "front": "Wie deklariert man eine Variable mit let?",
-      "back": "let name = \"Max\";"
+      "question": "Was ist ein Objekt in JS?",
+      "answer": "Eine Sammlung von Schlüssel‑Wert‑Paaren, z. B. `const obj = { name: 'Max', age: 30 };`"
     },
     {
-      "front": "Was ist der Unterschied zwischen var und const?",
-      "back": "var: alt, funktionen-scope; const: Block-scope und nicht neu zuweisen."
+      "question": "Wie liest du die Eigenschaft `name` von `obj` aus?",
+      "answer": "Per Punktnotation: `obj.name` oder eckiger Notation `obj['name']`"
     },
     {
-      "front": "Nenne drei primitive Datentypen in JS.",
-      "back": "string, number, boolean"
+      "question": "Wie fügst du ein neues DOM‑Element ans Ende des `body` hinzu?",
+      "answer": "```js\nconst p = document.createElement('p');\np.textContent = 'Hallo';\ndocument.body.appendChild(p);\n```"
     },
     {
-      "front": "Wie prüft man den Typ einer Variable?",
-      "back": "Mit typeof, z. B. typeof 5 ergibt \"number\"."
+      "question": "Wie hört du auf Klick‑Events am Dokument?",
+      "answer": "```js\ndocument.addEventListener('click', e => {\n  console.log('Geklickt!');\n});\n```"
     },
     {
-      "front": "Was macht console.log()?",
-      "back": "Gibt Werte in der Browser-Konsole aus."
+      "question": "Was sind Template Literals und wie nutzt du sie?",
+      "answer": "Strings in Backticks mit Einbettung: `` `Hallo ${name}!` ``"
     },
     {
-      "front": "Wie schreibt man einen einzeiligen Kommentar?",
-      "back": "// Das ist ein Kommentar"
+      "question": "Wie zerlegst du ein Objekt per Destructuring?",
+      "answer": "```js\nconst person = { name: 'Anna', age: 25 };\nconst { name, age } = person;\n```"
     },
     {
-      "front": "Was ist ein Operator?",
-      "back": "Ein Symbol für Rechen- oder Vergleichsoperationen, z. B. + oder ===."
+      "question": "Wie erzeugst du ein neues Array aus `arr` plus ein Element?",
+      "answer": "`const newArr = [...arr, 'neuesElement'];`"
     },
     {
-      "front": "Wie schreibt man eine if-Anweisung?",
-      "back": "if (bedingung) { // Code } else { // anderer Code }"
+      "question": "Wie rufst du eine API‑URL per `fetch` ab?",
+      "answer": "```js\nfetch('https://api.example.com')\n  .then(r => r.json())\n  .then(data => console.log(data));\n```"
     },
     {
-      "front": "Wie funktioniert eine for-Schleife?",
-      "back": "for (let i = 0; i < 5; i++) { /* wiederhole */ }"
+      "question": "Was ist ein Promise?",
+      "answer": "Ein Objekt für asynchrone Vorgänge, das entweder resolved oder rejected wird."
     },
     {
-      "front": "Was ist eine Funktion?",
-      "back": "Ein benannter Block mit wiederverwendbarem Code."
+      "question": "Wie schreibst du eine async/await‑Funktion?",
+      "answer": "```js\nasync function load() {\n  const res = await fetch(url);\n  const data = await res.json();\n  console.log(data);\n}\n```"
     },
     {
-      "front": "Wie definiert man eine Funktion?",
-      "back": "function meineFunktion() { /* Code */ }"
+      "question": "Was ist JavaScript?",
+      "answer": "Eine Skriptsprache, die Webseiten dynamisch macht und interaktive Funktionen ermöglicht."
     },
     {
-      "front": "Wie ruft man eine Funktion auf?",
-      "back": "meineFunktion();"
+      "question": "Wie deklarierst du eine Variable, die neu zugewiesen werden kann?",
+      "answer": "Mit dem Keyword `let`, z. B. `let x = 5;`"
     },
     {
-      "front": "Was ist eine Arrow Function?",
-      "back": "Kurze Syntax: const f = () => { /* Code */ };"
+      "question": "Wie deklarierst du eine Konstante?",
+      "answer": "Mit dem Keyword `const`, z. B. `const PI = 3.14;`"
     },
     {
-      "front": "Wie erstellt man ein Array?",
-      "back": "const arr = [\"Apfel\", \"Banane\", \"Kirsche\"];"
+      "question": "Nenne die sechs primitiven Datentypen in JS.",
+      "answer": "`string`, `number`, `boolean`, `null`, `undefined`, `symbol`"
     },
     {
-      "front": "Wie greift man auf ein Array-Element zu?",
-      "back": "arr[0] liefert das erste Element."
+      "question": "Wie erzeugst du ein Array mit drei Zahlen?",
+      "answer": "Per Literalsyntax: `const arr = [1, 2, 3];`"
     },
     {
-      "front": "Was ist ein Objekt?",
-      "back": "Sammlung von Schlüssel-Wert-Paaren, z. B. const o = {name: \"Anna\"};"
+      "question": "Wie greifst du auf das zweite Element eines Arrays `arr` zu?",
+      "answer": "Mit dem Index: `arr[1]`"
     },
     {
-      "front": "Wie liest man ein Objekt-Property aus?",
-      "back": "o.name oder o[\"name\"]"
+      "question": "Wie definierst du eine Funktion, die zwei Werte addiert?",
+      "answer": "```js\nfunction add(a, b) {\n  return a + b;\n}\n```"
     },
     {
-      "front": "Wie wählt man ein DOM-Element aus?",
-      "back": "document.getElementById(\"meineId\");"
+      "question": "Wie schreibst du dieselbe Funktion als Arrow Function?",
+      "answer": "`const add = (a, b) => a + b;`"
     },
     {
-      "front": "Wie fügt man einem Button einen Klick-Handler hinzu?",
-      "back": "button.addEventListener(\"click\", () => { /* Code */ });"
+      "question": "Was ist der Unterschied zwischen `==` und `===`?",
+      "answer": "`==` prüft nur Wert, `===` prüft Wert und Typ."
     },
     {
-      "front": "Was ist eine Methode?",
-      "back": "Eine Funktion, die als Property in einem Objekt gespeichert ist."
+      "question": "Wie baust du eine `for`‑Schleife, die 5‑mal läuft?",
+      "answer": "```js\nfor (let i = 0; i < 5; i++) {\n  // ...\n}\n```"
     },
     {
-      "front": "Erkläre Hoisting.",
-      "back": "Variablen- und Funktionsdeklarationen werden vor der Ausführung an den Anfang ihres Scopes verschoben."
+      "question": "Was macht `Array.prototype.map()`?",
+      "answer": "Erzeugt ein neues Array durch Anwenden einer Funktion auf jedes Element."
     },
     {
-      "front": "Was ist der globale Scope?",
-      "back": "Variablen, die außerhalb von Funktionen definiert sind, sind im gesamten Skript sichtbar."
+      "question": "Was macht `Array.prototype.filter()`?",
+      "answer": "Erzeugt ein neues Array mit allen Elementen, die eine Bedingung erfüllen."
     },
     {
-      "front": "Was ist der Block-Scope?",
-      "back": "Variablen mit let oder const sind nur innerhalb des umgebenden Blocks sichtbar."
+      "question": "Was ist ein Objekt in JS?",
+      "answer": "Eine Sammlung von Schlüssel‑Wert‑Paaren, z. B. `{ name: 'Max', age: 30 }`."
     },
     {
-      "front": "Was bedeutet lexical scope?",
-      "back": "Der Scope einer Variablen wird durch die physische Position des Codes bestimmt."
+      "question": "Wie liest du die Eigenschaft `name` von `obj` aus?",
+      "answer": "Per Punktnotation `obj.name` oder eckiger Notation `obj['name']`."
     },
     {
-      "front": "Was ist eine Closure?",
-      "back": "Eine Funktion, die Zugriff auf Variablen ihres äußeren Scopes behält, auch nach dessen Ausführung."
+      "question": "Wie fügst du ein neues DOM‑Element ans Ende des `body` hinzu?",
+      "answer": "```js\nconst p = document.createElement('p');\np.textContent = 'Hallo';\ndocument.body.appendChild(p);\n```"
     },
     {
-      "front": "Wie schreibt man eine for-Schleife?",
-      "back": "for (let i = 0; i < 5; i++) { /* ... */ }"
+      "question": "Wie hörst du auf Klick‑Events am Dokument?",
+      "answer": "```js\ndocument.addEventListener('click', () => console.log('Geklickt!'));\n```"
     },
     {
-      "front": "Was ist eine while-Schleife?",
-      "back": "Eine Schleife, die so lange wiederholt, wie die Bedingung true ist."
+      "question": "Was sind Template Literals und wie nutzt du sie?",
+      "answer": "Strings in Backticks mit `${}`: `` `Hallo ${name}!` ``"
     },
     {
-      "front": "Was ist ein Callback?",
-      "back": "Eine Funktion, die als Argument an eine andere Funktion übergeben wird."
+      "question": "Wie zerlegst du ein Objekt per Destructuring?",
+      "answer": "```js\nconst { name, age } = person;\n```"
     },
     {
-      "front": "Was macht Array.prototype.map()?",
-      "back": "Erzeugt ein neues Array durch Anwenden einer Funktion auf jedes Element."
+      "question": "Wie erzeugst du ein neues Array aus `arr` plus ein Element?",
+      "answer": "`const newArr = [...arr, 'neu'];`"
     },
     {
-      "front": "Was macht Array.prototype.filter()?",
-      "back": "Erzeugt ein neues Array mit allen Elementen, die einen Test bestehen."
+      "question": "Was ist Hoisting?",
+      "answer": "Variable‑ und Funktionsdeklarationen werden vor der Ausführung nach oben verschoben."
     },
     {
-      "front": "Was macht Array.prototype.reduce()?",
-      "back": "Reduziert ein Array auf einen einzigen Wert durch Anwenden einer Funktion."
+      "question": "Was ist der globale Scope?",
+      "answer": "Variablen außerhalb von Funktionen, sichtbar im gesamten Skript."
     },
     {
-      "front": "Was ist ein Promise?",
-      "back": "Ein Objekt für asynchrone Operationen, das eventual einen Wert liefert oder fehlschlägt."
+      "question": "Was ist Block‑Scope?",
+      "answer": "Variablen mit `let`/`const` sind nur im aktuellen Block ({…}) gültig."
     },
     {
-      "front": "Welche drei Zustände kann ein Promise haben?",
-      "back": "pending, fulfilled (resolved), rejected."
+      "question": "Was ist eine Closure?",
+      "answer": "Eine Funktion, die Zugriff auf ihren äußeren Lexikalischen Scope behält."
     },
     {
-      "front": "Wie erstellt man ein Promise?",
-      "back": "Mit new Promise((resolve, reject) => { /* ... */ });"
+      "question": "Wie erstellst du ein Promise?",
+      "answer": "Mit `new Promise((resolve, reject) => { … })`."
     },
     {
-      "front": "Wie hängt man einen .then()-Handler an?",
-      "back": "promise.then(result => { /* ... */ });"
+      "question": "Was ist async/await?",
+      "answer": "Syntax für asynchrone Operationen, die Promises wie synchronen Code aussehen lässt."
     },
     {
-      "front": "Was macht .catch() bei Promises?",
-      "back": "Fängt Fehler ab, wenn das Promise rejected wurde."
+      "question": "Wie behandelst du Fehler mit `try/catch`?",
+      "answer": "```js\ntry { … } catch (err) { console.error(err); }\n```"
     },
     {
-      "front": "Was ist async/await?",
-      "back": "Syntax für asynchrone Funktionen, die Promises handhaben wie synchronen Code."
+      "question": "Was ist `this` in einer Methode?",
+      "answer": "Referenziert das Objekt, über das die Methode aufgerufen wurde."
     },
     {
-      "front": "Wie deklariert man eine async-Funktion?",
-      "back": "async function myFunc() { /* ... */ }"
+      "question": "Wie bindest du `this` manuell?",
+      "answer": "Mit `.bind(context)`, z. B. `fn.bind(obj)`."
     },
     {
-      "front": "Wie wartet man auf ein Promise mit await?",
-      "back": "const result = await promise; (nur in async-Funktionen)"
+      "question": "Wie stoppst du Event‑Bubbling?",
+      "answer": "Mit `event.stopPropagation()` im Event‑Handler."
     },
     {
-      "front": "Was ist event bubbling?",
-      "back": "Ein Ereignis auf einem Element wird nach oben zum DOM-Root weitergereicht."
+      "question": "Was macht `console.log()`?",
+      "answer": "Gibt eine Nachricht in die Entwicklertools‑Konsole aus."
     },
     {
-      "front": "Wie verhindert man event bubbling?",
-      "back": "Mit event.stopPropagation() im Event-Handler."
+      "question": "Was ist ein Ternary Operator?",
+      "answer": "Kurzform für `if`: `condition ? expr1 : expr2`."
     },
     {
-      "front": "Was ist event delegation?",
-      "back": "Ein einzelner Event-Handler am übergeordneten Element fängt Events seiner Kinder ab."
+      "question": "Wie wandelst du einen String `'123'` in eine Zahl um?",
+      "answer": "Mit `Number('123')` oder `parseInt('123', 10)`."
     },
     {
-      "front": "Wie registriert man einen Click-Handler?",
-      "back": "element.addEventListener('click', () => { /* ... */ });"
+      "question": "Was ist `null` in JS?",
+      "answer": "Ein expliziter Wert, der „keinen Wert“ repräsentiert."
     },
     {
-      "front": "Was ist JSON?",
-      "back": "JavaScript Object Notation – Textformat zum Datenaustausch."
+      "question": "Was ist `undefined` in JS?",
+      "answer": "Der Standardwert für uninitialisierte Variablen."
     },
     {
-      "front": "Wie wandelt man ein JS-Objekt in JSON um?",
-      "back": "JSON.stringify(obj);"
+      "question": "Wie erzeugst du ein Objekt mit dynamischem Key?",
+      "answer": "```js\nconst key = 'name';\nconst obj = { [key]: 'Wert' };\n```"
     },
     {
-      "front": "Wie parst man JSON in ein JS-Objekt?",
-      "back": "JSON.parse(jsonString);"
+      "question": "Was ist eine IIFE (Immediately Invoked Function Expression)?",
+      "answer": "Eine Funktion, die sofort nach der Definition ausgeführt wird: `(function(){ … })();`"
     },
     {
-      "front": "Was ist Fetch API?",
-      "back": "Moderne Schnittstelle für HTTP-Anfragen im Browser."
+      "question": "Wie prüfst du, ob ein Array leer ist?",
+      "answer": "Mit `arr.length === 0`."
     },
     {
-      "front": "Wie macht man eine GET-Anfrage mit fetch?",
-      "back": "fetch(url).then(res => res.json()).then(data => { /* ... */ });"
+      "question": "Wie verbindet du zwei Arrays `a` und `b`?",
+      "answer": "Mit `a.concat(b)` oder spread: `[...a, ...b]`."
     },
     {
-      "front": "Was ist localStorage?",
-      "back": "Browser-API zum Speichern von Daten als Schlüssel-Wert-Paare dauerhaft."
+      "question": "Was macht `Object.keys(obj)`?",
+      "answer": "Gibt ein Array aller Property-Namen zurück."
     },
     {
-      "front": "Wie speichert man etwas in localStorage?",
-      "back": "localStorage.setItem('key', 'value');"
+      "question": "Was macht `Object.values(obj)`?",
+      "answer": "Gibt ein Array aller Property-Werte zurück."
     },
     {
-      "front": "Wie liest man etwas aus localStorage?",
-      "back": "const value = localStorage.getItem('key');"
+      "question": "Wie stopst du die Ausführung einer Funktion?",
+      "answer": "Mit `return`."
     },
     {
-      "front": "Was ist sessionStorage?",
-      "back": "Ähnlich wie localStorage, aber die Daten werden beim Schließen des Tabs gelöscht."
+      "question": "Was ist ein Callback?",
+      "answer": "Eine Funktion, die als Argument an eine andere Funktion übergeben wird."
     },
     {
-      "front": "Was ist der Unterschied var vs. let vs. const?",
-      "back": "var: function-scoped; let/const: block-scoped; const: unveränderlich."
+      "question": "Was ist eine Callback‑Funktion?",
+      "answer": "Eine Funktion, die als Argument an eine andere Funktion übergeben wird und später aufgerufen wird."
     },
     {
-      "front": "Was ist Type Coercion?",
-      "back": "Automatische Umwandlung von Datentypen bei Operationen."
+      "question": "Wie verhinderst du, dass ein Formular beim Absenden neu lädt?",
+      "answer": "Im Event‑Handler `event.preventDefault()` aufrufen."
     },
     {
-      "front": "Wie konvertiert man einen String in eine Zahl?",
-      "back": "Mit Number('123') oder parseInt('123', 10)."
+      "question": "Was macht `console.error()`?",
+      "answer": "Gibt eine Fehlermeldung in der Konsole aus und markiert sie rot."
     },
     {
-      "front": "Was ist NaN?",
-      "back": "Not-a-Number – Ergebnis ungültiger oder undefinierter Zahl-Operationen."
+      "question": "Wie prüfst du, ob ein Wert `NaN` ist?",
+      "answer": "Mit `Number.isNaN(value)`."
     },
     {
-      "front": "Wie prüft man auf NaN?",
-      "back": "Number.isNaN(value);"
+      "question": "Was bewirkt `Array.prototype.sort()` ohne Callback?",
+      "answer": "Sortiert Elemente als Strings lexikographisch."
     },
     {
-      "front": "Was ist der Ternary Operator?",
-      "back": "Kurzform für if: condition ? expr1 : expr2."
+      "question": "Wie entfernst du das letzte Element aus einem Array `arr`?",
+      "answer": "Mit `arr.pop()`."
     },
     {
-      "front": "Wie definiert man eine Klasse in JS?",
-      "back": "class MyClass { constructor() { } method() { } }"
+      "question": "Wie fügst du am Anfang eines Arrays `arr` ein Element hinzu?",
+      "answer": "Mit `arr.unshift(elem)`."
     },
     {
-      "front": "Was ist der Konstruktor einer Klasse?",
-      "back": "Die special Methode constructor(), die beim new-Aufruf ausgeführt wird."
+      "question": "Was ist der Unterschied zwischen `null` und `undefined`?",
+      "answer": "`null` ist ein absichtlicher leerer Wert, `undefined` bedeutet „nicht definiert“."
     },
     {
-      "front": "Wie erbt man von einer Klasse?",
-      "back": "class Child extends Parent { super(); }"
+      "question": "Wie machst du einen Deep‑Copy eines einfachen Objekts `obj`?",
+      "answer": "Mit `JSON.parse(JSON.stringify(obj))`."
     },
     {
-      "front": "Was ist das Schlüsselwort this?",
-      "back": "Bezieht sich auf das aktuelle Objekt-Kontext in dem Code."
+      "question": "Was ist eine IIFE und wofür wird sie genutzt?",
+      "answer": "Immediately Invoked Function Expression – wird sofort ausgeführt und kapselt Variablen im lokalen Scope."
     },
     {
-      "front": "Wie bindet man this manuell?",
-      "back": "Mit function.bind(context) z.B. fn.bind(obj)."
+      "question": "Was ist der Unterschied zwischen `for...in` und `for...of`?",
+      "answer": "`for...in` iteriert über Objekt‑Keys, `for...of` über iterable Werte (z.B. Arrays)."
     },
     {
-      "front": "Was ist ein Modul in JS?",
-      "back": "Ein File, das export/import verwendet, um Code zu kapseln."
+      "question": "Wie wandelst du einen String in Großbuchstaben um?",
+      "answer": "Mit `string.toUpperCase()`."
     },
     {
-      "front": "Wie exportiert man mehrere Sachen?",
-      "back": "export { a, b, c }; oder export function foo() { }"
+      "question": "Wie entfernst du führende und folgende Leerzeichen eines Strings?",
+      "answer": "Mit `string.trim()`."
     },
     {
-      "front": "Wie importiert man alle Exporte als Objekt?",
-      "back": "import * as Utils from './utils.js';"
+      "question": "Was macht `Array.prototype.find()`?",
+      "answer": "Gibt das erste Element zurück, das den Callback‑Test besteht."
+    },
+    {
+      "question": "Wie überprüfst du, ob ein Array `arr` ein Element enthält?",
+      "answer": "Mit `arr.includes(value)`."
+    },
+    {
+      "question": "Wie kombinierst du mehrere Arrays zu einem neuen Array?",
+      "answer": "Mit dem Spread‑Operator: `[...arr1, ...arr2]`."
+    },
+    {
+      "question": "Was ist Destructuring Assignment bei Objekten?",
+      "answer": "Eine Kurzschreibweise zum Extrahieren von Properties: `const {a, b} = obj;`."
+    },
+    {
+      "question": "Wie erstellst du ein Datum-Objekt für den aktuellen Zeitpunkt?",
+      "answer": "Mit `new Date()`."
+    },
+    {
+      "question": "Wie wandelst du ein Datum in einen ISO‑String um?",
+      "answer": "Mit `date.toISOString()`."
+    },
+    {
+      "question": "Was macht `setInterval(fn, ms)`?",
+      "answer": "Ruft `fn` alle `ms` Millisekunden wiederholt auf."
+    },
+    {
+      "question": "Wie wandelst du einen String in Kleinbuchstaben um?",
+      "answer": "Mit `string.toLowerCase()`."
+    },
+    {
+      "question": "Wofür steht das Kürzel `NaN`?",
+      "answer": "„Not a Number“ – Ergebnis ungültiger mathematischer Operationen."
+    },
+    {
+      "question": "Wie stoppst du einen laufenden `setInterval`?",
+      "answer": "Mit `clearInterval(intervalId)`."
+    },
+    {
+      "question": "Was liefert `Array.prototype.slice(start, end)` zurück?",
+      "answer": "Ein neues Array mit dem Teilbereich von `start` bis `end` (exklusiv)."
+    },
+    {
+      "question": "Wie prüfst du, ob eine Variable `x` `null` oder `undefined` ist?",
+      "answer": "Mit `x == null` (gleichs Operator zweierlei) oder explizit `x === null || x === undefined`."
+    },
+    {
+      "question": "Was macht der Spread‑Operator bei Objekten?",
+      "answer": "Erzeugt ein neues Objekt mit kopierten Properties: `{...obj}`."
+    },
+    {
+      "question": "Wie erstellst du eine einfache JavaScript‑Klasse?",
+      "answer": "Mit `class MyClass { constructor(){} method(){} }`."
+    },
+    {
+      "question": "Was ist eine anonyme Funktion?",
+      "answer": "Eine Funktion ohne Namen, z.B. `const f = function() {}` oder als Arrow: `() => {}`."
+    },
+    {
+      "question": "Wie stoppst du die Ausführung in einer Funktion?",
+      "answer": "Mit dem Statement `return`."
+    },
+    {
+      "question": "Wie prüfst du, ob ein Objekt `obj` eine bestimmte Property `prop` hat?",
+      "answer": "Mit `obj.hasOwnProperty('prop')` oder dem `'prop' in obj`‑Operator."
+    },
+    {
+      "question": "Was bewirkt `array.push(element)`?",
+      "answer": "Hängt `element` ans Ende des Arrays an und gibt die neue Länge zurück."
+    },
+    {
+      "question": "Wofür steht `DOM`?",
+      "answer": "Document Object Model – die Struktur eines HTML-/XML‑Dokuments im Speicher."
+    },
+    {
+      "question": "Wie findest du alle Elemente mit einer bestimmten Klasse?",
+      "answer": "Mit `document.getElementsByClassName('klasse')` oder `document.querySelectorAll('.klasse')`."
+    },
+    {
+      "question": "Was macht die Methode `string.includes(substring)`?",
+      "answer": "Prüft, ob `substring` in `string` enthalten ist, und gibt `true`/`false` zurück."
+    },
+    {
+      "question": "Wie entfernst du das letzte Element aus einem Array?",
+      "answer": "Mit `array.pop()`, das auch das entfernte Element zurückgibt."
+    },
+    {
+      "question": "Was ist der Unterschied zwischen `==` und `===`?",
+      "answer": "`==` vergleicht nach Typumwandlung, `===` vergleicht strikt ohne Typumwandlung."
+    },
+    {
+      "question": "Wie konvertierst du einen String in eine Zahl?",
+      "answer": "Mit `Number(string)` oder `parseInt(string, 10)` bzw. `parseFloat(string)`."
+    },
+    {
+      "question": "Was ist eine IIFE (Immediately Invoked Function Expression)?",
+      "answer": "Eine Funktion, die sofort nach ihrer Definition ausgeführt wird, z.B. `(function(){})();`."
+    },
+    {
+      "question": "Wie verhinderst du, dass ein Event weiter nach oben propagiert?",
+      "answer": "Mit `event.stopPropagation()` im Event‑Handler."
+    },
+    {
+      "question": "Wie erstellst du ein leeres Objekt-Array mit einer bestimmten Länge?",
+      "answer": "Mit `Array(length).fill({})` oder `new Array(length).fill({})`."
+    },
+    {
+      "question": "Was macht `array.slice(start, end)`?",
+      "answer": "Gibt einen neuen Array‑Abschnitt von `start` bis `end` (exklusiv) zurück."
+    },
+    {
+      "question": "Wofür steht `JSON`?",
+      "answer": "JavaScript Object Notation – ein leichtgewichtiges Daten‑Austauschformat."
+    },
+    {
+      "question": "Wie fügst du HTML‑Code dynamisch in die Seite ein?",
+      "answer": "Mit `element.innerHTML = '<p>Text</p>'`."
+    },
+    {
+      "question": "Was bewirkt `event.preventDefault()`?",
+      "answer": "Verhindert die Standardaktion eines Events, z.B. das Abschicken eines Formulars."
+    },
+    {
+      "question": "Wie übergibst du Standard‑Parameter an eine Funktion?",
+      "answer": "Mit Syntax wie `function foo(x = 10) { … }`, wobei `x` Standardwert 10 hat."
+    },
+    {
+      "question": "Was ist `NaN` in JavaScript?",
+      "answer": "`Not a Number` – Ergebnis einer invaliden oder undefinierten Zahl‑Operation."
+    },
+    {
+      "question": "Wie prüfst du, ob eine Variable `undefined` ist?",
+      "answer": "Mit `typeof variable === 'undefined'` oder `variable === undefined`."
+    },
+    {
+      "question": "Was macht `array.find(callback)`?",
+      "answer": "Gibt das erste Element zurück, für das `callback` `true` ergibt, oder `undefined`."
+    },
+    {
+      "question": "Wie kombinierst du zwei Arrays?",
+      "answer": "Mit dem Spread‑Operator: `const combined = [...array1, ...array2]`."
+    },
+    {
+      "question": "Wie stoppst du ein `forEach`‑Durchlauf frühzeitig?",
+      "answer": "Du kannst `forEach` nicht abbrechen – nutze stattdessen eine normale `for`‑Schleife oder `some`/`find`."
+    },
+    {
+      "question": "Was macht `array.includes(value)`?",
+      "answer": "Prüft, ob `value` im Array enthalten ist; gibt `true` oder `false` zurück."
+    },
+    {
+      "question": "Wie konvertierst du einen String in eine Zahl?",
+      "answer": "Mit `Number('123')` oder `parseInt('123', 10)`."
+    },
+    {
+      "question": "Was bewirkt der Spread‑Operator bei Objekten?",
+      "answer": "Er kopiert Eigenschaften: `const copy = { ...original }`."
+    },
+    {
+      "question": "Wie entfernst du das letzte Element eines Arrays?",
+      "answer": "Mit `array.pop()`, das auch den entfernten Wert zurückgibt."
+    },
+    {
+      "question": "Was macht `array.shift()`?",
+      "answer": "Entfernt das erste Element im Array und gibt es zurück."
+    },
+    {
+      "question": "Wie fügst du ein Element an den Anfang eines Arrays?",
+      "answer": "Mit `array.unshift(element)`."
+    },
+    {
+      "question": "Was ist der Unterschied zwischen `==` und `===`?",
+      "answer": "`==` vergleicht nach Typumwandlung, `===` prüft Typ und Wert streng."
+    },
+    {
+      "question": "Wie erstellst du ein leeres Objekt?",
+      "answer": "Mit `{}` oder `new Object()`."
+    },
+    {
+      "question": "Was macht `Object.keys(obj)`?",
+      "answer": "Gibt ein Array der Eigenschaftsnamen von `obj` zurück."
+    },
+    {
+      "question": "Wie wandelst du ein Array in einen String um?",
+      "answer": "Mit `array.join(',')`, dabei trennst du die Elemente mit `,`."
+    },
+    {
+      "question": "Was ist `NaN` in JavaScript?",
+      "answer": "`NaN` steht für „Not a Number“ und entsteht, wenn eine Zahl‑Operation fehlschlägt."
+    },
+    {
+      "question": "Wie rundest du eine Zahl auf die nächste Ganzzahl auf?",
+      "answer": "Mit `Math.ceil(zahl)`."
+    },
+    {
+      "question": "Wie rundest du eine Zahl auf die nächste Ganzzahl ab?",
+      "answer": "Mit `Math.floor(zahl)`."
+    },
+    {
+      "question": "Wofür steht DOM?",
+      "answer": "Document Object Model – die baumartige Repräsentation des HTML‑Dokuments."
+    },
+    {
+      "question": "Wie änderst du den Text eines Elements mit JavaScript?",
+      "answer": "Mit `element.textContent = 'Neuer Text';`."
+    },
+    {
+      "question": "Wie fügt man einem Element eine CSS‑Klasse hinzu?",
+      "answer": "Mit `element.classList.add('meine-klasse');`."
+    },
+    {
+      "question": "Wie entfernst du alle Elemente mit `innerHTML`?",
+      "answer": "Mit `container.innerHTML = '';`."
+    },
+    {
+      "question": "Wie stoppst du das Standardverhalten eines Events?",
+      "answer": "Mit `event.preventDefault();` im Event‑Handler."
+    },
+    {
+      "question": "Was bewirkt `setInterval(fn, ms)`?",
+      "answer": "Führt die Funktion `fn` alle `ms` Millisekunden wiederholt aus."
+    },
+    {
+      "question": "Wie brichst du eine `for`‑Schleife vorzeitig ab?",
+      "answer": "Mit dem `break`‑Statement."
     }
   ]
 }

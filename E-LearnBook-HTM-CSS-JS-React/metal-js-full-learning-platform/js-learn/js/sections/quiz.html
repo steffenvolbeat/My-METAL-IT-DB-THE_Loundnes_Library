@@ -1,0 +1,32 @@
+<!-- js/sections/quiz.html -->
+<section aria-labelledby="quiz-title" class="module quiz-section">
+  <header><h2 id="quiz-title">JS Lernquiz</h2></header>
+
+  <!-- Hier wird das Quiz gerendert -->
+  <article id="quiz-container" aria-live="polite"></article>
+
+  <!-- Ergebnisbereich (wird erst am Ende sichtbar) -->
+  <aside id="quiz-result" hidden aria-live="polite">
+    <h3>Ergebnis</h3>
+    <p id="quiz-score"></p>
+    <button id="restart-button">Quiz neu starten</button>
+  </aside>
+</section>
+
+<script type="module">
+  // --- Pfad zur Quiz‑Klasse, immer relativ zu index.html! ---
+  import { Quiz } from "./js/modules/quiz.js";
+
+  // Mappe eure Hash‑Routen auf die JSON-Dateien unter data/quiz/...
+  const quizMap = {
+    "#/beginner": "./data/quiz/beginner.json",
+    "#/intermediate": "./data/quiz/intermediate.json",
+    "#/expert": "./data/quiz/expert.json",
+  };
+
+  const hash = window.location.hash || "#/beginner";
+  const jsonUrl = quizMap[hash] || quizMap["#/beginner"];
+
+  // Quiz initialisieren (zweiter Parameter = Container-Selector)
+  new Quiz(jsonUrl, "#quiz-container");
+</script>

@@ -4,31 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Learn Platform</title>
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/theme-metal.css" />
+
+    <!-- Basis-Styles -->
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/theme-metal.css" />
+
+    <!-- Module-Styles (flashcard, quiz, console) -->
+    <link rel="stylesheet" href="./css/modules/flashcard.css" />
+    <link rel="stylesheet" href="./css/modules/quiz.css" />
+    <link rel="stylesheet" href="./css/modules/console.css" />
   </head>
   <body>
     <canvas id="metal-canvas"></canvas>
+
     <div id="wrapper">
       <header id="header-content" class="site-header">
         <h1>JS Learn Platform</h1>
-        <nav>
+        <nav aria-label="Hauptnavigation">
           <ul>
             <li><a href="#/beginner">Einsteiger</a></li>
             <li><a href="#/intermediate">Fortgeschritten</a></li>
             <li><a href="#/expert">Experten</a></li>
+            <li><a href="#/quiz">Quiz</a></li>
+            <li><a href="#/flashcard">Flashcards</a></li>
+            <li><a href="#/console">Konsole</a></li>
+            <!-- neu -->
           </ul>
         </nav>
       </header>
-      <main id="app">
-        <!-- Dynamisch per router.js befüllt -->
-      </main>
+
+      <main id="app"></main>
+
       <footer class="site-footer">
         <p>&copy; 2025 JS Learn Platform</p>
       </footer>
     </div>
-    <script src="js/metal-canvas.js" type="module"></script>
-    <script type="module" src="js/main.js"></script>
+
+    <script src="./js/metal-canvas.js" type="module"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
+git 

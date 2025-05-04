@@ -1,82 +1,86 @@
 // js/modules/quiz.js
 export class Quiz {
-  constructor(jsonUrl, containerSelector) {
-    this.container = document.querySelector(containerSelector);
-    this.currentIndex = 0;
+  constructor(jsonUrl, containerSel) {
+    this.container = document.querySelector(containerSel);
+    this.idx = 0;
     this.score = 0;
+
     fetch(jsonUrl)
-      .then((r) => r.json())
-      .then((data) => this.setup(data.questions));
+      .then((r) => {
+        if (!r.ok)
+          throw new Error(`HTTP ${r.status} beim Laden von ${jsonUrl}`);
+        return r.json();
+      })
+      .then((data) => {
+        this.questions = data.questions;
+        this.render();
+      })
+      .catch((err) => {
+        this.container.innerHTML = `<p style="color: red;">Fehler: ${err.message}</p>`;
+      });
   }
 
-  setup(questions) {
-    this.questions = questions;
-    this.renderQuestion();
-  }
-
-  renderQuestion() {
-    const q = this.questions[this.currentIndex];
+  render() {
+    const q = this.questions[this.idx];
     this.container.innerHTML = `
       <article class="quiz-item">
-        <h2>Frage ${this.currentIndex + 1} von ${this.questions.length}</h2>
+        <h2>Frage ${this.idx + 1} / ${this.questions.length}</h2>
         <p class="quiz-question">${q.question}</p>
-        <ol class="quiz-options">
+        <ul class="quiz-options">
           ${q.options
             .map(
-              (opt, i) => `<li><button data-index="${i}">${opt}</button></li>`
+              (opt, i) => `
+            <li><button data-i="${i}">${opt}</button></li>
+          `
             )
             .join("")}
-        </ol>
+        </ul>
       </article>
     `;
-    this.attachOptionHandlers();
+    this.attach();
   }
 
-  attachOptionHandlers() {
-    this.container.querySelectorAll(".quiz-options button").forEach((btn) => {
-      btn.addEventListener("click", (e) => this.checkAnswer(e));
-    });
+  attach() {
+    this.container
+      .querySelectorAll("button")
+      .forEach((btn) => btn.addEventListener("click", (e) => this.check(e)));
   }
 
-  checkAnswer(event) {
-    const selected = Number(event.currentTarget.dataset.index);
-    const correct = this.questions[this.currentIndex].answer;
+  check(e) {
+    const sel = +e.currentTarget.dataset.i;
+    const corr = this.questions[this.idx].answer;
     const feedback = document.createElement("div");
-    feedback.className = selected === correct ? "correct" : "incorrect";
+    feedback.className = sel === corr ? "correct" : "incorrect";
     feedback.textContent =
-      selected === correct
-        ? "Richtig!"
-        : `Falsch! Richtige Antwort: ${
-            this.questions[this.currentIndex].options[correct]
-          }`;
+      sel === corr
+        ? "👍 Richtig!"
+        : `❌ Falsch! Richtig wäre: ${this.questions[this.idx].options[corr]}`;
     this.container.appendChild(feedback);
+    if (sel === corr) this.score++;
 
-    // Punkte vergeben
-    if (selected === correct) this.score++;
-
-    // Nächste Frage nach kurzer Pause
     setTimeout(() => {
-      this.currentIndex++;
-      if (this.currentIndex < this.questions.length) {
-        this.renderQuestion();
-      } else {
-        this.showResult();
-      }
-    }, 1500);
+      this.idx++;
+      if (this.idx < this.questions.length) this.render();
+      else this.finish();
+    }, 1000);
   }
 
-  showResult() {
+  finish() {
+    // Ergebnis‑Anzeige aktivieren
+    const aside = document.getElementById("quiz-result");
+    aside.hidden = false;
     this.container.innerHTML = `
       <section class="quiz-result">
         <h2>Quiz abgeschlossen!</h2>
-        <p>Du hast ${this.score} von ${this.questions.length} Punkten erreicht.</p>
-        <button id="retry-quiz">Nochmal versuchen</button>
+        <p id="quiz-score">${this.score} von ${this.questions.length} richtig</p>
+        <button id="restart-button">Nochmal</button>
       </section>
     `;
-    document.getElementById("retry-quiz").addEventListener("click", () => {
-      this.currentIndex = 0;
+    document.getElementById("restart-button").addEventListener("click", () => {
+      this.idx = 0;
       this.score = 0;
-      this.renderQuestion();
+      aside.hidden = true;
+      this.render();
     });
   }
 }

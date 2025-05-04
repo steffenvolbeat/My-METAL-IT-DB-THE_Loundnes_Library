@@ -1,0 +1,1499 @@
+{
+  "questions": [
+    {
+      "question": "Was ist JavaScript?",
+      "options": [
+        "Programmiersprache",
+        "Betriebssystem",
+        "Browser",
+        "Hardware"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welche Schleife gibt es in JS?",
+      "options": ["for", "loop", "repeat", "circle"],
+      "answer": 0
+    },
+    {
+      "question": "Wozu verwendet man `console.log()`?",
+      "options": [
+        "Um Daten dauerhaft zu speichern",
+        "Um Text im HTML anzuzeigen",
+        "Um Nachrichten in der Browser‑Konsole auszugeben",
+        "Um CSS‑Klassen hinzuzufügen"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welcher Datentyp ist das Ergebnis von `typeof []`?",
+      "options": ["\"array\"", "\"object\"", "\"list\"", "\"undefined\""],
+      "answer": 1
+    },
+    {
+      "question": "Was macht der `push()`‑Aufruf auf einem Array?",
+      "options": [
+        "Löscht das erste Element",
+        "Gibt die Länge zurück",
+        "Hängt einen neuen Wert ans Ende an",
+        "Sortiert das Array alphabetisch"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welches Schlüsselwort deklariert eine Variable, deren Wert sich ändern lässt?",
+      "options": ["const", "let", "static", "immutable"],
+      "answer": 1
+    },
+    {
+      "question": "Wie beendet man eine `while`‑Schleife sofort?",
+      "options": ["continue", "exit", "break", "stop"],
+      "answer": 2
+    },
+    {
+      "question": "Welches Statement wird immer ausgeführt, egal ob ein Fehler geworfen wurde oder nicht?",
+      "options": ["try", "catch", "finally", "throw"],
+      "answer": 2
+    },
+    {
+      "question": "Wie erstellt man eine anonyme Funktion?",
+      "options": [
+        "function myFunc() {}",
+        "() => {}",
+        "new Function()",
+        "<function></function>"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode wandelt ein Objekt in einen JSON‑String um?",
+      "options": [
+        "JSON.toString()",
+        "Object.stringify()",
+        "JSON.stringify()",
+        "toJSON()"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Wie ruft man eine Funktion namens `greet` mit dem Argument `\"Hi\"` auf?",
+      "options": [
+        "greet = \"Hi\"",
+        "call greet(\"Hi\");",
+        "greet:\"Hi\";",
+        "greet(\"Hi\");"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Wofür steht AJAX häufig?",
+      "options": [
+        "Asynchronous Java And XML",
+        "Asynchronous JavaScript And XML",
+        "Automatic JSON And XML",
+        "Advanced Java API for XHR"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Was bewirkt das Schlüsselwort `var` in JavaScript?",
+      "options": [
+        "Es deklariert eine block‑skalierte Variable",
+        "Es deklariert eine Funktion",
+        "Es deklariert eine Variable mit Funktions‑Scope",
+        "Es deklariert eine Konstante"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welcher Ausdruck erstellt ein neues Array aus einem bestehenden Array?",
+      "options": [
+        "array.copy()",
+        "array.slice()",
+        "array.split()",
+        "array.join()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Wie fügt man einem Objekt eine neue Eigenschaft hinzu?",
+      "options": [
+        "obj.newProp = value;",
+        "obj.add('newProp', value);",
+        "obj->newProp = value;",
+        "obj.set('newProp', value);"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welche Methode entfernt das letzte Element eines Arrays?",
+      "options": ["pop()", "shift()", "slice()", "splice()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie prüft man, ob zwei Werte und Typen gleich sind?",
+      "options": ["==", "=", "===", "!=="],
+      "answer": 2
+    },
+    {
+      "question": "Welcher Loop‑Typ führt den Code mindestens einmal aus, bevor die Bedingung geprüft wird?",
+      "options": ["for", "while", "do...while", "forEach"],
+      "answer": 2
+    },
+    {
+      "question": "Wie konvertiert man einen String in eine Zahl?",
+      "options": [
+        "Number('123')",
+        "String(123)",
+        "'123'.toNumber()",
+        "parseString('123')"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Was gibt `Array.isArray([])` zurück?",
+      "options": ["undefined", "true", "false", "null"],
+      "answer": 1
+    },
+    {
+      "question": "Wie erstellt man ein leeres Objekt?",
+      "options": ["{}", "[]", "new Object[]", "Object.create()"],
+      "answer": 0
+    },
+    {
+      "question": "Welches Ereignis feuert, wenn eine Seite vollständig geladen ist?",
+      "options": ["onclick", "onload", "onready", "DOMContentLoaded"],
+      "answer": 1
+    },
+    {
+      "question": "Wie stoppt man das Standardverhalten eines Events?",
+      "options": [
+        "event.preventDefault()",
+        "event.stopPropagation()",
+        "event.cancel()",
+        "event.blockDefault()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Was ist der Rückgabewert von `[].map(() => {})`?",
+      "options": [
+        "ein Objekt",
+        "ein Array gleicher Länge",
+        "undefined",
+        "null"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Wie definiert man eine Arrow Function mit einem Parameter `x`?",
+      "options": [
+        "function(x) => x * 2",
+        "(x) => x * 2",
+        "=> x * 2",
+        "x => { return x * 2; }"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Schlüsselwort beendet die Ausführung einer Funktion und gibt einen Wert zurück?",
+      "options": ["end", "return", "stop", "yield"],
+      "answer": 1
+    },
+    {
+      "question": "Was macht `JSON.parse()`?",
+      "options": [
+        "Konvertiert JSON in einen JS‑String",
+        "Konvertiert JS in JSON",
+        "Konvertiert einen JSON‑String in ein JS‑Objekt",
+        "Validiert JSON‑Syntax"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Wie greift man auf den ersten Eintrag eines Arrays `arr` zu?",
+      "options": ["arr.first", "arr[1]", "arr(0)", "arr[0]"],
+      "answer": 3
+    },
+    {
+      "question": "Welches Schlüsselwort definiert eine Konstante in ES6?",
+      "options": ["constant", "final", "let", "const"],
+      "answer": 3
+    },
+    {
+      "question": "Wie blendet man ein Element mit der ID `myDiv` aus?",
+      "options": [
+        "document.getElementById('myDiv').hide();",
+        "document.getElementById('myDiv').style.display = 'none';",
+        "$('#myDiv').hide();",
+        "document.querySelector('#myDiv').visible = false;"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Wofür steht DOM?",
+      "options": [
+        "Document Object Model",
+        "Data Object Model",
+        "Document Oriented Mapping",
+        "Dynamic Object Mutation"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Was passiert, wenn Sie `alert('Hello')` aufrufen?",
+      "options": [
+        "Es wird eine Konsoleinladung geöffnet",
+        "Es wird eine Browser‑Alert‑Box angezeigt",
+        "Es wird ein DOM‑Element erstellt",
+        "Es wird eine Variable deklariert"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Schlüsselwort deklariert eine Variable, die neu zugewiesen werden kann?",
+      "options": ["var", "let", "const", "static"],
+      "answer": 1
+    },
+    {
+      "question": "Wie entfernt man das erste Element aus einem Array?",
+      "options": ["pop()", "shift()", "unshift()", "slice()"],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode fügt ein oder mehrere Elemente an den Anfang eines Arrays an?",
+      "options": ["push()", "slice()", "unshift()", "concat()"],
+      "answer": 2
+    },
+    {
+      "question": "Mit welchem Operator verkettet man Strings?",
+      "options": ["+", "&", "&&", "|"],
+      "answer": 0
+    },
+    {
+      "question": "Was gibt `typeof null` zurück?",
+      "options": ["\"null\"", "\"object\"", "\"undefined\"", "\"boolean\""],
+      "answer": 1
+    },
+    {
+      "question": "Wie prüft man, ob ein Objekt die Eigenschaft `prop` hat?",
+      "options": [
+        "obj.has('prop')",
+        "'prop' in obj",
+        "obj.contains('prop')",
+        "obj.exists('prop')"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Schlüsselwort startet eine Ausnahmebehandlung?",
+      "options": ["throw", "catch", "try", "finally"],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Abschnitt wird immer nach try/catch ausgeführt?",
+      "options": ["throw", "finally", "catch", "end"],
+      "answer": 1
+    },
+    {
+      "question": "Wie legt man standardmäßige Parameterwerte für eine Funktion fest?",
+      "options": [
+        "function fn(a = 5) {}",
+        "function fn(default a = 5) {}",
+        "function fn(a:5) {}",
+        "function fn(a? = 5) {}"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Ausdruck erstellt eine neue Instanz einer Klasse `Foo`?",
+      "options": ["Foo()", "new Foo()", "create Foo()", "instantiate Foo()"],
+      "answer": 1
+    },
+    {
+      "question": "Wie ruft man eine anonyme Funktion sofort auf?",
+      "options": [
+        "immediately(() => {})",
+        "(()=>{})()",
+        "run(() => {})",
+        "(() => {});"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode fügt Elemente in ein Array ein oder entfernt sie?",
+      "options": ["splice()", "slice()", "insert()", "append()"],
+      "answer": 0
+    },
+    {
+      "question": "Wofür steht AJAX?",
+      "options": [
+        "Asynchronous Java And XML",
+        "Asynchronous JavaScript And XML",
+        "All Java And XML",
+        "Advanced JS And XHTML"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Wie sendet man eine GET‑Anfrage mit Fetch API?",
+      "options": [
+        "fetch(url, { method: 'GET' })",
+        "get(url)",
+        "fetch.get(url)",
+        "AJAX.get(url)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Was ist eine Callback‑Funktion?",
+      "options": [
+        "Eine Funktion, die Daten zurückgibt",
+        "Eine Funktion, die synchron läuft",
+        "Eine Funktion, die als Argument übergeben wird",
+        "Eine anonyme Funktion"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welche Methode sortiert die Elemente eines Arrays?",
+      "options": ["order()", "sort()", "arrange()", "sequence()"],
+      "answer": 1
+    },
+    {
+      "question": "Wie ruft man alle Listenelemente in einer HTML‑Liste ab?",
+      "options": [
+        "document.getElementsByTagName('li')",
+        "document.querySelectorAll('li')",
+        "document.find('li')",
+        "beide 0 und 1"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Welcher Befehl bricht eine Schleife sofort ab?",
+      "options": ["stop", "break", "exit", "return"],
+      "answer": 1
+    },
+    {
+      "question": "Wie fügt man einem DOM‑Element einen Event‑Listener hinzu?",
+      "options": [
+        "element.on('click', fn)",
+        "element.attach('click', fn)",
+        "element.addEventListener('click', fn)",
+        "element.listen('click', fn)"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welches Statement definiert eine Verzweigung basierend auf mehreren Fällen?",
+      "options": ["if…else", "switch", "when", "case"],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode wandelt ein JavaScript-Objekt in einen JSON-String um?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "Object.toJSON()",
+        "toString()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Wie kann man in JavaScript einen Kommentar über mehrere Zeilen schreiben?",
+      "options": [
+        "/* Kommentar */",
+        "// Kommentar",
+        "<!-- Kommentar -->",
+        "# Kommentar"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welches Schlüsselwort beendet die Ausführung einer Funktion und gibt optional einen Wert zurück?",
+      "options": ["stop", "exit", "return", "break"],
+      "answer": 2
+    },
+    {
+      "question": "Wofür steht DOM in Web-Entwicklung?",
+      "options": [
+        "Document Object Model",
+        "Data Object Module",
+        "Database Object Model",
+        "Document Oriented Model"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Operator prüft sowohl Wert als auch Typ?",
+      "options": ["==", "===", "=", "!="],
+      "answer": 1
+    },
+    {
+      "question": "Wie definiert man eine Konstante, deren Wert nicht geändert werden kann?",
+      "options": ["var", "const", "let", "static"],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode fügt Elemente am Ende eines Arrays hinzu?",
+      "options": ["pop()", "push()", "shift()", "unshift()"],
+      "answer": 1
+    },
+    {
+      "question": "Was macht Array.prototype.filter()?",
+      "options": [
+        "Verbindet Arrays",
+        "Erzeugt neues Array mit Elementen, die Test bestehen",
+        "Sortiert ein Array",
+        "Durchsucht Array nach einem Element"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Schlüsselwort startet einen neuen Block in ES6, der nur lokalen Scope bietet?",
+      "options": ["var", "const", "block", "let"],
+      "answer": 3
+    },
+    {
+      "question": "Wie erstellt man eine anonyme Funktion und weist sie einer Variable zu?",
+      "options": [
+        "function = () => {}",
+        "const fn = function() {}",
+        "let fn => function() {}",
+        "var fn => {}"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Befehl gibt eine Nachricht in der Entwicklerkonsole aus?",
+      "options": ["console.write()", "console.log()", "print()", "debug()"],
+      "answer": 1
+    },
+    {
+      "question": "Wie verhindert man das Standardverhalten eines Events (z.B. Link-Klick)?",
+      "options": [
+        "event.preventDefault()",
+        "event.stopPropagation()",
+        "event.cancel()",
+        "event.block()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Was passiert, wenn man JSON.parse() auf einen ungültigen JSON-String anwendet?",
+      "options": [
+        "Gibt null zurück",
+        "Wirft einen SyntaxError",
+        "Ignoriert Fehler",
+        "Erzeugt leeres Objekt"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Ausdruck erstellt ein neues Promise-Objekt?",
+      "options": [
+        "new Promise()",
+        "Promise.create()",
+        "Promise.new()",
+        "create Promise()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wofür verwendet man Array.prototype.map()?",
+      "options": [
+        "Filtert Elemente",
+        "Transformiert jedes Element und gibt neues Array zurück",
+        "Sortiert Elemente",
+        "Durchläuft Array ohne Rückgabe"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Ereignis feuert, wenn die DOM-Struktur vollständig geladen ist, aber Bilder noch laden?",
+      "options": ["DOMContentLoaded", "load", "ready", "onload"],
+      "answer": 0
+    },
+    {
+      "question": "Wie kann man den Inhalt eines Textfelds mit id='name' abfragen?",
+      "options": [
+        "document.getElementByName('name').value",
+        "document.querySelector('#name').text",
+        "document.getElementById('name').value",
+        "document.find('#name').text"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welche Schleife eignet sich besonders zum Durchlaufen von Objekteigenschaften?",
+      "options": ["for", "while", "for...of", "for...in"],
+      "answer": 3
+    },
+    {
+      "question": "Wie kann man in JavaScript einen String in ein Array von Zeichen umwandeln?",
+      "options": [
+        "str.split('')",
+        "str.toArray()",
+        "Array.from(str)",
+        "beide 0 und 2"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Was bewirkt das Schlüsselwort 'this' innerhalb einer Objektmethode?",
+      "options": [
+        "Referenziert globales Objekt",
+        "Referenziert die umgebende Funktion",
+        "Referenziert das aufrufende Objekt",
+        "Hat keinen Effekt"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welche Funktion wandelt einen JSON-String in ein JavaScript-Objekt um?",
+      "options": [
+        "JSON.toObject()",
+        "JSON.parse()",
+        "Object.parse()",
+        "parse.JSON()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Schlüsselwort deklariert eine Variable im globalen Scope (vor ES6)?",
+      "options": ["let", "const", "var", "global"],
+      "answer": 2
+    },
+    {
+      "question": "Wie überprüft man, ob eine Variable undefiniert ist?",
+      "options": [
+        "if (x === undefined)",
+        "if (x == null)",
+        "if (typeof x === 'undefined')",
+        "Alle oben genannten"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Welche Methode entfernt das letzte Element eines Arrays?",
+      "options": ["pop()", "push()", "shift()", "unshift()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie kann man in JavaScript Kommentare einzeilig schreiben?",
+      "options": [
+        "<!-- Kommentar -->",
+        "// Kommentar",
+        "/* Kommentar */",
+        "# Kommentar"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Ausdruck erstellt eine neue, leere Map?",
+      "options": ["new Map()", "Map()", "{}", "[]"],
+      "answer": 0
+    },
+    {
+      "question": "Wie friert man ein Objekt ein, sodass seine Eigenschaften nicht mehr geändert werden können?",
+      "options": [
+        "Object.freeze(obj)",
+        "obj.lock()",
+        "Object.preventExtensions(obj)",
+        "obj.freeze()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wofür steht das Kürzel API?",
+      "options": [
+        "Application Programming Interface",
+        "App Program Interaction",
+        "Application Process Input",
+        "Automated Program Interface"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welche Methode führt einen Rückruf für jedes Element eines Arrays aus?",
+      "options": ["map()", "filter()", "forEach()", "reduce()"],
+      "answer": 2
+    },
+    {
+      "question": "Wie kann man HTML‑Elemente elegant mit CSS-Selektoren abfragen?",
+      "options": [
+        "document.getElement('selector')",
+        "document.querySelector('selector')",
+        "document.find('selector')",
+        "document.select('selector')"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Wert ist das Ergebnis von typeof NaN?",
+      "options": ["'number'", "'NaN'", "'undefined'", "'object'"],
+      "answer": 0
+    },
+    {
+      "question": "Welches Schlüsselwort deklariert eine Funktion als „asynchron“?",
+      "options": ["async", "await", "promisify", "defer"],
+      "answer": 0
+    },
+    {
+      "question": "Wie bezeichnet man eine Funktion, die sich selbst aufruft?",
+      "options": ["Closure", "Callback", "IIFE", "Promise"],
+      "answer": 2
+    },
+    {
+      "question": "Welches Objekt erlaubt das Speichern von Key-Value-Paaren im Browser über Sitzungen hinaus?",
+      "options": [
+        "sessionStorage",
+        "localStorage",
+        "cookieStorage",
+        "cacheStorage"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Ereignis wird ausgelöst, wenn ein Bild vollständig geladen ist?",
+      "options": ["DOMContentLoaded", "load", "ready", "imageLoad"],
+      "answer": 1
+    },
+    {
+      "question": "Welche Schleife eignet sich für asynchrone Abläufe mit await?",
+      "options": ["forEach", "for...of", "map", "filter"],
+      "answer": 1
+    },
+    {
+      "question": "Wie stoppt man die Ausbreitung eines Events in der DOM-Hierarchie?",
+      "options": [
+        "event.preventDefault()",
+        "event.stopPropagation()",
+        "event.cancelBubble()",
+        "event.block()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Was liefert document.body zurück?",
+      "options": [
+        "Das body-Tag als String",
+        "Ein HTMLCollection",
+        "Ein DOM-Element (HTMLElement)",
+        "Nichts"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Wie kann man eine NodeList in ein Array umwandeln?",
+      "options": [
+        "Array.from(nodeList)",
+        "nodeList.toArray()",
+        "Array.of(nodeList)",
+        "nodeList.array()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Wert ist falsy in JavaScript?",
+      "options": ["0", "'0'", "[]", "{}"],
+      "answer": 0
+    },
+    {
+      "question": "Wie liest man den Inhalt eines input-Elements mit ID „email“ aus?",
+      "options": [
+        "document.querySelector('#email').text",
+        "document.getElementById('email').value",
+        "email.value()",
+        "input#email.textContent"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode gibt die Anzahl der Elemente in einem Array zurück?",
+      "options": ["length()", "size", "length", "count()"],
+      "answer": 2
+    },
+    {
+      "question": "Was passiert, wenn Sie return ohne Wert in einer Funktion verwenden?",
+      "options": [
+        "Gibt null zurück",
+        "Gibt undefined zurück",
+        "Beendet das Script",
+        "Wirft einen Fehler"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Befehl erzeugt eine Endlosschleife?",
+      "options": [
+        "for (;;)",
+        "while (true)",
+        "beide 0 und 1",
+        "for (let i=0; i<0; i++)"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Wofür steht das Schlüsselwort `this` in einer Methode eines Objekts?",
+      "options": [
+        "Das globale Objekt",
+        "Das aktuelle Objekt",
+        "Die übergeordnete Funktion",
+        "Nichts davon"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Operator verbindet Zeichenketten in JavaScript?",
+      "options": ["+", "&", ".", "concat()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie definiert man ein Objekt-Literal?",
+      "options": ["let o = [];", "let o = {};", "let o = ();", "let o = <>;"],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode entfernt das erste Element aus einem Array?",
+      "options": ["pop()", "shift()", "unshift()", "splice(0,1)"],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Befehl bricht eine Schleife ab?",
+      "options": ["stop;", "break;", "exit;", "return;"],
+      "answer": 1
+    },
+    {
+      "question": "Wie kann man prüfen, ob ein Array ein bestimmtes Element enthält?",
+      "options": [
+        "array.indexOf(x) !== -1",
+        "array.contains(x)",
+        "array.has(x)",
+        "array.exists(x)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Rückgabewert hat `Array.prototype.filter()`?",
+      "options": [
+        "Ein neues Array",
+        "Die Anzahl gefilterter Elemente",
+        "Das Original-Array",
+        "Ein Boolean"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welches Statement führt Code nur aus, wenn eine Bedingung wahr ist?",
+      "options": ["while", "for", "if", "switch"],
+      "answer": 2
+    },
+    {
+      "question": "Wie fängt man Fehler, die in einem `try`-Block auftreten?",
+      "options": ["finally", "catch", "throw", "error"],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode liefert die aktuelle URL der Seite?",
+      "options": [
+        "window.location.href",
+        "document.url",
+        "location.get()",
+        "window.url()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welches Schlüsselwort deklariert eine Konstante?",
+      "options": ["var", "let", "const", "constant"],
+      "answer": 2
+    },
+    {
+      "question": "Wie erstellt man ein Timeout, das eine Funktion nach 2 Sekunden ausführt?",
+      "options": [
+        "setTimeout(fn, 2000)",
+        "delay(fn, 2000)",
+        "wait(2000, fn)",
+        "timeout(fn, 2)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Rückgabewert hat `Array.prototype.map()`?",
+      "options": ["Ein neues Array", "Ein String", "Ein Objekt", "undefined"],
+      "answer": 0
+    },
+    {
+      "question": "Wie prüft man, ob zwei Werte strikt gleich sind?",
+      "options": ["==", "===", "equals()", "==="],
+      "answer": 3
+    },
+    {
+      "question": "Welche Funktion pausiert die Ausführung einer async-Funktion?",
+      "options": ["pause", "sleep", "await", "delay"],
+      "answer": 2
+    },
+    {
+      "question": "Wie holt man alle Elemente mit der Klasse 'btn'?",
+      "options": [
+        "getElementsByClassName('btn')",
+        "querySelector('.btn')",
+        "getElement('.btn')",
+        "getElements('.btn')"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Wertebereich hat `Math.random()`?",
+      "options": [
+        "0 bis 1 (einschließlich)",
+        "0 bis 1 (ausschließlich)",
+        "1 bis 100",
+        "-1 bis 1"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Was bewirkt `console.warn()`?",
+      "options": [
+        "Gibt eine Warnmeldung aus",
+        "Bricht das Script ab",
+        "Startet das Debugging",
+        "Erstellt eine Fehlermeldung"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wie entfernt man alle Leerzeichen aus beiden Enden eines Strings?",
+      "options": ["trim()", "strip()", "slice()", "cut()"],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Wert entsteht durch `[] + []`?",
+      "options": ["''", "[]", "0", "NaN"],
+      "answer": 0
+    },
+    {
+      "question": "Was passiert, wenn man `return` in einer Funktion ohne Wert benutzt?",
+      "options": [
+        "undefined zurückgegeben",
+        "null zurückgegeben",
+        "0 zurückgegeben",
+        "false zurückgegeben"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wie setzt man das Prototyp einer Funktion?",
+      "options": [
+        "func.prototype = {}",
+        "func.__proto__ = {}",
+        "setPrototype(func)",
+        "func.proto = {}"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welcher der folgenden ist kein primitiver Datentyp?",
+      "options": ["string", "symbol", "object", "boolean"],
+      "answer": 2
+    },
+    {
+      "question": "Was ist das Ergebnis von `typeof []`?",
+      "options": ["'array'", "'object'", "'list'", "'undefined'"],
+      "answer": 1
+    },
+    {
+      "question": "Welche Schleife eignet sich, um über Array-Elemente zu iterieren?",
+      "options": ["for...in", "while", "for...of", "do...while"],
+      "answer": 2
+    },
+    {
+      "question": "Welcher Befehl erstellt ein neues Objekt mit dem Prototypen `proto`?",
+      "options": [
+        "Object.create(proto)",
+        "new Object(proto)",
+        "Object.clone(proto)",
+        "proto.new()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wie überprüft man, ob eine Variable `x` den Wert `null` hat?",
+      "options": [
+        "x == undefined",
+        "x === null",
+        "typeof x === 'null'",
+        "x.equals(null)"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode wandelt ein Objekt in einen JSON-String um?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "toJSON()",
+        "Stringify()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welchen Wert liefert `Boolean('')`?",
+      "options": ["true", "false", "undefined", "TypeError"],
+      "answer": 1
+    },
+    {
+      "question": "Wie fügt man einem Array am Ende ein Element hinzu?",
+      "options": ["push()", "pop()", "shift()", "unshift()"],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Event-Typ wird ausgelöst, wenn eine Taste gedrückt wird?",
+      "options": ["keydown", "keypress", "keyup", "input"],
+      "answer": 0
+    },
+    {
+      "question": "Wie erstellt man eine anonyme Funktion, die man sofort aufruft?",
+      "options": ["IIFE", "Callback", "Promise", "Generator"],
+      "answer": 0
+    },
+    {
+      "question": "Welches Schlüsselwort definiert eine Variable mit Funktionsscope?",
+      "options": ["var", "let", "const", "function"],
+      "answer": 0
+    },
+    {
+      "question": "Wie liest man den Wert des Input-Felds mit der ID `name`?",
+      "options": [
+        "document.getElementById('name').value",
+        "document.querySelector('name').text",
+        "getInput('name')",
+        "document.name.value"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welche Methode bricht die Ausführung eines `setInterval`-Timers ab?",
+      "options": [
+        "clearTimeout()",
+        "clearInterval()",
+        "stopInterval()",
+        "cancelTimer()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Wofür steht DOM?",
+      "options": [
+        "Document Object Model",
+        "Data Object Model",
+        "Document Onload Method",
+        "Dynamic Object Mapping"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welche Funktion wartet auf den Abschluss eines Promises?",
+      "options": [".then()", ".catch()", ".finally()", ".await()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie kann man eine Zeichenkette in Großbuchstaben umwandeln?",
+      "options": ["toUpper()", "toUpperCase()", "upper()", "uppercase()"],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Wert ergibt `0 == '0'`?",
+      "options": ["true", "false", "TypeError", "undefined"],
+      "answer": 0
+    },
+    {
+      "question": "Wie beendet man die Ausführung einer Funktion vorzeitig?",
+      "options": ["stop", "return", "break", "exit"],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode entfernt HTML-Inhalt aus einem Element?",
+      "options": [
+        "element.clear()",
+        "element.remove()",
+        "element.innerHTML = ''",
+        "element.delete()"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Wie definiert man eine default-Export in ES6-Modulen?",
+      "options": [
+        "export default function()",
+        "export function default()",
+        "export func default",
+        "export = default"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welches Objekt repräsentiert die globale Umgebung im Browser?",
+      "options": ["global", "window", "environment", "document"],
+      "answer": 1
+    },
+    {
+      "question": "Was macht `Array.prototype.sort()` ohne Argumente?",
+      "options": [
+        "Sortiert numerisch aufsteigend",
+        "Sortiert lexikographisch",
+        "Gibt unerwartete Werte zurück",
+        "Liefert einen Fehler"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode pausiert ein Promise für eine bestimmte Zeit?",
+      "options": [
+        "Promise.delay()",
+        "setTimeout() mit Promise",
+        "Promise.sleep()",
+        "await pause()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Wie kann man zwei Arrays zu einem zusammenführen?",
+      "options": [
+        "arr1.concat(arr2)",
+        "arr1 + arr2",
+        "merge(arr1,arr2)",
+        "arr1.append(arr2)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wozu dient `document.querySelectorAll()`?",
+      "options": [
+        "Ein einzelnes Element zu holen",
+        "Alle Elemente zu holen",
+        "Ein Element zu entfernen",
+        "Ein neues Element zu erstellen"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Wie prüft man, ob eine Variable `x` eine Zahl ist?",
+      "options": [
+        "typeof x === 'number'",
+        "x.isNumber()",
+        "isNumeric(x)",
+        "Number(x)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Was bewirkt der `delete`-Operator in JavaScript?",
+      "options": [
+        "Löscht eine Variable",
+        "Entfernt ein Objekt-Property",
+        "Beendet einen Loop",
+        "Leert ein Array"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Ausdruck erzeugt einen neuen Symbol-Wert?",
+      "options": ["new Symbol()", "Symbol()", "createSymbol()", "Symbol.new()"],
+      "answer": 1
+    },
+    {
+      "question": "Wie prüft man, ob ein Array ein Element enthält?",
+      "options": [
+        "arr.has(item)",
+        "arr.contains(item)",
+        "arr.includes(item)",
+        "arr.exists(item)"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welcher Ausdruck erstellt einen neuen `Set`?",
+      "options": ["new Set()", "Set.create()", "Set()", "Array.toSet()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie wandelt man eine Zahl in eine Zeichenkette um?",
+      "options": ["toString()", "Stringify()", "str()", "Number.toText()"],
+      "answer": 0
+    },
+    {
+      "question": "Welche Schleife führt den Code mindestens einmal aus?",
+      "options": ["for", "while", "do...while", "for...of"],
+      "answer": 2
+    },
+    {
+      "question": "Welches Keyword deklariert eine Konstante?",
+      "options": ["let", "var", "const", "fix"],
+      "answer": 2
+    },
+    {
+      "question": "Welches Objekt liefert Informationen über den Browser?",
+      "options": ["navigator", "window", "document", "location"],
+      "answer": 0
+    },
+    {
+      "question": "Wie fügt man einem Objekt ein neues Property hinzu?",
+      "options": [
+        "obj.property = value",
+        "obj.add(property)",
+        "obj.push(property)",
+        "obj.new(property)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welche Methode entfernt das erste Element eines Arrays?",
+      "options": ["pop()", "shift()", "slice()", "splice()"],
+      "answer": 1
+    },
+    {
+      "question": "Was liefert `typeof []` zurück?",
+      "options": ["\"array\"", "\"object\"", "\"list\"", "\"undefined\""],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Operator führt eine Short-Circuit-Auswertung aus?",
+      "options": ["&&", "===", "+", "--"],
+      "answer": 0
+    },
+    {
+      "question": "Wie erzeugt man eine Kopie eines Arrays?",
+      "options": [
+        "arr.copy()",
+        "arr.slice()",
+        "arr.duplicate()",
+        "arr.clone()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Statement beendet eine Schleife sofort?",
+      "options": ["exit", "return", "break", "stop"],
+      "answer": 2
+    },
+    {
+      "question": "Welche Methode lässt sich auf Promises anwenden, um Fehler abzufangen?",
+      "options": [".then()", ".catch()", ".finally()", ".error()"],
+      "answer": 1
+    },
+    {
+      "question": "Wie ruft man eine Funktion `foo` mit Argument `bar` auf?",
+      "options": ["call foo(bar)", "foo->bar()", "foo(bar)", "bar(foo)"],
+      "answer": 2
+    },
+    {
+      "question": "Was ist `NaN` in JavaScript?",
+      "options": ["Ein Fehlerobjekt", "Not-a-Number", "Null", "Not-a-Null"],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Wert ergibt `typeof function(){}`?",
+      "options": ["\"function\"", "\"object\"", "\"method\"", "\"undefined\""],
+      "answer": 0
+    },
+    {
+      "question": "Wie fügt man zwei Strings zusammen?",
+      "options": ["concat()", "merge()", "+", "beide korrekt"],
+      "answer": 3
+    },
+    {
+      "question": "Welche Methode entfernt Leerzeichen am Anfang und Ende eines Strings?",
+      "options": ["trim()", "strip()", "clean()", "removeSpaces()"],
+      "answer": 0
+    },
+    {
+      "question": "Welche Methode erzeugt ein neues Array basierend auf der Rückgabe einer Callback-Funktion?",
+      "options": [".filter()", ".reduce()", ".map()", ".forEach()"],
+      "answer": 2
+    },
+    {
+      "question": "Welches Schlüsselwort bindet den `this`-Wert dauerhaft?",
+      "options": ["bind()", "this.fix()", "lock()", "const"],
+      "answer": 0
+    },
+    {
+      "question": "Wie stoppt man das Event-Bubbling in einem Event-Handler?",
+      "options": [
+        "event.preventDefault()",
+        "event.stopPropagation()",
+        "event.stop()",
+        "event.cancel()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welche Methode formatiert eine Zahl mit festgelegter Anzahl Dezimalstellen?",
+      "options": ["toFixed()", "toPrecision()", "toLocale()", "toDecimal()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie fragt man den aktuellen URL-Pfad ab?",
+      "options": [
+        "window.url",
+        "location.href",
+        "document.url",
+        "navigator.path"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Ausdruck erstellt ein neues `Promise`-Objekt?",
+      "options": [
+        "new Promise()",
+        "Promise()",
+        "create Promise()",
+        "Promise.new()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Was macht `Array.prototype.find()`?",
+      "options": [
+        "Gibt ein Array zurück",
+        "Gibt das erste gefundene Element zurück",
+        "Filtert alle Elemente",
+        "Wandelt das Array um"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welcher Befehl gibt ein modales Dialogfeld mit Eingabe zurück?",
+      "options": ["alert()", "confirm()", "prompt()", "modal()"],
+      "answer": 2
+    },
+    {
+      "question": "Welche Methode entfernt alle Leerzeichen am Anfang und Ende eines Strings?",
+      "options": ["trim()", "strip()", "clean()", "removeSpaces()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie ermittelt man die Länge eines Strings `s`?",
+      "options": ["s.length()", "s.size", "s.count", "s.length"],
+      "answer": 3
+    },
+    {
+      "question": "Wie überprüfst du, ob eine Variable `x` den Wert 5 hat?",
+      "options": ["x = 5", "x == 5", "x === 5", "x equals 5"],
+      "answer": 2
+    },
+    {
+      "question": "Welche Schleife eignet sich, um über alle Elemente eines Arrays zu iterieren?",
+      "options": ["forEach()", "for(i in array)", "do…while", "alle drei"],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Datentyp ergibt `typeof []`?",
+      "options": ["\"array\"", "\"object\"", "\"list\"", "\"undefined\""],
+      "answer": 1
+    },
+    {
+      "question": "Womit kannst du ein neues Objekt literal erzeugen?",
+      "options": ["new Object()", "{}", "Object.create()", "alle drei"],
+      "answer": 3
+    },
+    {
+      "question": "Wie bindest du einen Klick-Event-Listener an einen Button mit id \"btn\"?",
+      "options": [
+        "btn.onClick = …",
+        "document.querySelector('#btn').addEventListener('click', …)",
+        "$('#btn').click(…)",
+        "button.clickEvent(…)"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welches Ergebnis liefert `5 + '5'` in JavaScript?",
+      "options": ["10", "55", "NaN", "TypeError"],
+      "answer": 1
+    },
+    {
+      "question": "Wie legst du eine Konstante an, die nicht neu zugewiesen werden darf?",
+      "options": ["var x", "let x", "const x", "fixed x"],
+      "answer": 2
+    },
+    {
+      "question": "Was bewirkt `array.push(item)`?",
+      "options": [
+        "Letztes Element entfernen",
+        "Einfügen am Anfang",
+        "Einfügen am Ende",
+        "Array kopieren"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Welches Schlüsselwort erzeugt eine asynchrone Funktion?",
+      "options": ["async", "await", "then", "promise"],
+      "answer": 0
+    },
+    {
+      "question": "Wie stoppst du die Ausführung eines interaktiven Timers?",
+      "options": [
+        "clearInterval(id)",
+        "stopTimeout(id)",
+        "clearTimer(id)",
+        "stopInterval(id)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welche Methode serialisiert ein Objekt zu JSON?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "Object.toJSON()",
+        "toString()"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Was bedeutet `NaN`?",
+      "options": [
+        "Not a Number",
+        "Null and None",
+        "Numeric and Null",
+        "Name and Number"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wie erzeugst du eine Zufallszahl zwischen 0 und 1?",
+      "options": ["Math.random()", "Random()", "Math.rand()", "random()"],
+      "answer": 0
+    },
+    {
+      "question": "Welches Schlüsselwort deklariert eine Variable mit Block-Scope?",
+      "options": ["var", "let", "function", "global"],
+      "answer": 1
+    },
+    {
+      "question": "Wie holst du das erste Element eines Arrays `arr`?",
+      "options": ["arr[1]", "arr.first()", "arr[0]", "arr.get(0)"],
+      "answer": 2
+    },
+    {
+      "question": "Wofür steht DOM?",
+      "options": [
+        "Document Object Model",
+        "Data Object Model",
+        "Document Oriented Map",
+        "Dynamic Object Mapping"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wie wandelst du einen String `s` in eine Zahl um?",
+      "options": ["Number(s)", "toNumber(s)", "parseInt(s)", "beide 0 und 2"],
+      "answer": 3
+    },
+    {
+      "question": "Wie überprüfst du, ob `a` ungleich `b` ist?",
+      "options": ["a != b", "a <> b", "a !== b", "beide 0 und 2"],
+      "answer": 3
+    },
+    {
+      "question": "Welche Methode entfernt das letzte Element aus einem Array?",
+      "options": ["pop()", "push()", "shift()", "unshift()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie definierst du eine Funktion `foo`?",
+      "options": [
+        "function foo() {}",
+        "def foo() {}",
+        "fun foo() {}",
+        "const foo => {}"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welcher Operator führt Verkettung bei Strings durch?",
+      "options": ["+", "&", "&&", "|"],
+      "answer": 0
+    },
+    {
+      "question": "Womit stoppst du eine Schleife vorzeitig?",
+      "options": ["break", "stop", "exit", "return"],
+      "answer": 0
+    },
+    {
+      "question": "Wie greifst du auf das `innerText`-Attribut eines Elements zu?",
+      "options": [
+        "element.text",
+        "element.innerText",
+        "element.value",
+        "element.content"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Welche Anweisung wirft einen Fehler in JavaScript?",
+      "options": ["throw new Error()", "raise Error()", "error()", "fail()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie führst du Code nach 2 Sekunden Verzögerung aus?",
+      "options": [
+        "setTimeout(fn, 2000)",
+        "delay(fn,2000)",
+        "wait(2000,fn)",
+        "setInterval(fn,2000)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welches Array-Method gibt ein neues Array mit bearbeiteten Werten zurück?",
+      "options": ["map()", "filter()", "find()", "reduce()"],
+      "answer": 0
+    },
+    {
+      "question": "Wie kannst du das aktuelle Datum in JS bekommen?",
+      "options": ["new Date()", "Date.now()", "getDate()", "beide 0 und 1"],
+      "answer": 3
+    },
+    {
+      "question": "Welcher Ausdruck prüft auf exakt gleichen Typ und Wert?",
+      "options": ["==", "===", "!=", "!=="],
+      "answer": 1
+    },
+    {
+      "question": "Wofür steht API?",
+      "options": [
+        "Application Programming Interface",
+        "Abstract Program Instruction",
+        "Application Protocol Interface",
+        "All-purpose Programming Interface"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Welche Methode konvertiert JSON-String in Objekt?",
+      "options": [
+        "JSON.parse()",
+        "JSON.convert()",
+        "JSON.toObject()",
+        "JSON.unpack()"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Wie erzeugst du eine endlose Schleife?",
+      "options": ["while(true)", "for(;true;)", "for(;;)", "alle drei"],
+      "answer": 3
+    },
+    {
+      "question": "Welches Schlüsselwort beendet eine Funktion und liefert einen Wert zurück?",
+      "options": ["return", "exit", "stop", "break"],
+      "answer": 0
+    }
+  ]
+}

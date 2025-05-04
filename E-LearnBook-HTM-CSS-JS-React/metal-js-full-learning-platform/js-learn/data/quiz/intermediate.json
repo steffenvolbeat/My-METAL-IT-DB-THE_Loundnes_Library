@@ -1,0 +1,29 @@
+{
+  "questions": [
+    {
+      "question": "Was gibt `typeof NaN` zurück?",
+      "options": ["\"number\"", "\"NaN\"", "\"undefined\"", "\"object\""],
+      "answer": 0
+    },
+    {
+      "question": "Wie erzeugst du eine Promise in JS?",
+      "options": [
+        "`new Promise()`",
+        "`Promise.resolve()`",
+        "`async function`",
+        "`setTimeout()`"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "Was ist ein Closure?",
+      "options": [
+        "Eine Funktion, die sich selbst aufruft",
+        "Eine Funktion mit Zugriff auf äußere Variablen",
+        "Eine private Variable",
+        "Ein Block-Statement"
+      ],
+      "answer": 1
+    }
+  ]
+}

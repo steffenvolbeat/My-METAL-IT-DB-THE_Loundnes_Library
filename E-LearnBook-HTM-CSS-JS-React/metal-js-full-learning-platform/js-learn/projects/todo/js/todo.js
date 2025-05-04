@@ -1,3 +1,5 @@
+//projects/todo
+
 const input = document.getElementById("new-task");
 const btn = document.getElementById("add-btn");
 const list = document.getElementById("task-list");

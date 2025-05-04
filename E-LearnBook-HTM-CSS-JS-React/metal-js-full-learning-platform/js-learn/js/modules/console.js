@@ -1,44 +1,34 @@
 // js/modules/console.js
 export class CodeConsole {
-  constructor(containerSelector) {
-    this.container = document.querySelector(containerSelector);
+  constructor(selector) {
+    this.el = document.querySelector(selector);
     this.render();
   }
-
   render() {
-    this.container.innerHTML = `
+    this.el.innerHTML = `
       <section class="console-module">
-        <h1>Code Console</h1>
-        <textarea id="console-input" placeholder="Schreibe hier JS-Code..."></textarea>
-        <button id="run-code">Ausführen</button>
-        <button id="clear-console">Clear</button>
+        <h2>JS Console</h2>
+        <textarea id="console-input" placeholder="JS-Code…"></textarea>
+        <button id="run">Ausführen</button>
+        <button id="clear">Clear</button>
         <pre id="console-output"></pre>
-      </section>
-    `;
-    this.attachHandlers();
+      </section>`;
+    this.attach();
   }
-
-  attachHandlers() {
-    const runBtn = this.container.querySelector("#run-code");
-    const clearBtn = this.container.querySelector("#clear-console");
-    const input = this.container.querySelector("#console-input");
-    const output = this.container.querySelector("#console-output");
-
-    runBtn.addEventListener("click", () => {
+  attach() {
+    const run = this.el.querySelector("#run");
+    const clr = this.el.querySelector("#clear");
+    const inp = this.el.querySelector("#console-input");
+    const out = this.el.querySelector("#console-output");
+    run.onclick = () => {
       try {
-        // Eval in sandboxed iframe could be used; here direkt eval
-        const result = eval(input.value);
-        output.textContent += `> ${input.value}
-${result}
-`;
-      } catch (err) {
-        output.textContent += `Error: ${err.message}
-`;
+        out.textContent += ">" + eval(inp.value) + "\n";
+      } catch (e) {
+        out.textContent += "Error:" + e.message + "\n";
       }
-    });
-
-    clearBtn.addEventListener("click", () => {
-      output.textContent = "";
-    });
+    };
+    clr.onclick = () => {
+      out.textContent = "";
+    };
   }
 }
