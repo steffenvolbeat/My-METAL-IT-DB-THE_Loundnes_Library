@@ -1,7 +1,12 @@
-// js/modules/quiz.js
 export class Quiz {
-  constructor(jsonUrl, containerSel) {
+  /**
+   * @param {string} jsonUrl URL zur JSON-Datei (relativ zu index.html)
+   * @param {string} containerSel CSS-Selector für das Quiz-Container-Element
+   * @param {string} resultAsideSel CSS-Selector für das <aside> mit der Ergebnis-Box
+   */
+  constructor(jsonUrl, containerSel, resultAsideSel) {
     this.container = document.querySelector(containerSel);
+    this.resultAside = document.querySelector(resultAsideSel);
     this.idx = 0;
     this.score = 0;
 
@@ -16,7 +21,8 @@ export class Quiz {
         this.render();
       })
       .catch((err) => {
-        this.container.innerHTML = `<p style="color: red;">Fehler: ${err.message}</p>`;
+        this.container.innerHTML = `<p style="color:red;">Fehler: ${err.message}</p>`;
+        console.error(err);
       });
   }
 
@@ -28,58 +34,62 @@ export class Quiz {
         <p class="quiz-question">${q.question}</p>
         <ul class="quiz-options">
           ${q.options
-            .map(
-              (opt, i) => `
-            <li><button data-i="${i}">${opt}</button></li>
-          `
-            )
+            .map((opt, i) => `<li><button data-i="${i}">${opt}</button></li>`)
             .join("")}
         </ul>
       </article>
     `;
-    this.attach();
+    this.attachHandlers();
   }
 
-  attach() {
+  attachHandlers() {
     this.container
       .querySelectorAll("button")
-      .forEach((btn) => btn.addEventListener("click", (e) => this.check(e)));
+      .forEach((btn) =>
+        btn.addEventListener("click", (e) => this.checkAnswer(e))
+      );
   }
 
-  check(e) {
-    const sel = +e.currentTarget.dataset.i;
-    const corr = this.questions[this.idx].answer;
-    const feedback = document.createElement("div");
-    feedback.className = sel === corr ? "correct" : "incorrect";
-    feedback.textContent =
-      sel === corr
+  checkAnswer(e) {
+    const selected = +e.currentTarget.dataset.i;
+    const correct = this.questions[this.idx].answer;
+
+    const fb = document.createElement("div");
+    fb.className = selected === correct ? "correct" : "incorrect";
+    fb.textContent =
+      selected === correct
         ? "👍 Richtig!"
-        : `❌ Falsch! Richtig wäre: ${this.questions[this.idx].options[corr]}`;
-    this.container.appendChild(feedback);
-    if (sel === corr) this.score++;
+        : `❌ Falsch! Richtig wäre: ${
+            this.questions[this.idx].options[correct]
+          }`;
+    this.container.appendChild(fb);
+
+    if (selected === correct) this.score++;
 
     setTimeout(() => {
       this.idx++;
-      if (this.idx < this.questions.length) this.render();
-      else this.finish();
+      if (this.idx < this.questions.length) {
+        this.render();
+      } else {
+        this.finish();
+      }
     }, 1000);
   }
 
   finish() {
-    // Ergebnis‑Anzeige aktivieren
-    const aside = document.getElementById("quiz-result");
-    aside.hidden = false;
+    // Ergebnis-Box anzeigen
+    this.resultAside.hidden = false;
     this.container.innerHTML = `
       <section class="quiz-result">
         <h2>Quiz abgeschlossen!</h2>
-        <p id="quiz-score">${this.score} von ${this.questions.length} richtig</p>
-        <button id="restart-button">Nochmal</button>
+        <p id="quiz-score">${this.score} / ${this.questions.length} richtig</p>
+        <button id="restart-button" class="metal-btn">Nochmal</button>
       </section>
     `;
     document.getElementById("restart-button").addEventListener("click", () => {
       this.idx = 0;
       this.score = 0;
-      aside.hidden = true;
+      this.resultAside.hidden = true;
       this.render();
     });
   }

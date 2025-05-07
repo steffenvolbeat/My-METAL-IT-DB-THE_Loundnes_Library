@@ -1,16 +1,15 @@
-<section class="module flashcard-section">
-  <header><h2>JS Flashcards</h2></header>
+<!-- js/sections/flashcard.html -->
+<section aria-labelledby="flashcard-title" class="module flashcard-section">
+  <header><h2 id="flashcard-title">📇 Flashcards</h2></header>
   <div id="flashcard-container" aria-live="polite"></div>
+  <nav class="flashcard-nav">
+    <button id="prev-card">← Prev</button>
+    <button id="flip-card">Flip</button>
+    <button id="next-card">Next →</button>
+  </nav>
 </section>
 
 <script type="module">
   import { Flashcard } from "./js/modules/flashcard.js";
-
-  const map = {
-    "#/beginner": "data/flashcards/beginner.json",
-    "#/intermediate": "data/flashcards/intermediate.json",
-    "#/expert": "data/flashcards/expert.json",
-  };
-  const url = map[window.location.hash] || map["#/beginner"];
-  new Flashcard(url, "#flashcard-container");
+  new Flashcard("data/flashcards/beginner.json", "#flashcard-container");
 </script>

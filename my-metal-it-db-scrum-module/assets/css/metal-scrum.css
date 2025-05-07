@@ -1,2 +1,323 @@
-// metal-scrum.css
-// Empty scaffold file for the Scrum module
+/** metal-scrum.css */
+/** Empty scaffold file for the Scrum module */
+
+/* metal-scrum.css – Dark Metal UI für dein Scrum-Tool */
+
+:root {
+  --metal-bg: #0f0f1a;
+  --metal-panel: #1c1c2b;
+  --metal-highlight: #9c27b0;
+  --metal-text: #e0e0e0;
+  --metal-border: #3a3a4d;
+  --metal-shadow: 0 0 8px rgba(156, 39, 176, 0.6);
+  --font-main: "Segoe UI", sans-serif;
+
+  /* Neue Design Tokens */
+  --metal-focus: rgba(156, 39, 176, 0.8);
+  --metal-error: #b22222;
+
+  /* Chart-Höhe variabel */
+  --chart-height: 25vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--font-main);
+  background-color: var(--metal-bg);
+  color: var(--metal-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#init-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  color: #9f9; /* giftgrün-metallic */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-family: "Metal Mania", sans-serif;
+}
+
+.loader {
+  text-align: center;
+  animation: pulse 1.5s infinite alternate;
+}
+
+.loader p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 10px;
+  background: #444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #9f9, #0f0);
+  animation: loadProgress 3s ease-in-out forwards;
+}
+
+@keyframes loadProgress {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--metal-highlight);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus {
+  outline: 2px dashed var(--metal-focus);
+  outline-offset: 2px;
+}
+
+header {
+  background: var(--metal-panel);
+  border-bottom: 1px solid var(--metal-border);
+  box-shadow: var(--metal-shadow);
+  padding: 1.2rem 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: var(--metal-highlight);
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav li a {
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+main {
+  padding: 2rem;
+}
+
+.panel,
+section {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--metal-border);
+  background-color: var(--metal-panel);
+  border-radius: 0.75rem;
+  box-shadow: var(--metal-shadow);
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--metal-highlight);
+}
+
+button {
+  background: var(--metal-highlight);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  box-shadow: var(--metal-shadow);
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #7b1fa2;
+}
+button:focus {
+  outline: 2px solid var(--metal-focus);
+  outline-offset: 2px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.board-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.kanban-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  background: #1b1b2d;
+  color: var(--metal-text);
+  border: 1px solid var(--metal-border);
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  resize: vertical;
+}
+textarea {
+  min-height: 80px;
+}
+textarea:invalid,
+input:invalid,
+select:invalid {
+  border-color: var(--metal-error);
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+canvas {
+  width: 100%;
+  max-width: 100%;
+  height: var(--chart-height);
+  background: #12121c;
+  border: 1px solid var(--metal-border);
+  border-radius: 0.5rem;
+  box-shadow: var(--metal-shadow);
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #15151f;
+  border-top: 1px solid var(--metal-border);
+  font-size: 0.9rem;
+  color: #aaa;
+}
+/*=======================================================================*/
+#admin-panel {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 12px;
+  color: #fff;
+}
+
+#admin-panel h2 {
+  margin-bottom: 1rem;
+  color: #f0f;
+}
+
+#admin-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#admin-panel input,
+#admin-panel button {
+  padding: 0.5rem;
+  background: #222;
+  border: 1px solid #666;
+  color: #fff;
+}
+
+.notification {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem 1.5rem;
+  background: #1a1a1a;
+  color: white;
+  border-left: 4px solid limegreen;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  z-index: 1000;
+  opacity: 0.95;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  animation: fadeInOut 3s ease-in-out;
+}
+.notification.error {
+  border-left-color: crimson;
+  background-color: #2a0000;
+}
+@keyframes fadeInOut {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 1rem;
+  }
+  section {
+    padding: 1rem;
+  }
+  button {
+    width: 100%;
+  }
+}

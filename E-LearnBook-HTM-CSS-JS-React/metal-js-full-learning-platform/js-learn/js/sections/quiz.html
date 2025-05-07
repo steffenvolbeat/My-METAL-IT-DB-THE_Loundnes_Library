@@ -1,32 +1,42 @@
 <!-- js/sections/quiz.html -->
 <section aria-labelledby="quiz-title" class="module quiz-section">
-  <header><h2 id="quiz-title">JS Lernquiz</h2></header>
+  <header>
+    <h2 id="quiz-title">JS Lernquiz</h2>
+  </header>
 
-  <!-- Hier wird das Quiz gerendert -->
+  <!-- Hier wird das Quiz reingeladen -->
   <article id="quiz-container" aria-live="polite"></article>
 
-  <!-- Ergebnisbereich (wird erst am Ende sichtbar) -->
+  <!-- Start-Button, bis dahin nur der Button sichtbar -->
+  <nav class="quiz-start-nav">
+    <button id="startQuizBtn" class="metal-btn">🔥 Let’s Rock!</button>
+  </nav>
+
+  <!-- Ergebnis-Box, initial versteckt -->
   <aside id="quiz-result" hidden aria-live="polite">
     <h3>Ergebnis</h3>
     <p id="quiz-score"></p>
-    <button id="restart-button">Quiz neu starten</button>
+    <button id="restart-button" class="metal-btn">Nochmal</button>
   </aside>
 </section>
 
 <script type="module">
-  // --- Pfad zur Quiz‑Klasse, immer relativ zu index.html! ---
-  import { Quiz } from "./js/modules/quiz.js";
+  // Import relativ aus /js/sections/ nach /js/modules/
+  import { Quiz } from "../modules/quiz.js";
 
-  // Mappe eure Hash‑Routen auf die JSON-Dateien unter data/quiz/...
   const quizMap = {
-    "#/beginner": "./data/quiz/beginner.json",
-    "#/intermediate": "./data/quiz/intermediate.json",
-    "#/expert": "./data/quiz/expert.json",
+    "#/beginner": "../data/quiz/beginner.json",
+    "#/intermediate": "../data/quiz/intermediate.json",
+    "#/expert": "../data/quiz/expert.json",
   };
-
   const hash = window.location.hash || "#/beginner";
   const jsonUrl = quizMap[hash] || quizMap["#/beginner"];
 
-  // Quiz initialisieren (zweiter Parameter = Container-Selector)
-  new Quiz(jsonUrl, "#quiz-container");
+  const startBtn = document.getElementById("startQuizBtn");
+  let quizInstance = null;
+
+  startBtn.addEventListener("click", () => {
+    startBtn.hidden = true;
+    quizInstance = new Quiz(jsonUrl, "#quiz-container", "#quiz-result");
+  });
 </script>

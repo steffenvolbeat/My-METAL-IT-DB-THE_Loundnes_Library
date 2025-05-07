@@ -75,3 +75,21 @@ ul {
 .quiz-item[data-level="expert"] {
   border-left: 5px solid red;
 }
+.metal-btn {
+  background: linear-gradient(135deg, #6600cc, #9900ff);
+  border: none;
+  padding: 0.5em 0.5em;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-shadow: 0 0 8px #ff00ff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px #8a2be2;
+}
+
+.metal-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #6600cc;
+}

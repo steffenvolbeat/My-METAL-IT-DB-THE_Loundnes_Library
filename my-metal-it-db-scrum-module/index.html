@@ -1,2 +1,190 @@
-// index.html
-// Empty scaffold file for the Scrum module
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Scrum-Tool zur agilen Organisation im Metal-IT-DB-Style."
+    />
+    <title>Scrum-Board | Metal-IT-DB</title>
+    <link rel="stylesheet" href="assets/css/metal-scrum.css" />
+    <link rel="icon" href="assets/images/favicon-metal.png" type="image/png" />
+  </head>
+  <body>
+    <div id="init-overlay">
+      <div class="loader">
+        <p>⚙️ Initialisiere Metal Scrum-Tool...</p>
+        <div class="progress-bar"><div class="progress"></div></div>
+      </div>
+    </div>
+    <header>
+      <nav aria-label="Hauptnavigation Scrum-Modul">
+        <h1>⚙️ Metal-IT-DB Scrum Board</h1>
+        <ul>
+          <li><a href="../index.html">⏪ Zurück zur Hauptseite</a></li>
+          <li><a href="#product-backlog">📝 Product Backlog</a></li>
+          <li><a href="#sprint-board">🏁 Sprint Board</a></li>
+          <li><a href="#reports">📊 Reports</a></li>
+          <li><a href="#retrospective">🔁 Retrospektive</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Product Backlog -->
+      <section id="product-backlog" aria-labelledby="heading-backlog">
+        <h2 id="heading-backlog">📝 Product Backlog</h2>
+        <p>Definiere und priorisiere Epics, User Stories und Tasks.</p>
+        <div id="backlog-items" class="board-grid" role="list"></div>
+        <button type="button" id="add-backlog-item">➕ Neue Aufgabe</button>
+      </section>
+
+      <!-- =============================
+       NEU: Sprint Planner Section
+       ============================= -->
+      <section
+        id="sprint-planner"
+        aria-labelledby="heading-sprint-planner"
+        class="panel"
+      >
+        <h2 id="heading-sprint-planner">🗓️ Sprint Planner</h2>
+        <form id="sprint-form">
+          <label for="sprint-name">Name des Sprints:</label>
+          <input id="sprint-name" type="text" required />
+
+          <label for="sprint-start">Startdatum:</label>
+          <input id="sprint-start" type="date" required />
+
+          <label for="sprint-end">Enddatum:</label>
+          <input id="sprint-end" type="date" required />
+
+          <label for="sprint-team-size">Teamgröße:</label>
+          <input id="sprint-team-size" type="number" min="1" required />
+
+          <label for="sprint-points-per-day">Punkte pro Tag:</label>
+          <input id="sprint-points-per-day" type="number" min="1" required />
+
+          <button type="submit">Sprint speichern</button>
+        </form>
+      </section>
+
+      <!-- =============================
+       NEU: Kapazitäts‑Chart Section
+       ============================= -->
+      <section
+        id="sprint-capacity"
+        aria-labelledby="heading-capacity"
+        class="panel"
+      >
+        <h2 id="heading-capacity">⚙️ Sprint Kapazität</h2>
+        <canvas
+          id="capacity-chart"
+          aria-label="Sprint Kapazitätsdiagramm"
+          role="img"
+        ></canvas>
+      </section>
+      <!-- Sprint Board / Kanban -->
+      <section id="sprint-board" aria-labelledby="heading-sprint">
+        <h2 id="heading-sprint">🏁 Sprint Board (Kanban)</h2>
+        <p>Verschiebe Tasks zwischen To Do → In Progress → Done.</p>
+        <div id="kanban-board" class="kanban-wrapper">
+          <article class="kanban-col" aria-label="To Do" role="region">
+            <h3>To Do</h3>
+          </article>
+          <article class="kanban-col" aria-label="In Progress" role="region">
+            <h3>In Progress</h3>
+          </article>
+          <article class="kanban-col" aria-label="Done" role="region">
+            <h3>Done</h3>
+          </article>
+        </div>
+      </section>
+      <!-- 4) NEU: Sprint Backlog -->
+
+      <section
+        id="sprint-backlog"
+        aria-labelledby="heading-backlog-sprint"
+        class="panel"
+      >
+        <h2 id="heading-backlog-sprint">🏷️ Sprint Backlog</h2>
+        <div class="dual-list">
+          <div class="list available">
+            <h3>Verfügbare Backlog‑Items</h3>
+            <ul
+              id="backlog-available"
+              class="story-list"
+              aria-label="Verfügbare Backlog‑Items"
+            ></ul>
+          </div>
+          <div class="list selected">
+            <h3>Im Sprint</h3>
+            <ul
+              id="backlog-selected"
+              class="story-list"
+              aria-label="Im Sprint ausgewählte Items"
+            ></ul>
+          </div>
+        </div>
+      </section>
+      <!-- NEU: Admin-Panel direkt darunter einfügen -->
+      <section id="admin-panel" aria-labelledby="heading-admin">
+        <h2 id="heading-admin">🛠️ Admin-Panel</h2>
+
+        <details>
+          <summary>Sprint konfigurieren</summary>
+          <form id="sprint-form">...</form>
+        </details>
+
+        <details>
+          <summary>Backlog-Items hinzufügen</summary>
+          <form id="backlog-form">...</form>
+        </details>
+      </section>
+      <!-- Reports -->
+      <section id="reports" aria-labelledby="heading-reports">
+        <h2 id="heading-reports">📊 Reports</h2>
+        <p>Burndown, Velocity und weitere Kennzahlen im Überblick.</p>
+        <canvas
+          id="burndown-chart"
+          aria-label="Burndown-Chart"
+          role="img"
+        ></canvas>
+      </section>
+
+      <!-- Retrospektive -->
+      <section id="retrospective" aria-labelledby="heading-retro">
+        <h2 id="heading-retro">🔁 Retrospektive</h2>
+        <p>Was lief gut, was weniger? Dokumentiere Learnings.</p>
+        <form id="retro-form">
+          <fieldset>
+            <legend>Retrospektive</legend>
+
+            <label for="what-went-well">Was lief gut?</label>
+            <textarea id="what-went-well" name="wentWell" required></textarea>
+
+            <label for="what-didnt-go-well">Was lief schlecht?</label>
+            <textarea
+              id="what-didnt-go-well"
+              name="wentBad"
+              required
+            ></textarea>
+
+            <label for="improvements">Was verbessern?</label>
+            <textarea id="improvements" name="improvements" required></textarea>
+
+            <button type="submit">💾 Speichern</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 My-METAL-IT-DB – Scrum Edition. Made with 🤘 and JavaScript.
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
